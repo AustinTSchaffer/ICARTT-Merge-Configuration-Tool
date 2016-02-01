@@ -191,9 +191,9 @@ namespace ICARTT_Header_Parsing_Library
         /// <summary>
         /// 2 param constructor. Should be used for loading ICARTT files from the file system. Accepts the name and path of a file.
         /// </summary>
-        /// <param name="fileName">The name of the ICARTT file, including the extension.</param>
-        /// <param name="filePath">The absolute file path to the ICARTT file from the root directory.</param>
-        public ICARTT_Metadata_FileName (string fileName, string filePath)
+        /// <param name="inputFileName">The name of the ICARTT file, including the extension.</param>
+        /// <param name="inputFilePath">The absolute file path to the ICARTT file from the root directory.</param>
+        public ICARTT_Metadata_FileName (string inputFileName, string inputFilePath)
         {
             // Initialize static Regex objects if not already initialized.
             if (null == invalidFileNameCharactersRegex)
@@ -206,26 +206,26 @@ namespace ICARTT_Header_Parsing_Library
                 volumeInformationRegex = new Regex(VOLUME_INFORMATION_REGEX);          
 
             // Null check before copying file path
-            this.filePath = (null == filePath)? DEFAULT_FILE_PATH : string.Copy(filePath);
+            filePath = (null == inputFilePath)? DEFAULT_FILE_PATH : string.Copy(inputFilePath);
 
             // Default initialization.
-            this.fileName   = DEFAULT_FILE_NAME;
-            dataID          = DEFAULT_DATA_ID;
-            locationID      = DEFAULT_LOCATION_ID;
-            date            = DEFAULT_DATE;
-            revision        = DEFAULT_REVISION;
-            launch          = DEFAULT_LAUNCH;
-            volume          = DEFAULT_VOLUME;
-            comments        = DEFAULT_COMMENTS;
+            fileName   = DEFAULT_FILE_NAME;
+            dataID     = DEFAULT_DATA_ID;
+            locationID = DEFAULT_LOCATION_ID;
+            date       = DEFAULT_DATE;
+            revision   = DEFAULT_REVISION;
+            launch     = DEFAULT_LAUNCH;
+            volume     = DEFAULT_VOLUME;
+            comments   = DEFAULT_COMMENTS;
 
 
-            if (!ValidateFileName(fileName))
+            if (!ValidateFileName(inputFileName))
             {
-                Console.WriteLine("Unable to set file name to " + fileName);
+                Console.WriteLine("Unable to set file name to " + inputFileName);
             }
             else
             {
-                this.fileName = string.Copy(fileName);
+                fileName = string.Copy(inputFileName);
                 UpdateMembersFromFileName();
             }
         }
@@ -323,8 +323,8 @@ namespace ICARTT_Header_Parsing_Library
         private void UpdateMembersFromFileName()
         {
             string[] fileNameComponents =
-                fileName
-                .Substring(0, fileName.Length - ICARTT_FILE_EXTENSION.Length)
+                FileName
+                .Substring(0, FileName.Length - ICARTT_FILE_EXTENSION.Length)
                 .Split(FILE_NAME_FIELD_SEPARATOR);
 
             dataID      = fileNameComponents[0];
@@ -392,15 +392,15 @@ namespace ICARTT_Header_Parsing_Library
             StringBuilder outputBuilder = new StringBuilder();
 
             outputBuilder
-                .Append(string.Format("File Name: {0}{1}",     fileName,   Environment.NewLine))
-                .Append(string.Format("  File Path:   {0}{1}", filePath,   Environment.NewLine))
-                .Append(string.Format("  Data ID:     {0}{1}", dataID,     Environment.NewLine))
-                .Append(string.Format("  Location ID: {0}{1}", locationID, Environment.NewLine))
-                .Append(string.Format("  Date String: {0}{1}", date,       Environment.NewLine))
-                .Append(string.Format("  Revision:    {0}{1}", revision,   Environment.NewLine))
-                .Append(string.Format("  Launch:      {0}{1}", launch,     Environment.NewLine))
-                .Append(string.Format("  Volume:      {0}{1}", volume,     Environment.NewLine))
-                .Append(string.Format("  Comments:    {0}{1}", comments,   Environment.NewLine));
+                .Append(string.Format("File Name: {0}{1}",     FileName,   Environment.NewLine))
+                .Append(string.Format("  File Path:   {0}{1}", FilePath,   Environment.NewLine))
+                .Append(string.Format("  Data ID:     {0}{1}", DataID,     Environment.NewLine))
+                .Append(string.Format("  Location ID: {0}{1}", LocationID, Environment.NewLine))
+                .Append(string.Format("  Date String: {0}{1}", Date,       Environment.NewLine))
+                .Append(string.Format("  Revision:    {0}{1}", Revision,   Environment.NewLine))
+                .Append(string.Format("  Launch:      {0}{1}", Launch,     Environment.NewLine))
+                .Append(string.Format("  Volume:      {0}{1}", Volume,     Environment.NewLine))
+                .Append(string.Format("  Comments:    {0}{1}", Comments,   Environment.NewLine));
             
             return outputBuilder.ToString();
 
@@ -432,9 +432,9 @@ namespace ICARTT_Header_Parsing_Library
 
 
         /// <summary>
-        /// Returns a 
+        /// Returns a hash code based on the name of the file.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>FimeName.GetHashCode()</returns>
         public override int GetHashCode()
         {
             return FileName.GetHashCode();
