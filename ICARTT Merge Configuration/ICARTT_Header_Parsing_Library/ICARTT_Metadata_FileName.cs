@@ -392,19 +392,20 @@ namespace ICARTT_Header_Parsing_Library
             StringBuilder outputBuilder = new StringBuilder();
 
             outputBuilder
-                .Append(string.Format("File Name: {0}{1}",     FileName,   Environment.NewLine))
-                .Append(string.Format("  File Path:   {0}{1}", FilePath,   Environment.NewLine))
-                .Append(string.Format("  Data ID:     {0}{1}", DataID,     Environment.NewLine))
-                .Append(string.Format("  Location ID: {0}{1}", LocationID, Environment.NewLine))
-                .Append(string.Format("  Date String: {0}{1}", Date,       Environment.NewLine))
-                .Append(string.Format("  Revision:    {0}{1}", Revision,   Environment.NewLine))
-                .Append(string.Format("  Launch:      {0}{1}", Launch,     Environment.NewLine))
-                .Append(string.Format("  Volume:      {0}{1}", Volume,     Environment.NewLine))
-                .Append(string.Format("  Comments:    {0}{1}", Comments,   Environment.NewLine));
+                .Append(String.Format("File Name: {0}{1}",     FileName,   Environment.NewLine))
+                .Append(String.Format("  File Path:   {0}{1}", FilePath,   Environment.NewLine))
+                .Append(String.Format("  Data ID:     {0}{1}", DataID,     Environment.NewLine))
+                .Append(String.Format("  Location ID: {0}{1}", LocationID, Environment.NewLine))
+                .Append(String.Format("  Date String: {0}{1}", Date,       Environment.NewLine))
+                .Append(String.Format("  Revision:    {0}{1}", Revision,   Environment.NewLine))
+                .Append(String.Format("  Launch:      {0}{1}", Launch,     Environment.NewLine))
+                .Append(String.Format("  Volume:      {0}{1}", Volume,     Environment.NewLine))
+                .Append(String.Format("  Comments:    {0}{1}", Comments,   Environment.NewLine));
             
             return outputBuilder.ToString();
 
         }
+
 
         /// <summary>
         /// Checks this file's name metadata against another file's name metadata to check for equality. The two files are equal if 
