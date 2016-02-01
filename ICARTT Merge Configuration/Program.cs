@@ -19,17 +19,7 @@ namespace ICARTT_Merge_Configuration
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
 
-            ICARTT_Metadata_FileName fileNameTests = new ICARTT_Metadata_FileName("asdf_asdf_10101010_R0.ict","asdf");
-            fileNameTests = new ICARTT_Metadata_FileName("asdf_asdf_10101010_R0.it", "asdf");
-            fileNameTests = new ICARTT_Metadata_FileName("asdf_asdf_10101010_R0_asdfhooohlkjahsdfjklhasdfkljhasdfklahsdfkljhasdfkljasdfklhasdfkljhasdfjklahsdfkljhasdfkljhasdfkljahsdf.ict", "asdf");
-            fileNameTests = new ICARTT_Metadata_FileName("asdf_as$df_10101010_$R0.ict", "asdf");
-            fileNameTests = new ICARTT_Metadata_FileName("asdf_as$df_10101010_$R0.ict", "asdf");
-            fileNameTests = new ICARTT_Metadata_FileName("asdf_asdf_10101010_0.ict", "asdf");
-            fileNameTests = new ICARTT_Metadata_FileName("asdf_as$df_1012221013330_R0.ict", "asdf");
-
-            fileNameTests = new ICARTT_Metadata_FileName("asdf_asdf_10101010_R0.ict", null);
-            fileNameTests = new ICARTT_Metadata_FileName(null, null);
-            fileNameTests = new ICARTT_Metadata_FileName(null, "asdf");
+            ICARTT_Metadata_FileName icmdfn = new ICARTT_Metadata_FileName("dataID_locID_00000000_R0.ict", "bin/");
         }
     }
 }

@@ -13,28 +13,78 @@ namespace ICARTT_Header_Parsing_Library
     /// </summary>
     class ICARTT_Metadata_FileName
     {
-        /// <summary>
-        /// Holds the absolute file path to the ICARTT file from the root directory.
-        /// </summary>
-        private String filePath;
-
 
         #region fileName related members
 
         /// <summary>
         /// Holds the name of the ICARTT file, including the extension.
         /// </summary>
-        private String fileName;
+        private string fileName;
+
+        /// <summary>
+        /// Holds the absolute file path to the ICARTT file from the root directory.
+        /// </summary>
+        private string filePath;
 
         /// <summary>
         /// Required field in an ICARTT file name.
         /// </summary>
-        private String dataID, locationID, date, revision;
+        private string dataID, locationID, date, revision;
 
         /// <summary>
-        /// Optional field in an ICARTT file name. This field can be unreliable, since the flag can be unreliable.
+        /// Optional field in an ICARTT file name. This field can be unreliable, since the flag       can be unreliable.
         /// </summary>
-        private String launch, volume, comments;
+        private string launch, volume, comments;
+
+        #endregion
+
+
+        #region fileName related getters
+
+        /// <summary>
+        /// Returns a copy of the member. Can not be used for altering class members.
+        /// </summary>
+        public string FileName { get { return string.Copy(fileName); } }
+
+        /// <summary>
+        /// Returns a copy of the member. Can not be used for altering class members.
+        /// </summary>
+        public string FilePath { get { return string.Copy(filePath); } }
+
+        /// <summary>
+        /// Returns a copy of the member. Can not be used for altering class members.
+        /// </summary>
+        public string DataID { get { return string.Copy(dataID); } }
+
+        /// <summary>
+        /// Returns a copy of the member. Can not be used for altering class members.
+        /// </summary>
+        public string LocationID { get { return string.Copy(locationID); } }
+
+        /// <summary>
+        /// Returns a copy of the member. Can not be used for altering class members.
+        /// </summary>
+        public string Date { get { return string.Copy(date); } }
+
+        /// <summary>
+        /// Returns a copy of the member. Can not be used for altering class members.
+        /// </summary>
+        public string Revision { get { return string.Copy(revision); } }
+
+        /// <summary>
+        /// Returns a copy of the member. Can not be used for altering class members.
+        /// </summary>
+        public string Launch { get { return string.Copy(launch); } }
+
+        /// <summary>
+        /// Returns a copy of the member. Can not be used for altering class members.
+        /// </summary>
+        public string Volume { get { return string.Copy(volume); } }
+
+        /// <summary>
+        /// Returns a copy of the member. Can not be used for altering class members.
+        /// </summary>
+        public string Comments { get { return string.Copy(comments); } }
 
         #endregion
 
@@ -46,7 +96,7 @@ namespace ICARTT_Header_Parsing_Library
         /// <summary>
         /// Default member values.
         /// </summary>
-        public static readonly String
+        public static readonly string
             DEFAULT_FILE_PATH   = "",
             DEFAULT_DATA_ID     = "NO-DATA-ID",
             DEFAULT_LOCATION_ID = "NO-LOCATION-ID",
@@ -77,15 +127,15 @@ namespace ICARTT_Header_Parsing_Library
         /// <summary>
         /// All ICARTT files must have the ".ict" extension.
         /// </summary>
-        public static readonly String ICARTT_FILE_EXTENSION = ".ict";
+        public static readonly string ICARTT_FILE_EXTENSION = ".ict";
 
         /// <summary>
-        /// The date field in the name of an ICARTT file is YYYYMMDD.
+        /// The required date information in the name of an ICARTT file is YYYYMMDD.
         /// </summary>
         public static readonly short DATE_MINIMUM_LENGTH = 8;
 
         /// <summary>
-        /// The date field in the name of an ICARTT 
+        /// The date field in the name of an ICARTT can contain additional [hh[mm[ss]]]
         /// </summary>
         public static readonly short DATE_MAXIMUM_LENGTH = 14;
 
@@ -96,22 +146,42 @@ namespace ICARTT_Header_Parsing_Library
         /// <summary>
         /// Regular expression that matches any characters that are not alphanumeric, not periods, not underscores, and not dashes.
         /// </summary>
-        public static readonly String FILE_NAME_INVALID_CHARACTERS_REGEX = "[^a-zA-Z0-9._-]";
-
-        /// <summary>
-        /// Static object for checking the inval. char. regex on file names for all instances of this class.
-        /// </summary>
-        private static Regex invalidFileNameCharactersRegex;
+        public static readonly string FILE_NAME_INVALID_CHARACTERS_REGEX = "[^a-zA-Z0-9._-]";
 
         /// <summary>
         /// Regular expression that matches any characters that are not alphanumeric, not periods, not underscores, and not dashes.
         /// </summary>
-        public static readonly String ONLY_NUMBERS_REGEX = "[^0-9]";
+        public static readonly string ONLY_NUMBERS_REGEX = "[^0-9]";
 
         /// <summary>
-        /// Static object for checking the inval. char. regex on file names for all instances of this class.
+        /// Regular expression that matches the launch information from the name of an ICARTT file. The launch information starts with an L or an l and is followed by 1 or 2 digits.
+        /// </summary>
+        public static readonly string LAUNCH_INFORMATION_REGEX = "([Ll][0-9]{1,2})";
+
+        /// <summary>
+        /// Regular expression that matches the volume information from the name of an ICARTT file. The volume information starts with a V or a v and is followed by 1 or 2 digits.
+        /// </summary>
+        public static readonly string VOLUME_INFORMATION_REGEX = "([Vv][0-9]{1,2})";
+
+        /// <summary>
+        /// Static Regex object for checking the inval. char. regex on file names for all instances of this class.
+        /// </summary>
+        private static Regex invalidFileNameCharactersRegex;
+
+        /// <summary>
+        /// Static Regex object for checking for non-digit characters.
         /// </summary>
         private static Regex allNonDigitsRegex;
+
+        /// <summary>
+        /// Static Regex object for checking for launch information.
+        /// </summary>
+        private static Regex launchInformationRegex;
+
+        /// <summary>
+        /// Static Regex object for checking for volume information.
+        /// </summary>
+        private static Regex volumeInformationRegex;
 
         #endregion
 
@@ -123,19 +193,22 @@ namespace ICARTT_Header_Parsing_Library
         /// </summary>
         /// <param name="fileName">The name of the ICARTT file, including the extension.</param>
         /// <param name="filePath">The absolute file path to the ICARTT file from the root directory.</param>
-        public ICARTT_Metadata_FileName (String fileName, String filePath)
+        public ICARTT_Metadata_FileName (string fileName, string filePath)
         {
             // Initialize static Regex objects if not already initialized.
             if (null == invalidFileNameCharactersRegex)
                 invalidFileNameCharactersRegex = new Regex(FILE_NAME_INVALID_CHARACTERS_REGEX);
             if (null == allNonDigitsRegex)
                 allNonDigitsRegex = new Regex(ONLY_NUMBERS_REGEX);
-            
+            if (null == launchInformationRegex)
+                launchInformationRegex = new Regex(LAUNCH_INFORMATION_REGEX);
+            if (null == volumeInformationRegex)
+                volumeInformationRegex = new Regex(VOLUME_INFORMATION_REGEX);          
 
             // Null check before copying file path
-            this.filePath = (null == filePath)? DEFAULT_FILE_PATH : String.Copy(filePath);
+            this.filePath = (null == filePath)? DEFAULT_FILE_PATH : string.Copy(filePath);
 
-
+            // Default initialization.
             this.fileName   = DEFAULT_FILE_NAME;
             dataID          = DEFAULT_DATA_ID;
             locationID      = DEFAULT_LOCATION_ID;
@@ -145,39 +218,25 @@ namespace ICARTT_Header_Parsing_Library
             volume          = DEFAULT_VOLUME;
             comments        = DEFAULT_COMMENTS;
 
-            
-            if (!SetFileName(fileName))
+
+            if (!ValidateFileName(fileName))
             {
-                Console.WriteLine("Issue with file: " + filePath + fileName);
+                Console.WriteLine("Unable to set file name to " + fileName);
+            }
+            else
+            {
+                this.fileName = string.Copy(fileName);
+                UpdateMembersFromFileName();
             }
         }
 
-
-        /// <summary>
-        /// Sets the name of the file. This class will not be altered unless the string meets ICARTT specifications.
-        /// </summary>
-        /// <param name="inputFileName">A properly formatted ICARTT file name.</param>
-        /// <returns> True if the name parameter is valid. If it is valid, then all of the file name information will be correctly populated. Otherwise, this class will not be altered.</returns>
-        private bool SetFileName(String inputFileName)
-        {
-            if (!ValidateFileName(inputFileName))
-            {
-                Console.WriteLine("Unable to set file name to " + inputFileName);
-                return false;
-            }
-
-            fileName = String.Copy(inputFileName);
-            UpdateMembersFromFileName();
-
-            return true;
-        }
 
         /// <summary>
         /// Checks a string to see if it can be considered a file name for an ICARTT file.
         /// </summary>
         /// <param name="inputFileName"></param>
         /// <returns>True if the input string meets qualifications set by the ICARTT File Format Standards V1.1.</returns>
-        public bool ValidateFileName(String inputFileName)
+        public bool ValidateFileName(string inputFileName)
         {
             // Null checking.
             if (null == inputFileName)
@@ -209,7 +268,7 @@ namespace ICARTT_Header_Parsing_Library
 
 
             // Remove the ICARTT file extension and split into components
-            String[] unverifiedComponents =
+            string[] unverifiedComponents =
                 inputFileName
                 .Substring(0, inputFileName.Length - ICARTT_FILE_EXTENSION.Length)
                 .Split(FILE_NAME_FIELD_SEPARATOR);
@@ -257,12 +316,13 @@ namespace ICARTT_Header_Parsing_Library
             return true;
         }
 
+
         /// <summary>
         /// Updates dataID, locationID, date, revision, launch, volume, and comments after a successful modification of the file name.
         /// </summary>
         private void UpdateMembersFromFileName()
         {
-            String[] fileNameComponents =
+            string[] fileNameComponents =
                 fileName
                 .Substring(0, fileName.Length - ICARTT_FILE_EXTENSION.Length)
                 .Split(FILE_NAME_FIELD_SEPARATOR);
@@ -272,22 +332,113 @@ namespace ICARTT_Header_Parsing_Library
             date        = fileNameComponents[2];
             revision    = fileNameComponents[3];
 
-            // TODO: Flags
-            // TODO Regular expressions
 
-            // Set optional members, if any.
-            if (fileNameComponents.Length > 4)
+
+            /*
+                   Launch Info? --> |----|
+                   Volume Info? --> |----|----|   
+                       Comments --> |----_----_----...
+            dataID_locID_YYYYMMDD_R0_####_####_####...
+
+            Process:
+                   
+            i = 4:
+                Check first ambiguous position for launch info.
+                No launch info? check it for volume info.
+                Otherwise, append it to comments.
+
+            i = 5:
+                Check second ambiguous position for volume info.
+                Otherwise, append it to comments.
+
+            i >= 6:
+                Append it to comments
+            
+            */
+            StringBuilder commentsBuilder = new StringBuilder();
+            for (int i = 4; i < fileNameComponents.Length; ++i)
             {
-                throw new NotImplementedException();
-                if (fileNameComponents[4].ToUpper()[0] == 'L')
+                string launchResult = launchInformationRegex.Match(fileNameComponents[i]).ToString();
+                string volumeResult = volumeInformationRegex.Match(fileNameComponents[i]).ToString();
+                
+                if (i == 4 && fileNameComponents[i].Equals(launchResult))
                 {
-
+                    launch = fileNameComponents[i];
                 }
-
+                else if ((i == 4 || i == 5) && fileNameComponents[i].Equals(volumeResult))
+                {
+                    volume = fileNameComponents[i];
+                }
+                else
+                {
+                    commentsBuilder.Append(fileNameComponents[i]);
+                    if (i != fileNameComponents.Length - 1)
+                        commentsBuilder.Append(FILE_NAME_FIELD_SEPARATOR);
+                }
+                
             }
-           
+
+            comments = commentsBuilder.ToString();   
         }
-        
+
+
+        /// <summary>
+        /// Outputs a string representation of this object.
+        /// </summary>
+        /// <returns>A formatted string representation of this object.</returns>
+        public override string ToString()
+        {
+
+            StringBuilder outputBuilder = new StringBuilder();
+
+            outputBuilder
+                .Append(string.Format("File Name: {0}{1}",     fileName,   Environment.NewLine))
+                .Append(string.Format("  File Path:   {0}{1}", filePath,   Environment.NewLine))
+                .Append(string.Format("  Data ID:     {0}{1}", dataID,     Environment.NewLine))
+                .Append(string.Format("  Location ID: {0}{1}", locationID, Environment.NewLine))
+                .Append(string.Format("  Date String: {0}{1}", date,       Environment.NewLine))
+                .Append(string.Format("  Revision:    {0}{1}", revision,   Environment.NewLine))
+                .Append(string.Format("  Launch:      {0}{1}", launch,     Environment.NewLine))
+                .Append(string.Format("  Volume:      {0}{1}", volume,     Environment.NewLine))
+                .Append(string.Format("  Comments:    {0}{1}", comments,   Environment.NewLine));
+            
+            return outputBuilder.ToString();
+
+        }
+
+        /// <summary>
+        /// Checks this file's name metadata against another file's name metadata to check for equality. The two files are equal if 
+        /// </summary>
+        /// <param name="obj">Object to check equality to.</param>
+        /// <returns>True if obj is an ICARTT_Metadata_FileName type with the same file name.</returns>
+        public override bool Equals(object obj)
+        {
+            if (null == obj)
+                return false;
+
+            return Equals(obj as ICARTT_Metadata_FileName);
+        }
+
+
+        /// <summary>
+        /// Checks this file's name metadata against another file's name metadata to check for equality. The two files are equal if 
+        /// </summary>
+        /// <param name="other">Other metadata class to check equality to.</param>
+        /// <returns>True if other is an ICARTT_Metadata_FileName type with the same file name.</returns>
+        public bool Equals(ICARTT_Metadata_FileName other)
+        {
+            return (null != other) && (other.FileName.ToUpper().Equals(FileName.ToUpper()));
+        }
+
+
+        /// <summary>
+        /// Returns a 
+        /// </summary>
+        /// <returns></returns>
+        public override int GetHashCode()
+        {
+            return FileName.GetHashCode();
+        }
     }
 
 }
