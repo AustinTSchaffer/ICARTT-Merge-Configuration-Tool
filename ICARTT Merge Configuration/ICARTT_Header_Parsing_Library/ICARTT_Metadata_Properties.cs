@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ICARTT_Header_Parsing_Library
+namespace ICARTT_Merge_Configuration.ICARTT_Header_Parsing_Library
 {
     class ICARTT_Metadata_Properties
     {

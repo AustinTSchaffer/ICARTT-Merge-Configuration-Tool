@@ -1,15 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
+﻿using ICARTT_Merge_Configuration.Logging;
+using System;
+using System.Configuration;
+using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
-namespace ICARTT_Header_Parsing_Library
+namespace ICARTT_Merge_Configuration.ICARTT_Header_Parsing_Library
 {
     /// <summary>
-    /// Contains and controlls access to the name and path of an ICARTT file as well as its component parts.
+    /// Contains and controlls access to the name and path of an ICARTT file as well as the name's component parts.
     /// <seealso cref="ICARTT_File"/>
     /// </summary>
     class ICARTT_Metadata_FileName
@@ -145,22 +144,22 @@ namespace ICARTT_Header_Parsing_Library
         #region regular expressions
 
         /// <summary>
-        /// Regular expression that matches any characters that are not alphanumeric, not periods, not underscores, and not dashes.
+        /// Regular expression that matches all characters that are not alphanumeric, not periods, not underscores, and not dashes.
         /// </summary>
         public static readonly string FILE_NAME_INVALID_CHARACTERS_REGEX = "[^a-zA-Z0-9._-]";
 
         /// <summary>
-        /// Regular expression that matches any characters that are not alphanumeric, not periods, not underscores, and not dashes.
+        /// Regular expression that matches all characters that are not digits.
         /// </summary>
         public static readonly string ONLY_NUMBERS_REGEX = "[^0-9]";
 
         /// <summary>
-        /// Regular expression that matches the launch information from the name of an ICARTT file. The launch information starts with an L or an l and is followed by 1 or 2 digits.
+        /// Regular expression that matches the launch information from the name of an ICARTT file. The launch information starts with an 'L' or an 'l' and is followed by 1 or 2 digits.
         /// </summary>
         public static readonly string LAUNCH_INFORMATION_REGEX = "^[Ll][0-9]{1,2}$";
 
         /// <summary>
-        /// Regular expression that matches the volume information from the name of an ICARTT file. The volume information starts with a V or a v and is followed by 1 or 2 digits.
+        /// Regular expression that matches the volume information from the name of an ICARTT file. The volume information starts with a 'V' or a 'v' and is followed by 1 or 2 digits.
         /// </summary>
         public static readonly string VOLUME_INFORMATION_REGEX = "^[Vv][0-9]{1,2}$";
 
@@ -204,7 +203,9 @@ namespace ICARTT_Header_Parsing_Library
             if (null == launchRegex)
                 launchRegex = new Regex(LAUNCH_INFORMATION_REGEX);
             if (null == volumeRegex)
-                volumeRegex = new Regex(VOLUME_INFORMATION_REGEX);          
+                volumeRegex = new Regex(VOLUME_INFORMATION_REGEX);
+
+            
 
             // Null check before copying file path
             filePath = (null == inputFilePath)? DEFAULT_FILE_PATH : string.Copy(inputFilePath);
@@ -222,7 +223,10 @@ namespace ICARTT_Header_Parsing_Library
 
             if (!ValidateFileName(inputFileName))
             {
-                Console.WriteLine("Unable to set file name to " + inputFileName);
+                Logger.Log(
+                    GetType(), MethodBase.GetCurrentMethod(),
+                    String.Format("Invalid file name {0}", inputFileName)
+                    );
             }
             else
             {
@@ -242,14 +246,20 @@ namespace ICARTT_Header_Parsing_Library
             // Null checking.
             if (null == inputFileName)
             {
-                Console.WriteLine("Null file name");
+                Logger.Log(
+                    GetType(), MethodBase.GetCurrentMethod(),
+                    "Null file name"
+                    );
                 return false;
             }
 
             // File name must be proper length.
             if (inputFileName.Length > FILE_NAME_MAXIMUM_LENGTH)
             {
-                Console.WriteLine("File name too long");
+                Logger.Log(
+                    GetType(), MethodBase.GetCurrentMethod(),
+                    String.Format("File name is too long:  {0}", inputFileName)
+                    );
                 return false;
             }
 
@@ -279,7 +289,6 @@ namespace ICARTT_Header_Parsing_Library
             if (unverifiedComponents.Length < 4)
             {
                 Console.WriteLine("Not enough fields in name of file.");
-                Trace.TraceInformation("TRACE TEST");
                 return false;
             }
 
@@ -377,7 +386,8 @@ namespace ICARTT_Header_Parsing_Library
                 
             }
 
-            comments = commentsBuilder.ToString();   
+            string commentsFound = commentsBuilder.ToString();
+            comments = (null == commentsFound || commentsFound.Equals(""))? DEFAULT_COMMENTS : commentsFound;
         }
 
 

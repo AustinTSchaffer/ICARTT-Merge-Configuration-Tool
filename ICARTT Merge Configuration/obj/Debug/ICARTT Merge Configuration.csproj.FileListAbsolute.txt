@@ -5,3 +5,8 @@ c:\users\atschaff\documents\visual studio 2015\Projects\ICARTT Merge Configurati
 c:\users\atschaff\documents\visual studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\bin\Debug\`.pdb
 c:\users\atschaff\documents\visual studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\obj\Debug\`.exe
 c:\users\atschaff\documents\visual studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\obj\Debug\`.pdb
+C:\Users\atschaff\Documents\Visual Studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\bin\Debug\`.exe.manifest
+C:\Users\atschaff\Documents\Visual Studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\bin\Debug\`.application
+C:\Users\atschaff\Documents\Visual Studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\obj\Debug\ICARTT Merge Configuration.csprojResolveAssemblyReference.cache
+C:\Users\atschaff\Documents\Visual Studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\obj\Debug\`.exe.manifest
+C:\Users\atschaff\Documents\Visual Studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\obj\Debug\`.application

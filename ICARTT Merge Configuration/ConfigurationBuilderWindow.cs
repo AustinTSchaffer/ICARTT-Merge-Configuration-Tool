@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ICARTT_Merge_Configuration
 {
-    public partial class Form1 : Form
+    public partial class ConfigurationBuilderWindow : Form
     {
-        public Form1()
+        public ConfigurationBuilderWindow()
         {
             InitializeComponent();
         }
