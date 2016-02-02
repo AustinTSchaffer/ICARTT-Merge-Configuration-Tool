@@ -19,7 +19,10 @@ namespace ICARTT_Merge_Configuration
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
 
-            ICARTT_Metadata_FileName icmdfn = new ICARTT_Metadata_FileName("dataID_locID_00000000_R0.ict", "bin/");
+            ICARTT_Metadata_FileName icmdfn = new ICARTT_Metadata_FileName("dataID_locID_00000000_R0_L444_V22_Not-a-very-good-comment.ict", "bin/");
+            ICARTT_Metadata_FileName icmdfn2 = new ICARTT_Metadata_FileName("dataID_locID_00000000_R0_L444_V22_Not-a-very-good-commet.ict", "bin/");
+            Console.WriteLine(icmdfn.ToString());
+            Console.WriteLine(icmdfn.Equals(icmdfn2));
         }
     }
 }

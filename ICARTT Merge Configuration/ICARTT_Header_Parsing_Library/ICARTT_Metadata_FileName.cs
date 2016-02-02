@@ -100,7 +100,7 @@ namespace ICARTT_Header_Parsing_Library
             DEFAULT_FILE_PATH   = "",
             DEFAULT_DATA_ID     = "NO-DATA-ID",
             DEFAULT_LOCATION_ID = "NO-LOCATION-ID",
-            DEFAULT_DATE        = "99991231",
+            DEFAULT_DATE        = "99999999",
             DEFAULT_REVISION    = "R0",
             DEFAULT_LAUNCH      = "L0",
             DEFAULT_VOLUME      = "V0",
@@ -115,20 +115,20 @@ namespace ICARTT_Header_Parsing_Library
             );
 
         /// <summary>
+        /// All ICARTT files must have the ".ict" extension.
+        /// </summary>
+        public static readonly string ICARTT_FILE_EXTENSION = ".ict";
+
+        /// <summary>
         /// Fields in the name of an ICARTT file are separated by an underscore (_)
         /// </summary>
-        public static readonly char FILE_NAME_FIELD_SEPARATOR = '_';
+        public static readonly char FIELD_SEPARATOR = '_';
 
         /// <summary>
         /// The maximum length of an ICARTT file name, including the extension, is 127 characters.
         /// </summary>
         public static readonly short FILE_NAME_MAXIMUM_LENGTH = 127;
-
-        /// <summary>
-        /// All ICARTT files must have the ".ict" extension.
-        /// </summary>
-        public static readonly string ICARTT_FILE_EXTENSION = ".ict";
-
+        
         /// <summary>
         /// The required date information in the name of an ICARTT file is YYYYMMDD.
         /// </summary>
@@ -156,12 +156,12 @@ namespace ICARTT_Header_Parsing_Library
         /// <summary>
         /// Regular expression that matches the launch information from the name of an ICARTT file. The launch information starts with an L or an l and is followed by 1 or 2 digits.
         /// </summary>
-        public static readonly string LAUNCH_INFORMATION_REGEX = "([Ll][0-9]{1,2})";
+        public static readonly string LAUNCH_INFORMATION_REGEX = "^[Ll][0-9]{1,2}$";
 
         /// <summary>
         /// Regular expression that matches the volume information from the name of an ICARTT file. The volume information starts with a V or a v and is followed by 1 or 2 digits.
         /// </summary>
-        public static readonly string VOLUME_INFORMATION_REGEX = "([Vv][0-9]{1,2})";
+        public static readonly string VOLUME_INFORMATION_REGEX = "^[Vv][0-9]{1,2}$";
 
         /// <summary>
         /// Static Regex object for checking the inval. char. regex on file names for all instances of this class.
@@ -176,12 +176,12 @@ namespace ICARTT_Header_Parsing_Library
         /// <summary>
         /// Static Regex object for checking for launch information.
         /// </summary>
-        private static Regex launchInformationRegex;
+        private static Regex launchRegex;
 
         /// <summary>
         /// Static Regex object for checking for volume information.
         /// </summary>
-        private static Regex volumeInformationRegex;
+        private static Regex volumeRegex;
 
         #endregion
 
@@ -200,10 +200,10 @@ namespace ICARTT_Header_Parsing_Library
                 invalidFileNameCharactersRegex = new Regex(FILE_NAME_INVALID_CHARACTERS_REGEX);
             if (null == allNonDigitsRegex)
                 allNonDigitsRegex = new Regex(ONLY_NUMBERS_REGEX);
-            if (null == launchInformationRegex)
-                launchInformationRegex = new Regex(LAUNCH_INFORMATION_REGEX);
-            if (null == volumeInformationRegex)
-                volumeInformationRegex = new Regex(VOLUME_INFORMATION_REGEX);          
+            if (null == launchRegex)
+                launchRegex = new Regex(LAUNCH_INFORMATION_REGEX);
+            if (null == volumeRegex)
+                volumeRegex = new Regex(VOLUME_INFORMATION_REGEX);          
 
             // Null check before copying file path
             filePath = (null == inputFilePath)? DEFAULT_FILE_PATH : string.Copy(inputFilePath);
@@ -271,7 +271,7 @@ namespace ICARTT_Header_Parsing_Library
             string[] unverifiedComponents =
                 inputFileName
                 .Substring(0, inputFileName.Length - ICARTT_FILE_EXTENSION.Length)
-                .Split(FILE_NAME_FIELD_SEPARATOR);
+                .Split(FIELD_SEPARATOR);
 
 
             // A file name has 4 non-optional fields.
@@ -325,7 +325,7 @@ namespace ICARTT_Header_Parsing_Library
             string[] fileNameComponents =
                 FileName
                 .Substring(0, FileName.Length - ICARTT_FILE_EXTENSION.Length)
-                .Split(FILE_NAME_FIELD_SEPARATOR);
+                .Split(FIELD_SEPARATOR);
 
             dataID      = fileNameComponents[0];
             locationID  = fileNameComponents[1];
@@ -358,14 +358,11 @@ namespace ICARTT_Header_Parsing_Library
             StringBuilder commentsBuilder = new StringBuilder();
             for (int i = 4; i < fileNameComponents.Length; ++i)
             {
-                string launchResult = launchInformationRegex.Match(fileNameComponents[i]).ToString();
-                string volumeResult = volumeInformationRegex.Match(fileNameComponents[i]).ToString();
-                
-                if (i == 4 && fileNameComponents[i].Equals(launchResult))
+                if (i == 4 && launchRegex.IsMatch(fileNameComponents[i]))
                 {
                     launch = fileNameComponents[i];
                 }
-                else if ((i == 4 || i == 5) && fileNameComponents[i].Equals(volumeResult))
+                else if ((i == 4 || i == 5) && volumeRegex.IsMatch(fileNameComponents[i]))
                 {
                     volume = fileNameComponents[i];
                 }
@@ -373,7 +370,7 @@ namespace ICARTT_Header_Parsing_Library
                 {
                     commentsBuilder.Append(fileNameComponents[i]);
                     if (i != fileNameComponents.Length - 1)
-                        commentsBuilder.Append(FILE_NAME_FIELD_SEPARATOR);
+                        commentsBuilder.Append(FIELD_SEPARATOR);
                 }
                 
             }
