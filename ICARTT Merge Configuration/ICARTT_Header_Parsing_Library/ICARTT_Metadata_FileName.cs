@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -278,6 +279,7 @@ namespace ICARTT_Header_Parsing_Library
             if (unverifiedComponents.Length < 4)
             {
                 Console.WriteLine("Not enough fields in name of file.");
+                Trace.TraceInformation("TRACE TEST");
                 return false;
             }
 

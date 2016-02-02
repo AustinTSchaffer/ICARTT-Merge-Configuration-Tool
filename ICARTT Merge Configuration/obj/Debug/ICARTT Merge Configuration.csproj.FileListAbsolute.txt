@@ -1,4 +1,3 @@
-c:\users\atschaff\documents\visual studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\obj\Debug\ICARTT Merge Configuration.csprojResolveAssemblyReference.cache
 c:\users\atschaff\documents\visual studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\obj\Debug\ICARTT_Merge_Configuration.Properties.Resources.resources
 c:\users\atschaff\documents\visual studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\obj\Debug\ICARTT Merge Configuration.csproj.GenerateResource.Cache
 c:\users\atschaff\documents\visual studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\bin\Debug\`.exe.config
