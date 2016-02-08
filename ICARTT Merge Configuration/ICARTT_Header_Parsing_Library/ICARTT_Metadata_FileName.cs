@@ -1,6 +1,7 @@
 ﻿using ICARTT_Merge_Configuration.Logging;
 using System;
 using System.Configuration;
+using System.IO;
 using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -97,7 +98,7 @@ namespace ICARTT_Merge_Configuration.ICARTT_Header_Parsing_Library
         /// Default member values.
         /// </summary>
         public static readonly string
-            DEFAULT_FILE_PATH   = "",
+            DEFAULT_FILE_PATH   = Directory.GetCurrentDirectory(),
             DEFAULT_DATA_ID     = "NO-DATA-ID",
             DEFAULT_LOCATION_ID = "NO-LOCATION-ID",
             DEFAULT_DATE        = "99999999",
@@ -128,7 +129,12 @@ namespace ICARTT_Merge_Configuration.ICARTT_Header_Parsing_Library
         /// The maximum length of an ICARTT file name, including the extension, is 127 characters.
         /// </summary>
         public static readonly short FILE_NAME_MAXIMUM_LENGTH = 127;
-        
+
+        /// <summary>
+        /// ICARTT file names have required fields and extensions, which creates an implied minimum length property. Example: X_X_20160204_R0.ict
+        /// </summary>
+        public static readonly short FILE_NAME_MINIMUM_LENGTH = 19;
+
         /// <summary>
         /// The required date information in the name of an ICARTT file is YYYYMMDD.
         /// </summary>
@@ -223,10 +229,7 @@ namespace ICARTT_Merge_Configuration.ICARTT_Header_Parsing_Library
 
             if (!ValidateFileName(inputFileName))
             {
-                Logger.Log(
-                    GetType(), MethodBase.GetCurrentMethod(),
-                    String.Format("Invalid file name {0}", inputFileName)
-                    );
+                Logger.Log(Logger.MessageCode.Error, GetType(), MethodBase.GetCurrentMethod(), "Invalid file name", String.Format("File name: {0}", inputFileName), String.Format("File path: {0}", inputFilePath), "Initialized to default");
             }
             else
             {
@@ -237,7 +240,7 @@ namespace ICARTT_Merge_Configuration.ICARTT_Header_Parsing_Library
 
 
         /// <summary>
-        /// Checks a string to see if it can be considered a file name for an ICARTT file.
+        /// Checks a string to see if it can be considered a file name for an ICARTT file. Method contains a list of conditionals that the file name must pass.
         /// </summary>
         /// <param name="inputFileName"></param>
         /// <returns>True if the input string meets qualifications set by the ICARTT File Format Standards V1.1.</returns>
@@ -246,34 +249,39 @@ namespace ICARTT_Merge_Configuration.ICARTT_Header_Parsing_Library
             // Null checking.
             if (null == inputFileName)
             {
-                Logger.Log(
-                    GetType(), MethodBase.GetCurrentMethod(),
-                    "Null file name"
-                    );
+                Logger.Log(Logger.MessageCode.Error, GetType(), MethodBase.GetCurrentMethod(), "Input file name was null");
                 return false;
             }
+
 
             // File name must be proper length.
             if (inputFileName.Length > FILE_NAME_MAXIMUM_LENGTH)
             {
-                Logger.Log(
-                    GetType(), MethodBase.GetCurrentMethod(),
-                    String.Format("File name is too long:  {0}", inputFileName)
-                    );
+                Logger.Log(Logger.MessageCode.Error, GetType(), MethodBase.GetCurrentMethod(), "File name is too long", String.Format("File name: {0}", inputFileName), String.Format("Maximum length: {0,3} Actual length: {1,3}", FILE_NAME_MAXIMUM_LENGTH, inputFileName.Length));
                 return false;
             }
+            if (inputFileName.Length < FILE_NAME_MINIMUM_LENGTH)
+            {
+                Logger.Log(Logger.MessageCode.Error, GetType(), MethodBase.GetCurrentMethod(), "File name is too short", String.Format("File name: {0}", inputFileName), String.Format("Minimum length: {0,3} Actual length: {1,3}", FILE_NAME_MINIMUM_LENGTH, inputFileName.Length));
+                return false;
+            }
+
 
             // File name must not contain invalid characters.
             if (invalidFileNameCharactersRegex.IsMatch(inputFileName))
             {
-                Console.WriteLine("Invalid character in file name. " + invalidFileNameCharactersRegex.Match(inputFileName).ToString());
+                Logger.Log(Logger.MessageCode.Error, GetType(), MethodBase.GetCurrentMethod(), "File name contains an invalid character", String.Format("File name: {0}", inputFileName), String.Format("Character found: {0}", invalidFileNameCharactersRegex.Match(inputFileName).ToString()));
                 return false;
             }
 
+
+
+
+
             // File name must contain proper extension.
-            if (!inputFileName.ToUpper().Contains(ICARTT_FILE_EXTENSION.ToUpper()))
+            if (!inputFileName.Substring(inputFileName.Length - ICARTT_FILE_EXTENSION.Length).ToUpper().Equals(ICARTT_FILE_EXTENSION.ToUpper()))
             {
-                Console.WriteLine("No ICARTT Extension");
+                Logger.Log(Logger.MessageCode.Error, GetType(), MethodBase.GetCurrentMethod(), "File name does not contain an ICARTT extension", String.Format("File name: {0}", inputFileName), String.Format("Expected extension: {0}", ICARTT_FILE_EXTENSION));
                 return false;
             }
 
@@ -288,42 +296,55 @@ namespace ICARTT_Merge_Configuration.ICARTT_Header_Parsing_Library
             // A file name has 4 non-optional fields.
             if (unverifiedComponents.Length < 4)
             {
-                Console.WriteLine("Not enough fields in name of file.");
+                Logger.Log(Logger.MessageCode.Error, GetType(), MethodBase.GetCurrentMethod(), "File name does not contain all 4 required fields", String.Format("File name: {0}", inputFileName));
                 return false;
             }
+
 
             // Cannot have a blank data ID
             if (unverifiedComponents[0].Length == 0)
             {
-                Console.WriteLine("Blank data ID");
+                Logger.Log(Logger.MessageCode.Error, GetType(), MethodBase.GetCurrentMethod(), "File name contains a blank data ID", String.Format("File name: {0}", inputFileName));
                 return false;
             }
+
 
             // Cannot have a blank location ID
             if (unverifiedComponents[1].Length == 0)
             {
-                Console.WriteLine("Blank location ID");
+                Logger.Log(Logger.MessageCode.Error, GetType(), MethodBase.GetCurrentMethod(), "File name contains a blank location ID", String.Format("File name: {0}", inputFileName));
                 return false;
             }
 
+
             // Date must be formatted properly and in correct position.
-            // This test currently only checks the length and absence of non-digit characters
-            if (unverifiedComponents[2].Length < DATE_MINIMUM_LENGTH
-                || unverifiedComponents[2].Length > DATE_MAXIMUM_LENGTH
-                || allNonDigitsRegex.IsMatch(unverifiedComponents[2]))
+            // These tests check the length and check for non-digit characters
+            if (allNonDigitsRegex.IsMatch(unverifiedComponents[2]))
             {
-                // TODO break out into 3 different conditionals with 3 different error messages.
-                Console.WriteLine("Issue with date.");
+                Logger.Log(Logger.MessageCode.Error, GetType(), MethodBase.GetCurrentMethod(), "File name date information contains a non-digit character", String.Format("File name: {0}", inputFileName), String.Format("Character found: {0}", allNonDigitsRegex.Match(unverifiedComponents[2]).ToString()));
                 return false;
             }
+            if (unverifiedComponents[2].Length < DATE_MINIMUM_LENGTH)
+            {
+                Logger.Log(Logger.MessageCode.Error, GetType(), MethodBase.GetCurrentMethod(), "File name date information is too short", String.Format("File name: {0}", inputFileName), String.Format("Minimum Length: {0} Actual Length: {1}", DATE_MINIMUM_LENGTH, unverifiedComponents[2].Length));
+                return false;
+            }
+            if (unverifiedComponents[2].Length > DATE_MAXIMUM_LENGTH)
+            {
+                Logger.Log(Logger.MessageCode.Error, GetType(), MethodBase.GetCurrentMethod(), "File name date information is too long", String.Format("File name: {0}", inputFileName), String.Format("Maximum Length: {0} Actual Length: {1}", DATE_MINIMUM_LENGTH, unverifiedComponents[2].Length));
+                return false;
+            }
+
 
             // Revision must be formatted correctly and in correct position.
             if (unverifiedComponents[3].ToUpper()[0] != 'R')
             {
-                Console.WriteLine("No revision number.");
+                Logger.Log(Logger.MessageCode.Error, GetType(), MethodBase.GetCurrentMethod(), "File name does not contain a recognizable revision number", String.Format("File name: {0}", inputFileName));
                 return false;
             }
 
+
+            Logger.Log(Logger.MessageCode.Message, GetType(), MethodBase.GetCurrentMethod(), String.Format("Successfully validated file name: {0}", inputFileName));
             return true;
         }
 

@@ -75,6 +75,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassWithThread.cs" />
     <Compile Include="ConfigurationBuilderWindow.cs">
       <SubType>Form</SubType>
     </Compile>
