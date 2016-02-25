@@ -1,4 +1,4 @@
-﻿using ICARTT_Merge_Configuration.Logging;
+﻿using ICARTT_Merge_Configuration.Utilities;
 using System;
 using System.Configuration;
 using System.IO;
@@ -6,13 +6,13 @@ using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace ICARTT_Merge_Configuration.ICARTT_Header_Parsing_Library
+namespace ICARTT_Merge_Configuration.ICARTT_File_Library
 {
     /// <summary>
     /// Contains and controlls access to the name and path of an ICARTT file as well as the name's component parts.
     /// <seealso cref="ICARTT_File"/>
     /// </summary>
-    class ICARTT_Metadata_FileName
+    class ICARTT_FileName
     {
 
         #region fileName related members
@@ -97,7 +97,7 @@ namespace ICARTT_Merge_Configuration.ICARTT_Header_Parsing_Library
         /// <summary>
         /// Default member values.
         /// </summary>
-        public static readonly string
+        private static readonly string
             DEFAULT_FILE_PATH   = Directory.GetCurrentDirectory(),
             DEFAULT_DATA_ID     = "NO-DATA-ID",
             DEFAULT_LOCATION_ID = "NO-LOCATION-ID",
@@ -118,76 +118,56 @@ namespace ICARTT_Merge_Configuration.ICARTT_Header_Parsing_Library
         /// <summary>
         /// All ICARTT files must have the ".ict" extension.
         /// </summary>
-        public static readonly string ICARTT_FILE_EXTENSION = ".ict";
+        private static readonly string ICARTT_FILE_EXTENSION = ".ict";
 
         /// <summary>
         /// Fields in the name of an ICARTT file are separated by an underscore (_)
         /// </summary>
-        public static readonly char FIELD_SEPARATOR = '_';
+        private static readonly char FIELD_SEPARATOR = '_';
 
         /// <summary>
         /// The maximum length of an ICARTT file name, including the extension, is 127 characters.
         /// </summary>
-        public static readonly short FILE_NAME_MAXIMUM_LENGTH = 127;
+        private static readonly short FILE_NAME_MAXIMUM_LENGTH = 127;
 
         /// <summary>
         /// ICARTT file names have required fields and extensions, which creates an implied minimum length property. Example: X_X_20160204_R0.ict
         /// </summary>
-        public static readonly short FILE_NAME_MINIMUM_LENGTH = 19;
+        private static readonly short FILE_NAME_MINIMUM_LENGTH = 19;
 
         /// <summary>
         /// The required date information in the name of an ICARTT file is YYYYMMDD.
         /// </summary>
-        public static readonly short DATE_MINIMUM_LENGTH = 8;
+        private static readonly short DATE_MINIMUM_LENGTH = 8;
 
         /// <summary>
         /// The date field in the name of an ICARTT can contain additional [hh[mm[ss]]]
         /// </summary>
-        public static readonly short DATE_MAXIMUM_LENGTH = 14;
+        private static readonly short DATE_MAXIMUM_LENGTH = 14;
 
         #endregion
 
         #region regular expressions
 
         /// <summary>
-        /// Regular expression that matches all characters that are not alphanumeric, not periods, not underscores, and not dashes.
-        /// </summary>
-        public static readonly string FILE_NAME_INVALID_CHARACTERS_REGEX = "[^a-zA-Z0-9._-]";
-
-        /// <summary>
-        /// Regular expression that matches all characters that are not digits.
-        /// </summary>
-        public static readonly string ONLY_NUMBERS_REGEX = "[^0-9]";
-
-        /// <summary>
-        /// Regular expression that matches the launch information from the name of an ICARTT file. The launch information starts with an 'L' or an 'l' and is followed by 1 or 2 digits.
-        /// </summary>
-        public static readonly string LAUNCH_INFORMATION_REGEX = "^[Ll][0-9]{1,2}$";
-
-        /// <summary>
-        /// Regular expression that matches the volume information from the name of an ICARTT file. The volume information starts with a 'V' or a 'v' and is followed by 1 or 2 digits.
-        /// </summary>
-        public static readonly string VOLUME_INFORMATION_REGEX = "^[Vv][0-9]{1,2}$";
-
-        /// <summary>
         /// Static Regex object for checking the inval. char. regex on file names for all instances of this class.
         /// </summary>
-        private static Regex invalidFileNameCharactersRegex;
+        private static Regex invalidFileNameCharactersRegex = new Regex("[^a-zA-Z0-9._-]");
 
         /// <summary>
         /// Static Regex object for checking for non-digit characters.
         /// </summary>
-        private static Regex allNonDigitsRegex;
+        private static Regex allNonDigitsRegex = new Regex("[^0-9]");
 
         /// <summary>
         /// Static Regex object for checking for launch information.
         /// </summary>
-        private static Regex launchRegex;
+        private static Regex launchRegex = new Regex("^[Ll][0-9]{1,2}$");
 
         /// <summary>
         /// Static Regex object for checking for volume information.
         /// </summary>
-        private static Regex volumeRegex;
+        private static Regex volumeRegex = new Regex("^[Vv][0-9]{1,2}$");
 
         #endregion
 
@@ -199,19 +179,8 @@ namespace ICARTT_Merge_Configuration.ICARTT_Header_Parsing_Library
         /// </summary>
         /// <param name="inputFileName">The name of the ICARTT file, including the extension.</param>
         /// <param name="inputFilePath">The absolute file path to the ICARTT file from the root directory.</param>
-        public ICARTT_Metadata_FileName (string inputFileName, string inputFilePath)
+        public ICARTT_FileName (string inputFileName, string inputFilePath)
         {
-            // Initialize static Regex objects if not already initialized.
-            if (null == invalidFileNameCharactersRegex)
-                invalidFileNameCharactersRegex = new Regex(FILE_NAME_INVALID_CHARACTERS_REGEX);
-            if (null == allNonDigitsRegex)
-                allNonDigitsRegex = new Regex(ONLY_NUMBERS_REGEX);
-            if (null == launchRegex)
-                launchRegex = new Regex(LAUNCH_INFORMATION_REGEX);
-            if (null == volumeRegex)
-                volumeRegex = new Regex(VOLUME_INFORMATION_REGEX);
-
-            
 
             // Null check before copying file path
             filePath = (null == inputFilePath)? DEFAULT_FILE_PATH : string.Copy(inputFilePath);
@@ -244,12 +213,12 @@ namespace ICARTT_Merge_Configuration.ICARTT_Header_Parsing_Library
         /// </summary>
         /// <param name="inputFileName"></param>
         /// <returns>True if the input string meets qualifications set by the ICARTT File Format Standards V1.1.</returns>
-        public bool ValidateFileName(string inputFileName)
+        public static bool ValidateFileName(string inputFileName)
         {
             // Null checking.
             if (null == inputFileName)
             {
-                Logger.Log(Logger.MessageCode.Error, GetType(), MethodBase.GetCurrentMethod(), "Input file name was null");
+                Logger.Log(Logger.MessageCode.Warning, typeof(ICARTT_FileName), MethodBase.GetCurrentMethod(), "Input file name was null");
                 return false;
             }
 
@@ -257,12 +226,12 @@ namespace ICARTT_Merge_Configuration.ICARTT_Header_Parsing_Library
             // File name must be proper length.
             if (inputFileName.Length > FILE_NAME_MAXIMUM_LENGTH)
             {
-                Logger.Log(Logger.MessageCode.Error, GetType(), MethodBase.GetCurrentMethod(), "File name is too long", String.Format("File name: {0}", inputFileName), String.Format("Maximum length: {0,3} Actual length: {1,3}", FILE_NAME_MAXIMUM_LENGTH, inputFileName.Length));
+                Logger.Log(Logger.MessageCode.Message, typeof(ICARTT_FileName), MethodBase.GetCurrentMethod(), "File name is too long", String.Format("File name: {0}", inputFileName), String.Format("Maximum length: {0,3} Actual length: {1,3}", FILE_NAME_MAXIMUM_LENGTH, inputFileName.Length));
                 return false;
             }
             if (inputFileName.Length < FILE_NAME_MINIMUM_LENGTH)
             {
-                Logger.Log(Logger.MessageCode.Error, GetType(), MethodBase.GetCurrentMethod(), "File name is too short", String.Format("File name: {0}", inputFileName), String.Format("Minimum length: {0,3} Actual length: {1,3}", FILE_NAME_MINIMUM_LENGTH, inputFileName.Length));
+                Logger.Log(Logger.MessageCode.Message, typeof(ICARTT_FileName), MethodBase.GetCurrentMethod(), "File name is too short", String.Format("File name: {0}", inputFileName), String.Format("Minimum length: {0,3} Actual length: {1,3}", FILE_NAME_MINIMUM_LENGTH, inputFileName.Length));
                 return false;
             }
 
@@ -270,18 +239,14 @@ namespace ICARTT_Merge_Configuration.ICARTT_Header_Parsing_Library
             // File name must not contain invalid characters.
             if (invalidFileNameCharactersRegex.IsMatch(inputFileName))
             {
-                Logger.Log(Logger.MessageCode.Error, GetType(), MethodBase.GetCurrentMethod(), "File name contains an invalid character", String.Format("File name: {0}", inputFileName), String.Format("Character found: {0}", invalidFileNameCharactersRegex.Match(inputFileName).ToString()));
+                Logger.Log(Logger.MessageCode.Message, typeof(ICARTT_FileName), MethodBase.GetCurrentMethod(), "File name contains an invalid character", String.Format("File name: {0}", inputFileName), String.Format("Character found: {0}", invalidFileNameCharactersRegex.Match(inputFileName).ToString()));
                 return false;
             }
-
-
-
-
 
             // File name must contain proper extension.
             if (!inputFileName.Substring(inputFileName.Length - ICARTT_FILE_EXTENSION.Length).ToUpper().Equals(ICARTT_FILE_EXTENSION.ToUpper()))
             {
-                Logger.Log(Logger.MessageCode.Error, GetType(), MethodBase.GetCurrentMethod(), "File name does not contain an ICARTT extension", String.Format("File name: {0}", inputFileName), String.Format("Expected extension: {0}", ICARTT_FILE_EXTENSION));
+                Logger.Log(Logger.MessageCode.Message, typeof(ICARTT_FileName), MethodBase.GetCurrentMethod(), "File name does not contain an ICARTT extension", String.Format("File name: {0}", inputFileName), String.Format("Expected extension: {0}", ICARTT_FILE_EXTENSION));
                 return false;
             }
 
@@ -296,7 +261,7 @@ namespace ICARTT_Merge_Configuration.ICARTT_Header_Parsing_Library
             // A file name has 4 non-optional fields.
             if (unverifiedComponents.Length < 4)
             {
-                Logger.Log(Logger.MessageCode.Error, GetType(), MethodBase.GetCurrentMethod(), "File name does not contain all 4 required fields", String.Format("File name: {0}", inputFileName));
+                Logger.Log(Logger.MessageCode.Message, typeof(ICARTT_FileName), MethodBase.GetCurrentMethod(), "File name does not contain all 4 required fields", String.Format("File name: {0}", inputFileName));
                 return false;
             }
 
@@ -304,7 +269,7 @@ namespace ICARTT_Merge_Configuration.ICARTT_Header_Parsing_Library
             // Cannot have a blank data ID
             if (unverifiedComponents[0].Length == 0)
             {
-                Logger.Log(Logger.MessageCode.Error, GetType(), MethodBase.GetCurrentMethod(), "File name contains a blank data ID", String.Format("File name: {0}", inputFileName));
+                Logger.Log(Logger.MessageCode.Message, typeof(ICARTT_FileName), MethodBase.GetCurrentMethod(), "File name contains a blank data ID", String.Format("File name: {0}", inputFileName));
                 return false;
             }
 
@@ -312,7 +277,7 @@ namespace ICARTT_Merge_Configuration.ICARTT_Header_Parsing_Library
             // Cannot have a blank location ID
             if (unverifiedComponents[1].Length == 0)
             {
-                Logger.Log(Logger.MessageCode.Error, GetType(), MethodBase.GetCurrentMethod(), "File name contains a blank location ID", String.Format("File name: {0}", inputFileName));
+                Logger.Log(Logger.MessageCode.Message, typeof(ICARTT_FileName), MethodBase.GetCurrentMethod(), "File name contains a blank location ID", String.Format("File name: {0}", inputFileName));
                 return false;
             }
 
@@ -321,17 +286,17 @@ namespace ICARTT_Merge_Configuration.ICARTT_Header_Parsing_Library
             // These tests check the length and check for non-digit characters
             if (allNonDigitsRegex.IsMatch(unverifiedComponents[2]))
             {
-                Logger.Log(Logger.MessageCode.Error, GetType(), MethodBase.GetCurrentMethod(), "File name date information contains a non-digit character", String.Format("File name: {0}", inputFileName), String.Format("Character found: {0}", allNonDigitsRegex.Match(unverifiedComponents[2]).ToString()));
+                Logger.Log(Logger.MessageCode.Message, typeof(ICARTT_FileName), MethodBase.GetCurrentMethod(), "File name date information contains a non-digit character", String.Format("File name: {0}", inputFileName), String.Format("Character found: {0}", allNonDigitsRegex.Match(unverifiedComponents[2]).ToString()));
                 return false;
             }
             if (unverifiedComponents[2].Length < DATE_MINIMUM_LENGTH)
             {
-                Logger.Log(Logger.MessageCode.Error, GetType(), MethodBase.GetCurrentMethod(), "File name date information is too short", String.Format("File name: {0}", inputFileName), String.Format("Minimum Length: {0} Actual Length: {1}", DATE_MINIMUM_LENGTH, unverifiedComponents[2].Length));
+                Logger.Log(Logger.MessageCode.Message, typeof(ICARTT_FileName), MethodBase.GetCurrentMethod(), "File name date information is too short", String.Format("File name: {0}", inputFileName), String.Format("Minimum Length: {0} Actual Length: {1}", DATE_MINIMUM_LENGTH, unverifiedComponents[2].Length));
                 return false;
             }
             if (unverifiedComponents[2].Length > DATE_MAXIMUM_LENGTH)
             {
-                Logger.Log(Logger.MessageCode.Error, GetType(), MethodBase.GetCurrentMethod(), "File name date information is too long", String.Format("File name: {0}", inputFileName), String.Format("Maximum Length: {0} Actual Length: {1}", DATE_MINIMUM_LENGTH, unverifiedComponents[2].Length));
+                Logger.Log(Logger.MessageCode.Message, typeof(ICARTT_FileName), MethodBase.GetCurrentMethod(), "File name date information is too long", String.Format("File name: {0}", inputFileName), String.Format("Maximum Length: {0} Actual Length: {1}", DATE_MINIMUM_LENGTH, unverifiedComponents[2].Length));
                 return false;
             }
 
@@ -339,12 +304,10 @@ namespace ICARTT_Merge_Configuration.ICARTT_Header_Parsing_Library
             // Revision must be formatted correctly and in correct position.
             if (unverifiedComponents[3].ToUpper()[0] != 'R')
             {
-                Logger.Log(Logger.MessageCode.Error, GetType(), MethodBase.GetCurrentMethod(), "File name does not contain a recognizable revision number", String.Format("File name: {0}", inputFileName));
+                Logger.Log(Logger.MessageCode.Message, typeof(ICARTT_FileName), MethodBase.GetCurrentMethod(), "File name does not contain a recognizable revision number", String.Format("File name: {0}", inputFileName));
                 return false;
             }
-
-
-            Logger.Log(Logger.MessageCode.Message, GetType(), MethodBase.GetCurrentMethod(), String.Format("Successfully validated file name: {0}", inputFileName));
+            
             return true;
         }
 
@@ -387,7 +350,7 @@ namespace ICARTT_Merge_Configuration.ICARTT_Header_Parsing_Library
                 Append it to comments
             
             */
-            StringBuilder commentsBuilder = new StringBuilder();
+            StringBuilder commentsStringBuilder = new StringBuilder();
             for (int i = 4; i < fileNameComponents.Length; ++i)
             {
                 if (i == 4 && launchRegex.IsMatch(fileNameComponents[i]))
@@ -400,14 +363,14 @@ namespace ICARTT_Merge_Configuration.ICARTT_Header_Parsing_Library
                 }
                 else
                 {
-                    commentsBuilder.Append(fileNameComponents[i]);
+                    commentsStringBuilder.Append(fileNameComponents[i]);
                     if (i != fileNameComponents.Length - 1)
-                        commentsBuilder.Append(FIELD_SEPARATOR);
+                        commentsStringBuilder.Append(FIELD_SEPARATOR);
                 }
                 
             }
 
-            string commentsFound = commentsBuilder.ToString();
+            string commentsFound = commentsStringBuilder.ToString();
             comments = (null == commentsFound || commentsFound.Equals(""))? DEFAULT_COMMENTS : commentsFound;
         }
 
@@ -437,39 +400,6 @@ namespace ICARTT_Merge_Configuration.ICARTT_Header_Parsing_Library
         }
 
 
-        /// <summary>
-        /// Checks this file's name metadata against another file's name metadata to check for equality. The two files are equal if 
-        /// </summary>
-        /// <param name="obj">Object to check equality to.</param>
-        /// <returns>True if obj is an ICARTT_Metadata_FileName type with the same file name.</returns>
-        public override bool Equals(object obj)
-        {
-            if (null == obj)
-                return false;
-
-            return Equals(obj as ICARTT_Metadata_FileName);
-        }
-
-
-        /// <summary>
-        /// Checks this file's name metadata against another file's name metadata to check for equality. The two files are equal if 
-        /// </summary>
-        /// <param name="other">Other metadata class to check equality to.</param>
-        /// <returns>True if other is an ICARTT_Metadata_FileName type with the same file name.</returns>
-        public bool Equals(ICARTT_Metadata_FileName other)
-        {
-            return (null != other) && (other.FileName.ToUpper().Equals(FileName.ToUpper()));
-        }
-
-
-        /// <summary>
-        /// Returns a hash code based on the name of the file.
-        /// </summary>
-        /// <returns>FimeName.GetHashCode()</returns>
-        public override int GetHashCode()
-        {
-            return FileName.GetHashCode();
-        }
     }
 
 }

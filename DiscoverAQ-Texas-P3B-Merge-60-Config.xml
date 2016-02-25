@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ICARTTMergeConfiguration>
+
+  <GenericMetadata>
+    <Timebase>60</Timebase>
+    <FilePath>C:\ICARTT_Merge_Temp_Folder\TEXAS_2013\P3B_AIRCRAFT\MERGES\</FilePath>
+    <FileName>discoveraq-mrg60-p3b_merge_$YYYY$$MM$$DD$_R3.ict</FileName>
+
+    <GenericHeader>
+      <Line>175, 1001</Line>
+      <Line>Shook, Michael</Line>
+      <Line>NASA Atmospheric Composition Branch, NASA Langley Research Center (SSAI)</Line>
+      <Line>Merged data file for DISCOVERAQ-Texas_2013, Flight $FLIGHTNUM$ ($YYYY$$MM$$DD$), on the p3 platform. Data is merged to 60 seconds.</Line>
+      <Line>NASA DISCOVER-AQ Texas Mission $YYYY$</Line>
+      <Line>1, 1</Line>
+      <Line>$YYYY$, $MM$, $DD$, 2015, 07, 23</Line>
+      <Line>60</Line>
+      <Line>UTC,s</Line>
+      <Line>128</Line>
+      <Line>1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1</Line>
+      <Line>-999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999, -999999</Line>
+      <Line>JDAY, days</Line>
+      <Line>INDEX, none</Line>
+      <Line>FLIGHT, none</Line>
+      <Line>LOCAL_SUN_TIME, hour</Line>
+      <Line>LATITUDE, degs</Line>
+      <Line>LONGITUDE, degs</Line>
+      <Line>ALTP, km</Line>
+      <Line>PRESSURE, hPa</Line>
+      <Line>TEMPERATURE, K</Line>
+      <Line>THETA, K</Line>
+      <Line>O3COLUMN, DU</Line>
+      <Line>SZA, deg</Line>
+      <Line>WNS, m s-1</Line>
+      <Line>WND, Degs</Line>
+      <Line>JulianDay, day</Line>
+      <Line>GPS_ALT, km</Line>
+      <Line>Radar_Altitude, km</Line>
+      <Line>GRD_SPD, m s-1</Line>
+      <Line>TAS, m s-1</Line>
+      <Line>IAS, m/s</Line>
+      <Line>MachNumber, mach</Line>
+      <Line>VerticalSpeed, m s-1</Line>
+      <Line>HDG, degs</Line>
+      <Line>TRK, degs</Line>
+      <Line>DriftAngle, degs</Line>
+      <Line>PITCH, degs</Line>
+      <Line>ROLL, degs</Line>
+      <Line>StaticTemp_Aircraft, K</Line>
+      <Line>Theta_REVEAL, K</Line>
+      <Line>Dewpoint, K</Line>
+      <Line>TotalTemp_Aircraft, K</Line>
+      <Line>TotalTemp, K</Line>
+      <Line>IR_SurfTemp, K</Line>
+      <Line>CabinPressure, hPa</Line>
+      <Line>SolarZenithAngle, degs</Line>
+      <Line>AircraftSunElevation, degs</Line>
+      <Line>SunAzimuth, degs</Line>
+      <Line>AircraftSunAzimuth, degs</Line>
+      <Line>MixingRatio, g kg-1</Line>
+      <Line>VaporPresWater, hPa</Line>
+      <Line>SatVaporPresWater, hPa</Line>
+      <Line>SatVaporPresIce, hPa</Line>
+      <Line>RelativeHumidity, %</Line>
+      <Line>ProfileNumber, none</Line>
+      <Line>SiteSeqNumber, none</Line>
+      <Line>MissedApproachNumber, none</Line>
+      <Line>ProfileCenterBearing, degs</Line>
+      <Line>IRS_VERT_ACC, G</Line>
+      <Line>A_JNO2_Nadir, sec-1</Line>
+      <Line>A_JNO2_Zenith, sec-1</Line>
+      <Line>C_DiffPressure, hPa</Line>
+      <Line>C_CabAltitude, km</Line>
+      <Line>H2O_MixingRatio, ppmv</Line>
+      <Line>CO_MixingRatio, ppbv</Line>
+      <Line>CH4_MixingRatio, ppbv</Line>
+      <Line>N2O_MixingRatio, ppbv</Line>
+      <Line>CH2O_DFGAS, pptv</Line>
+      <Line>CO2_MixingRatio, ppmv</Line>
+      <Line>NO_MixingRatio, pptv</Line>
+      <Line>NOy_MixingRatio, pptv</Line>
+      <Line>NO2_MixingRatio, pptv</Line>
+      <Line>O3_MixingRatio, ppbv</Line>
+      <Line>NO2_MixingRatio_LIF, pptv</Line>
+      <Line>PNs_MixingRatio, pptv</Line>
+      <Line>ANs_MixingRatio, pptv</Line>
+      <Line>HNO3_MixingRatio, pptv</Line>
+      <Line>SO2, ppbv</Line>
+      <Line>Chloride, ug m-3</Line>
+      <Line>Nitrite, ug m-3</Line>
+      <Line>Nitrate, ug m-3</Line>
+      <Line>Sulfate, ug m-3</Line>
+      <Line>Sodium, ug m-3</Line>
+      <Line>Ammonium, ug m-3</Line>
+      <Line>Potassium, ug m-3</Line>
+      <Line>Magnesium, ug m-3</Line>
+      <Line>Calcium, ug m-3</Line>
+      <Line>WSOC_mass, ug m-3</Line>
+      <Line>BC_mass, ng m-3</Line>
+      <Line>CNgt3nm, cm-3</Line>
+      <Line>CNgt10nm, cm-3</Line>
+      <Line>CNgt10nm_nonvol, cm-3</Line>
+      <Line>IntegN_Daero560to6300nm-PSL_APS_LARGE, # cm-3</Line>
+      <Line>IntegS_Daero560to6300nm-PSL_APS_LARGE, um2 cm-3</Line>
+      <Line>IntegV_Daero560to6300nm-PSL_APS_LARGE, um3 cm-3</Line>
+      <Line>IntegN_Dopt60to1000nm-PSL_UHSAS_LARGE, # cm-3</Line>
+      <Line>IntegS_Dopt60to1000nm-PSL_UHSAS_LARGE, um2 cm-3</Line>
+      <Line>IntegV_Dopt60to1000nm-PSL_UHSAS_LARGE, um3 cm-3</Line>
+      <Line>IntegN_Dmob10to340nm-PSL_SMPS_LARGE, # cm-3</Line>
+      <Line>IntegS_Dmob10to340nm-PSL_SMPS_LARGE, um2 cm-3</Line>
+      <Line>IntegV_Dmob10to340nm-PSL_SMPS_LARGE, um3 cm-3</Line>
+      <Line>Scat450nm-dry_sub1um_LARGE, Mm-1</Line>
+      <Line>Scat550nm-dry_sub1um_LARGE, Mm-1</Line>
+      <Line>Scat700nm-dry_sub1um_LARGE, Mm-1</Line>
+      <Line>SCAT550nm-amb_total_LARGE, Mm-1</Line>
+      <Line>SCAT450nm-dry_total_LARGE, Mm-1</Line>
+      <Line>SCAT550nm-dry_total_LARGE, Mm-1</Line>
+      <Line>SCAT700nm-dry_total_LARGE, Mm-1</Line>
+      <Line>ABS470nm-dry_total_LARGE, Mm-1</Line>
+      <Line>ABS532nm-dry_total_LARGE, Mm-1</Line>
+      <Line>ABS660nm-dry_total_LARGE, Mm-1</Line>
+      <Line>EXT532nm-amb_total_LARGE, Mm-1</Line>
+      <Line>EXT532nm-dry_total_LARGE, Mm-1</Line>
+      <Line>gamma-550nm_LARGE, unitless</Line>
+      <Line>fRH-550nm_RH20to80_LARGE, unitless</Line>
+      <Line>AE_SCAT_450to700nm_LARGE, unitless</Line>
+      <Line>AE_ABS_450to700nm_LARGE, unitless</Line>
+      <Line>SSA450nm-dry_LARGE, unitless</Line>
+      <Line>SSA550nm-dry_LARGE, unitless</Line>
+      <Line>SSA700nm-dry_LARGE, unitless</Line>
+      <Line>SSA550nm-amb_LARGE, unitless</Line>
+      <Line>stdPT-to-AMB_Conversion_LARGE, unitless</Line>
+      <Line>CCN_nconc_stp, # cm-3</Line>
+      <Line>CCN_nconc_amb, # cm-3</Line>
+      <Line>CCN_supersaturation, %</Line>
+      <Line>Methanol_MixingRatio, ppbv</Line>
+      <Line>Acetonitrile_MixingRatio, ppbv</Line>
+      <Line>Propene_MixingRatio, ppbv</Line>
+      <Line>Acetaldehyde_MixingRatio, ppbv</Line>
+      <Line>Acetone-Propanal_MixingRatio, ppbv</Line>
+      <Line>Acetic-Acid-Glycolaldehyde_MixingRatio, ppbv</Line>
+      <Line>Isoprene_MixingRatio, ppbv</Line>
+      <Line>MVK-MACR-crotonaldehyde_MixingRatio, ppbv</Line>
+      <Line>MEK-butanal_MixingRatio, ppbv</Line>
+      <Line>Benzene_MixingRatio, ppbv</Line>
+      <Line>Toluene_MixingRatio, ppbv</Line>
+      <Line>C8-alkylbenzenes_MixingRatio, ppbv</Line>
+      <Line>C9-alkylbenzenes_MixingRatio, ppbv</Line>
+      <Line>Monoterpenes_MixingRatio, ppbv</Line>
+      <Line>0</Line>
+      <Line>33</Line>
+      <Line>PI_CONTACT_INFO: michael.shook@nasa.gov,jennifer.r.olson@nasa.gov,gao.chen@nasa.gov</Line>
+      <Line>PLATFORM: NASA P3-B Aircraft</Line>
+      <Line>LOCATION:  Latitude, Longitude, and Altitude included in data records</Line>
+      <Line>ASSOCIATED_DATA: N/A</Line>
+      <Line>INSTRUMENT_INFO: N/A</Line>
+      <Line>DATA_INFO: Please see PI data file for explanation of ULOD and LLOD.</Line>
+      <Line>UNCERTAINTY: See individual files for uncertainty information.</Line>
+      <Line>ULOD_FLAG: -777777</Line>
+      <Line>ULOD_VALUE: N/A</Line>
+      <Line>LLOD_FLAG: -888888</Line>
+      <Line>LLOD_VALUE: N/A</Line>
+      <Line>DM_CONTACT_INFO: gao.chen@nasa.gov</Line>
+      <Line>PROJECT_INFO: N/A</Line>
+      <Line>STIPULATIONS_ON_USE: N/A</Line>
+      <Line>OTHER_COMMENTS: This merge was created using data in the NASA DISCOVERAQ-Texas 2013 archive as of 07/23/2015.</Line>
+      <Line>In most cases, variable names have been kept identical to those submitted in the raw data files.</Line>
+      <Line>However, in some cases, names have been changed (e.g., to eliminate duplication).</Line>
+      <Line>Units have been standardized throughout the merge.</Line>
+      <Line>See the mrg60 p3 readme.txt file for additional information.</Line>
+      <Line>--------------------------------------------------------------------------------</Line>
+      <Line>ProfileNumber- This six digit number starts with a 1, followed by the next two digits indicating SiteID (Shown below). SiteID is followed by a 0, and the last two digits give the sequential profile number from start of campaign. ProfileNumber is also an indicator of the start and end of the vertical profile.</Line>
+      <Line>SiteSeqNumber- This six digit number starts with a 7, followed by the next two digits indicating SiteID (Shown below). SiteID is followed by a 0, and the last two digits give the sequential identifier from start of campaign. SiteFlag is marked when the aircraft is within 1.5km of the ground site and below 2000 feet pressure altitude.</Line>
+      <Line>MissedApproachNumber- This six digit number starts with three digits indicating the AirportID (shown below). AirportID is followed by a 0, and the last two digits give sequential identifier from start of campaign.</Line>
+      <Line>SiteIDs- Galveston (01), Manvel Croix (02), Smith Point (03), Deer Park (04), Moody Tower (05), Channelview (06), West Houston (07), Conroe (08), UH Coastal Center (09), Seabrook Park (10), Texas Ave (11), Clinton (12), Aldine (13), NW Harris County (14), Ship Channel (15)</Line>
+      <Line>AirportIDs- Galveston - Scholes International Airport (801), Manvel Croix - Houston Southwest Airport (802), West Houston - West Houston Airport (807), Conroe - Lone Star Airport (808), La Porte Airport (816),and Baytown Airport (817)</Line>
+      <Line>Note that unless the corresponding raw data flags are set for the entire merge period, ProfileNumber, SiteSeqNumber and MissedApproachNumber are set to 0.</Line>
+      <Line>--------------------------------------------------------------------------------</Line>
+      <Line>REVISION: R3</Line>
+      <Line>R3: Updated to include data submitted as of 07/23/2015.</Line>
+      <Line>R2: Updated to include data submitted as of 10/27/2014.</Line>
+      <Line>R1: Updated to include data submitted as of 09/30/2014.</Line>
+      <Line>R0: Updated to include data submitted as of 04/21/2014.</Line>
+      <Line>UTC, JDAY, INDEX, FLIGHT, LOCAL_SUN_TIME, LATITUDE, LONGITUDE, ALTP, PRESSURE, TEMPERATURE, THETA, O3COLUMN, SZA, WNS, WND, JulianDay, GPS_ALT, Radar_Altitude, GRD_SPD, TAS, IAS, MachNumber, VerticalSpeed, HDG, TRK, DriftAngle, PITCH, ROLL, StaticTemp_Aircraft, Theta_REVEAL, Dewpoint, TotalTemp_Aircraft, TotalTemp, IR_SurfTemp, CabinPressure, SolarZenithAngle, AircraftSunElevation, SunAzimuth, AircraftSunAzimuth, MixingRatio, VaporPresWater, SatVaporPresWater, SatVaporPresIce, RelativeHumidity, ProfileNumber, SiteSeqNumber, MissedApproachNumber, ProfileCenterBearing, IRS_VERT_ACC, A_JNO2_Nadir, A_JNO2_Zenith, C_DiffPressure, C_CabAltitude, H2O_MixingRatio, CO_MixingRatio, CH4_MixingRatio, N2O_MixingRatio, CH2O_DFGAS, CO2_MixingRatio, NO_MixingRatio, NOy_MixingRatio, NO2_MixingRatio, O3_MixingRatio, NO2_MixingRatio_LIF, PNs_MixingRatio, ANs_MixingRatio, HNO3_MixingRatio, SO2, Chloride, Nitrite, Nitrate, Sulfate, Sodium, Ammonium, Potassium, Magnesium, Calcium, WSOC_mass, BC_mass, CNgt3nm, CNgt10nm, CNgt10nm_nonvol, IntegN_Daero560to6300nm-PSL_APS_LARGE, IntegS_Daero560to6300nm-PSL_APS_LARGE, IntegV_Daero560to6300nm-PSL_APS_LARGE, IntegN_Dopt60to1000nm-PSL_UHSAS_LARGE, IntegS_Dopt60to1000nm-PSL_UHSAS_LARGE, IntegV_Dopt60to1000nm-PSL_UHSAS_LARGE, IntegN_Dmob10to340nm-PSL_SMPS_LARGE, IntegS_Dmob10to340nm-PSL_SMPS_LARGE, IntegV_Dmob10to340nm-PSL_SMPS_LARGE, Scat450nm-dry_sub1um_LARGE, Scat550nm-dry_sub1um_LARGE, Scat700nm-dry_sub1um_LARGE, SCAT550nm-amb_total_LARGE, SCAT450nm-dry_total_LARGE, SCAT550nm-dry_total_LARGE, SCAT700nm-dry_total_LARGE, ABS470nm-dry_total_LARGE, ABS532nm-dry_total_LARGE, ABS660nm-dry_total_LARGE, EXT532nm-amb_total_LARGE, EXT532nm-dry_total_LARGE, gamma-550nm_LARGE, fRH-550nm_RH20to80_LARGE, AE_SCAT_450to700nm_LARGE, AE_ABS_450to700nm_LARGE, SSA450nm-dry_LARGE, SSA550nm-dry_LARGE, SSA700nm-dry_LARGE, SSA550nm-amb_LARGE, stdPT-to-AMB_Conversion_LARGE, CCN_nconc_stp, CCN_nconc_amb, CCN_supersaturation, Methanol_MixingRatio, Acetonitrile_MixingRatio, Propene_MixingRatio, Acetaldehyde_MixingRatio, Acetone-Propanal_MixingRatio, Acetic-Acid-Glycolaldehyde_MixingRatio, Isoprene_MixingRatio, MVK-MACR-crotonaldehyde_MixingRatio, MEK-butanal_MixingRatio, Benzene_MixingRatio, Toluene_MixingRatio, C8-alkylbenzenes_MixingRatio, C9-alkylbenzenes_MixingRatio, Monoterpenes_MixingRatio</Line>
+    </GenericHeader>
+  </GenericMetadata>
+
+  <Variables>
+    
+    
+    <ScalarVariables>
+      
+      <Scalar>
+        <Hash>43822540836</Hash>
+        <Column>1</Column>
+        <Line>JDAY, days</Line>
+      </Scalar>
+      
+    </ScalarVariables>
+    
+    
+    <VectorVariables>
+      <Vector>
+        <Magnitude>
+          
+        </Magnitude>
+        <Direction>
+          
+        </Direction>
+      </Vector>
+      
+    </VectorVariables>
+    
+    
+    <FlagVariables>
+      
+    </FlagVariables>
+
+
+
+  </Variables>
+  
+  
+  <Merges>
+    <Merge>
+      <ReplaceableHeaderText>
+        <Map>
+          <Key>YYYY</Key>
+          <Value>2013</Value>
+        </Map>
+        <Map>
+          <Key>MM</Key>
+          <Value>09</Value>
+        </Map>
+        <Map>
+          <Key>DD</Key>
+          <Value>29</Value>
+        </Map>
+      </ReplaceableHeaderText>
+      
+      <Files>
+        
+        
+        <File>
+
+
+          <variables>
+            <Variable>
+              <Hash>43822540836</Hash>
+              <Column>18</Column>
+            </Variable>
+            
+          </variables>
+        </File>
+
+        
+        <File>
+          
+        </File>
+        
+        
+      </Files>
+      
+      
+    </Merge>
+    
+  </Merges>
+  
+  <!--
+  <InputData>
+    <File>
+      <FilePath>C:\ICARTT_Merge_Temp_Folder\TEXAS_2013\P3B_AIRCRAFT\YANG.MELISSA\</FilePath>
+      <FileName>discoveraq-CO2_p3b_20130929_R0.ict</FileName>
+      <Variables>
+
+
+        <Variable>
+
+        </Variable>
+
+
+        <Variable>
+
+        </Variable>
+
+
+      </Variables>
+    </File>
+
+    <File>
+      <FilePath>C:\ICARTT_Merge_Temp_Folder\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\</FilePath>
+      <FileName>DISCOVERAQ-LARGE-APS_P3B_20130929_R0.ict</FileName>
+      <Variables>
+
+
+        <Variable>
+
+        </Variable>
+
+
+        <Variable>
+
+        </Variable>
+
+      </Variables>
+    </File>
+  </InputData>
+  -->
+
+</ICARTTMergeConfiguration>

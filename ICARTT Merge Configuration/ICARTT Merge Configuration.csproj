@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ICARTT_Merge_Configuration</RootNamespace>
-    <AssemblyName>`</AssemblyName>
+    <AssemblyName>ICARTT Merge Configuration Tool</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>false</IsWebBootstrapper>
@@ -75,19 +75,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClassWithThread.cs" />
     <Compile Include="ConfigurationBuilderWindow.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ConfigurationBuilderWindow.Designer.cs">
       <DependentUpon>ConfigurationBuilderWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="ICARTT_Header_Parsing_Library\ICARTT_File.cs" />
-    <Compile Include="ICARTT_Header_Parsing_Library\ICARTT_Metadata_FileName.cs" />
-    <Compile Include="ICARTT_Header_Parsing_Library\ICARTT_Metadata_Properties.cs" />
-    <Compile Include="ICARTT_Header_Parsing_Library\ICARTT_Metadata_Variables.cs" />
-    <Compile Include="ICARTT_Header_Parsing_Library\ICARTT_Variable.cs" />
-    <Compile Include="Logging\Logger.cs" />
+    <Compile Include="Utilities\ICARTT_FileLoader.cs" />
+    <Compile Include="ICARTT_File\ICARTT_File.cs" />
+    <Compile Include="ICARTT_File\ICARTT_FileName.cs" />
+    <Compile Include="ICARTT_File\ICARTT_FileProperties.cs" />
+    <Compile Include="ICARTT_File\ICARTT_Variable.cs" />
+    <Compile Include="ICARTT_File\ICARTT_Variables.cs" />
+    <Compile Include="Utilities\Logger.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -99,7 +99,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="ICARTT Merge Configuration_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -125,9 +124,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Configs\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

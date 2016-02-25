@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ICARTT_Header_Parsing_Library
+namespace ICARTT_Merge_Configuration.ICARTT_File_Library
 {
-    class ICARTT_Metadata_Variables
+    class ICARTT_Variables
     {
     }
+
+
 }
