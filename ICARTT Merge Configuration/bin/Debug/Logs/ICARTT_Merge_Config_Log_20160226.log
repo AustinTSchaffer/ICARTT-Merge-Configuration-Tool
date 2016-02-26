@@ -1,0 +1,228 @@
+2016-02-26 13:19:44.394 MESSAGE --- [              Logger].[               Setup] Ready to accept and digest messages.
+2016-02-26 13:19:44.729 MESSAGE --- [   ICARTT_FileLoader].[...CARTTFilesFromDir] Searched for ICARTT files
+2016-02-26 13:19:44.729 MESSAGE --- [   ICARTT_FileLoader].[...CARTTFilesFromDir]     Directory: C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT
+2016-02-26 13:19:44.729 MESSAGE --- [   ICARTT_FileLoader].[...CARTTFilesFromDir]     Number of ICARTT Files Found: 188
+2016-02-26 13:19:44.729 MESSAGE --- [   ICARTT_FileLoader].[...CARTTFilesFromDir]     Number of ICARTT Files Omitted: 0
+2016-02-26 13:19:44.732 MESSAGE --- [   ICARTT_FileLoader].[              Filter] Filtered ICARTT Files by 
+2016-02-26 13:19:44.732 MESSAGE --- [   ICARTT_FileLoader].[              Filter]     Values: [P3B]
+2016-02-26 13:19:44.732 MESSAGE --- [   ICARTT_FileLoader].[              Filter]     Number of ICARTT Files Filtered: 0
+2016-02-26 13:19:44.732 MESSAGE --- [   ICARTT_FileLoader].[              Filter]     New Number of ICARTT Files to Merge: 188
+2016-02-26 13:19:44.732 MESSAGE --- [   ICARTT_FileLoader].[              Filter]     New number of Omitted ICARTT Files: 0
+2016-02-26 13:19:44.774 MESSAGE --- [   ICARTT_FileLoader].[              Filter] Filtered ICARTT Files by 
+2016-02-26 13:19:44.774 MESSAGE --- [   ICARTT_FileLoader].[              Filter]     Values: [20130906, 20130911, 20130912, 20130913, 20130914, 20130924, 20130925, 20130926, 20130902, 20130918, 20130828]
+2016-02-26 13:19:44.774 MESSAGE --- [   ICARTT_FileLoader].[              Filter]     Number of ICARTT Files Filtered: 33
+2016-02-26 13:19:44.774 MESSAGE --- [   ICARTT_FileLoader].[              Filter]     New Number of ICARTT Files to Merge: 155
+2016-02-26 13:19:44.774 MESSAGE --- [   ICARTT_FileLoader].[              Filter]     New number of Omitted ICARTT Files: 33
+2016-02-26 13:19:44.775 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-APS_P3B_20130906_R0.ict
+2016-02-26 13:19:44.795 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-APS_P3B_20130911_R0.ict
+2016-02-26 13:19:44.795 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-APS_P3B_20130912_R0.ict
+2016-02-26 13:19:44.815 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-APS_P3B_20130913_R0.ict
+2016-02-26 13:19:44.815 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-APS_P3B_20130914_R0.ict
+2016-02-26 13:19:44.815 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-APS_P3B_20130924_R0.ict
+2016-02-26 13:19:44.815 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-APS_P3B_20130925_R0.ict
+2016-02-26 13:19:44.815 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-APS_P3B_20130926_R0.ict
+2016-02-26 13:19:44.815 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-CCN_P3B_20130906_R1.ict
+2016-02-26 13:19:44.815 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-CCN_P3B_20130911_R1.ict
+2016-02-26 13:19:44.836 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-CCN_P3B_20130912_R1.ict
+2016-02-26 13:19:44.836 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-CCN_P3B_20130913_R1.ict
+2016-02-26 13:19:44.836 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-CCN_P3B_20130914_R1.ict
+2016-02-26 13:19:44.836 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-CCN_P3B_20130924_R1.ict
+2016-02-26 13:19:44.836 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-CCN_P3B_20130925_R1.ict
+2016-02-26 13:19:44.836 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-CCN_P3B_20130926_R1.ict
+2016-02-26 13:19:44.836 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-CNC_P3B_20130906_R0.ict
+2016-02-26 13:19:44.836 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-CNC_P3B_20130911_R0.ict
+2016-02-26 13:19:44.856 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-CNC_P3B_20130912_R0.ict
+2016-02-26 13:19:44.856 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-CNC_P3B_20130913_R0.ict
+2016-02-26 13:19:44.856 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-CNC_P3B_20130914_R0.ict
+2016-02-26 13:19:44.856 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-CNC_P3B_20130924_R0.ict
+2016-02-26 13:19:44.856 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-CNC_P3B_20130925_R0.ict
+2016-02-26 13:19:44.856 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-CNC_P3B_20130926_R0.ict
+2016-02-26 13:19:44.856 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-OPTICAL_P3B_20130906_R1.ict
+2016-02-26 13:19:44.856 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-OPTICAL_P3B_20130911_R1.ict
+2016-02-26 13:19:44.856 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-OPTICAL_P3B_20130912_R1.ict
+2016-02-26 13:19:44.856 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-OPTICAL_P3B_20130913_R1.ict
+2016-02-26 13:19:44.877 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-OPTICAL_P3B_20130914_R1.ict
+2016-02-26 13:19:44.877 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-OPTICAL_P3B_20130924_R2.ict
+2016-02-26 13:19:44.877 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-OPTICAL_P3B_20130925_R2.ict
+2016-02-26 13:19:44.877 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-OPTICAL_P3B_20130926_R2.ict
+2016-02-26 13:19:44.877 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-pilsIC_P3B_20130906_R0.ict
+2016-02-26 13:19:44.878 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-pilsIC_P3B_20130911_R0.ict
+2016-02-26 13:19:44.878 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-pilsIC_P3B_20130912_R0.ict
+2016-02-26 13:19:44.878 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-pilsIC_P3B_20130913_R0.ict
+2016-02-26 13:19:44.878 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-pilsIC_P3B_20130914_R0.ict
+2016-02-26 13:19:44.878 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-pilsIC_P3B_20130924_R0.ict
+2016-02-26 13:19:44.878 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-pilsIC_P3B_20130925_R0.ict
+2016-02-26 13:19:44.878 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-pilsIC_P3B_20130926_R0.ict
+2016-02-26 13:19:44.878 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-pilsTOC_P3B_20130906_R0.ict
+2016-02-26 13:19:44.878 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-pilsTOC_P3B_20130911_R0.ict
+2016-02-26 13:19:44.878 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-pilsTOC_P3B_20130912_R0.ict
+2016-02-26 13:19:44.878 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-pilsTOC_P3B_20130913_R0.ict
+2016-02-26 13:19:44.898 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-pilsTOC_P3B_20130914_R0.ict
+2016-02-26 13:19:44.898 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-pilsTOC_P3B_20130924_R0.ict
+2016-02-26 13:19:44.898 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-pilsTOC_P3B_20130925_R0.ict
+2016-02-26 13:19:44.898 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-pilsTOC_P3B_20130926_R0.ict
+2016-02-26 13:19:44.898 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-SMPS_P3B_20130906_R0.ict
+2016-02-26 13:19:44.898 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-SMPS_P3B_20130911_R0.ict
+2016-02-26 13:19:44.898 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-SMPS_P3B_20130912_R0.ict
+2016-02-26 13:19:44.898 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-SMPS_P3B_20130913_R0.ict
+2016-02-26 13:19:44.899 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-SMPS_P3B_20130914_R0.ict
+2016-02-26 13:19:44.899 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-SMPS_P3B_20130924_R0.ict
+2016-02-26 13:19:44.899 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-SMPS_P3B_20130925_R0.ict
+2016-02-26 13:19:44.919 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-SMPS_P3B_20130926_R0.ict
+2016-02-26 13:19:44.919 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-SP2_P3B_20130906_R0.ict
+2016-02-26 13:19:44.919 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-SP2_P3B_20130911_R0.ict
+2016-02-26 13:19:44.919 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-SP2_P3B_20130912_R0.ict
+2016-02-26 13:19:44.919 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-SP2_P3B_20130913_R0.ict
+2016-02-26 13:19:44.919 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-SP2_P3B_20130914_R0.ict
+2016-02-26 13:19:44.919 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-SP2_P3B_20130925_R0.ict
+2016-02-26 13:19:44.940 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-SP2_P3B_20130926_R0.ict
+2016-02-26 13:19:44.940 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-UHSAS_P3B_20130906_R0.ict
+2016-02-26 13:19:44.940 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-UHSAS_P3B_20130911_R0.ict
+2016-02-26 13:19:44.940 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-UHSAS_P3B_20130912_R0.ict
+2016-02-26 13:19:44.940 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-UHSAS_P3B_20130913_R0.ict
+2016-02-26 13:19:44.940 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-UHSAS_P3B_20130914_R0.ict
+2016-02-26 13:19:44.940 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-UHSAS_P3B_20130924_R0.ict
+2016-02-26 13:19:44.940 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-UHSAS_P3B_20130925_R0.ict
+2016-02-26 13:19:44.940 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\ANDERSON.BRUCE\DISCOVERAQ-LARGE-UHSAS_P3B_20130926_R0.ict
+2016-02-26 13:19:44.940 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\BARRICK.JOHN\discoveraq-pds_p3b_20130902_r1.ict
+2016-02-26 13:19:44.940 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\BARRICK.JOHN\discoveraq-pds_p3b_20130906_r1.ict
+2016-02-26 13:19:44.941 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\BARRICK.JOHN\discoveraq-pds_p3b_20130911_r1.ict
+2016-02-26 13:19:44.941 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\BARRICK.JOHN\discoveraq-pds_p3b_20130912_r1.ict
+2016-02-26 13:19:44.941 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\BARRICK.JOHN\discoveraq-pds_p3b_20130913_r1.ict
+2016-02-26 13:19:44.941 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\BARRICK.JOHN\discoveraq-pds_p3b_20130914_r1.ict
+2016-02-26 13:19:44.941 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\BARRICK.JOHN\discoveraq-pds_p3b_20130918_r1.ict
+2016-02-26 13:19:44.941 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\BARRICK.JOHN\discoveraq-pds_p3b_20130924_r1.ict
+2016-02-26 13:19:44.941 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\BARRICK.JOHN\discoveraq-pds_p3b_20130925_r1.ict
+2016-02-26 13:19:44.941 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\BARRICK.JOHN\discoveraq-pds_p3b_20130926_r1.ict
+2016-02-26 13:19:44.941 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\COHEN.RONALD\DISCOVERAQ-TDLIF-NO2_P3B_20130906_R0.ict
+2016-02-26 13:19:44.941 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\COHEN.RONALD\DISCOVERAQ-TDLIF-NO2_P3B_20130911_R0.ict
+2016-02-26 13:19:44.941 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\COHEN.RONALD\DISCOVERAQ-TDLIF-NO2_P3B_20130912_R0.ict
+2016-02-26 13:19:44.941 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\COHEN.RONALD\DISCOVERAQ-TDLIF-NO2_P3B_20130913_R0.ict
+2016-02-26 13:19:44.941 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\COHEN.RONALD\DISCOVERAQ-TDLIF-NO2_P3B_20130914_R0.ict
+2016-02-26 13:19:44.941 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\COHEN.RONALD\DISCOVERAQ-TDLIF-NO2_P3B_20130924_R0.ict
+2016-02-26 13:19:44.942 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\COHEN.RONALD\DISCOVERAQ-TDLIF-NO2_P3B_20130925_R0.ict
+2016-02-26 13:19:44.942 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\COHEN.RONALD\DISCOVERAQ-TDLIF-NO2_P3B_20130926_R0.ict
+2016-02-26 13:19:44.962 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\DISKIN.GLENN\DISCOVERAQ-DACOM_P3B_20130906_R1.ict
+2016-02-26 13:19:44.962 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\DISKIN.GLENN\DISCOVERAQ-DACOM_P3B_20130911_R1.ict
+2016-02-26 13:19:44.962 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\DISKIN.GLENN\DISCOVERAQ-DACOM_P3B_20130912_R1.ict
+2016-02-26 13:19:44.962 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\DISKIN.GLENN\DISCOVERAQ-DACOM_P3B_20130913_R1.ict
+2016-02-26 13:19:44.962 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\DISKIN.GLENN\DISCOVERAQ-DACOM_P3B_20130914_R1.ict
+2016-02-26 13:19:44.962 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\DISKIN.GLENN\DISCOVERAQ-DACOM_P3B_20130924_R1.ict
+2016-02-26 13:19:44.962 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\DISKIN.GLENN\DISCOVERAQ-DACOM_P3B_20130925_R1.ict
+2016-02-26 13:19:44.962 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\DISKIN.GLENN\DISCOVERAQ-DACOM_P3B_20130926_R1.ict
+2016-02-26 13:19:44.962 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\DISKIN.GLENN\DISCOVERAQ-DLH_P3B_20130906_R0.ict
+2016-02-26 13:19:44.962 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\DISKIN.GLENN\DISCOVERAQ-DLH_P3B_20130911_R0.ict
+2016-02-26 13:19:44.962 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\DISKIN.GLENN\DISCOVERAQ-DLH_P3B_20130912_R0.ict
+2016-02-26 13:19:44.962 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\DISKIN.GLENN\DISCOVERAQ-DLH_P3B_20130913_R0.ict
+2016-02-26 13:19:44.962 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\DISKIN.GLENN\DISCOVERAQ-DLH_P3B_20130914_R0.ict
+2016-02-26 13:19:44.962 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\DISKIN.GLENN\DISCOVERAQ-DLH_P3B_20130924_R0.ict
+2016-02-26 13:19:44.962 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\DISKIN.GLENN\DISCOVERAQ-DLH_P3B_20130925_R0.ict
+2016-02-26 13:19:44.962 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\DISKIN.GLENN\DISCOVERAQ-DLH_P3B_20130926_R0.ict
+2016-02-26 13:19:44.962 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\FRIED.ALAN\DiscoverAQ-CH2O_P3B_20130906_R0.ict
+2016-02-26 13:19:44.962 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\FRIED.ALAN\DiscoverAQ-CH2O_P3B_20130911_R0.ict
+2016-02-26 13:19:44.962 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\FRIED.ALAN\DiscoverAQ-CH2O_P3B_20130912_R0.ict
+2016-02-26 13:19:44.963 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\FRIED.ALAN\DiscoverAQ-CH2O_P3B_20130913_R0.ict
+2016-02-26 13:19:44.963 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\FRIED.ALAN\DiscoverAQ-CH2O_P3B_20130914_R0.ict
+2016-02-26 13:19:44.963 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\FRIED.ALAN\DiscoverAQ-CH2O_P3B_20130924_R0.ict
+2016-02-26 13:19:44.983 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\FRIED.ALAN\DiscoverAQ-CH2O_P3B_20130925_R0.ict
+2016-02-26 13:19:44.983 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\FRIED.ALAN\DiscoverAQ-CH2O_P3B_20130926_R0.ict
+2016-02-26 13:19:44.983 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\HOLLOWAY.JOHN\DiscoverAQ-SO2_P3B_20130906_R1.ict
+2016-02-26 13:19:44.983 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\HOLLOWAY.JOHN\DiscoverAQ-SO2_P3B_20130911_R1.ict
+2016-02-26 13:19:44.983 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\HOLLOWAY.JOHN\DiscoverAQ-SO2_P3B_20130912_R1.ict
+2016-02-26 13:19:44.983 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\HOLLOWAY.JOHN\DiscoverAQ-SO2_P3B_20130913_R1.ict
+2016-02-26 13:19:44.984 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\HOLLOWAY.JOHN\DiscoverAQ-SO2_P3B_20130914_R1.ict
+2016-02-26 13:19:44.984 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\HOLLOWAY.JOHN\DiscoverAQ-SO2_P3B_20130924_R1.ict
+2016-02-26 13:19:44.984 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\HOLLOWAY.JOHN\DiscoverAQ-SO2_P3B_20130925_R1.ict
+2016-02-26 13:19:44.984 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\HOLLOWAY.JOHN\DiscoverAQ-SO2_P3B_20130926_R1.ict
+2016-02-26 13:19:44.984 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\VANGILST.DAVID\discoveraq-reveal_p3b_20130828_r0.ict
+2016-02-26 13:19:45.004 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\VANGILST.DAVID\discoveraq-reveal_p3b_20130902_r0.ict
+2016-02-26 13:19:45.004 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\VANGILST.DAVID\discoveraq-reveal_p3b_20130906_r1.ict
+2016-02-26 13:19:45.004 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\VANGILST.DAVID\discoveraq-reveal_p3b_20130911_r1.ict
+2016-02-26 13:19:45.004 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\VANGILST.DAVID\discoveraq-reveal_p3b_20130912_r1.ict
+2016-02-26 13:19:45.004 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\VANGILST.DAVID\discoveraq-reveal_p3b_20130913_r1.ict
+2016-02-26 13:19:45.004 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\VANGILST.DAVID\discoveraq-reveal_p3b_20130914_r1.ict
+2016-02-26 13:19:45.004 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\VANGILST.DAVID\discoveraq-reveal_p3b_20130924_r1.ict
+2016-02-26 13:19:45.004 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\VANGILST.DAVID\discoveraq-reveal_p3b_20130925_r1.ict
+2016-02-26 13:19:45.004 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\VANGILST.DAVID\discoveraq-reveal_p3b_20130926_r1.ict
+2016-02-26 13:19:45.004 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\WEINHEIMER.ANDREW\DISCOVERAQ-NOXYO3_P3B_20130906_R0.ict
+2016-02-26 13:19:45.004 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\WEINHEIMER.ANDREW\DISCOVERAQ-NOXYO3_P3B_20130911_R0.ict
+2016-02-26 13:19:45.004 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\WEINHEIMER.ANDREW\DISCOVERAQ-NOXYO3_P3B_20130912_R0.ict
+2016-02-26 13:19:45.004 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\WEINHEIMER.ANDREW\DISCOVERAQ-NOXYO3_P3B_20130913_R0.ict
+2016-02-26 13:19:45.004 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\WEINHEIMER.ANDREW\DISCOVERAQ-NOXYO3_P3B_20130914_R0.ict
+2016-02-26 13:19:45.004 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\WEINHEIMER.ANDREW\DISCOVERAQ-NOXYO3_P3B_20130924_R0.ict
+2016-02-26 13:19:45.004 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\WEINHEIMER.ANDREW\DISCOVERAQ-NOXYO3_P3B_20130925_R0.ict
+2016-02-26 13:19:45.024 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\WEINHEIMER.ANDREW\DISCOVERAQ-NOXYO3_P3B_20130926_R0.ict
+2016-02-26 13:19:45.024 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\WISTHALER.ARMIN\discoveraq-PTRTOF-NMHCs_P3B_20130906_R0.ict
+2016-02-26 13:19:45.024 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\WISTHALER.ARMIN\discoveraq-PTRTOF-NMHCs_P3B_20130911_R0.ict
+2016-02-26 13:19:45.024 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\WISTHALER.ARMIN\discoveraq-PTRTOF-NMHCs_P3B_20130912_R0.ict
+2016-02-26 13:19:45.024 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\WISTHALER.ARMIN\discoveraq-PTRTOF-NMHCs_P3B_20130913_R0.ict
+2016-02-26 13:19:45.024 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\WISTHALER.ARMIN\discoveraq-PTRTOF-NMHCs_P3B_20130914_R0.ict
+2016-02-26 13:19:45.024 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\WISTHALER.ARMIN\discoveraq-PTRTOF-NMHCs_P3B_20130924_R0.ict
+2016-02-26 13:19:45.024 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\WISTHALER.ARMIN\discoveraq-PTRTOF-NMHCs_P3B_20130925_R0.ict
+2016-02-26 13:19:45.024 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\WISTHALER.ARMIN\discoveraq-PTRTOF-NMHCs_P3B_20130926_R0.ict
+2016-02-26 13:19:45.024 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\YANG.MELISSA\discoveraq-CO2_p3b_20130906_R0.ict
+2016-02-26 13:19:45.024 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\YANG.MELISSA\discoveraq-CO2_p3b_20130911_R0.ict
+2016-02-26 13:19:45.024 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\YANG.MELISSA\discoveraq-CO2_p3b_20130912_R0.ict
+2016-02-26 13:19:45.024 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\YANG.MELISSA\discoveraq-CO2_p3b_20130913_R0.ict
+2016-02-26 13:19:45.024 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\YANG.MELISSA\discoveraq-CO2_p3b_20130914_R0.ict
+2016-02-26 13:19:45.024 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\YANG.MELISSA\discoveraq-CO2_p3b_20130924_R0.ict
+2016-02-26 13:19:45.024 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\YANG.MELISSA\discoveraq-CO2_p3b_20130925_R0.ict
+2016-02-26 13:19:45.024 MESSAGE --- [             Program].[        <Main>b__0_0] C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT\YANG.MELISSA\discoveraq-CO2_p3b_20130926_R0.ict
+2016-02-26 13:19:45.026   DEBUG --- [         ICARTT_File].[                Load] Anderson, Bruce E.
+2016-02-26 13:19:45.026   DEBUG --- [         ICARTT_File].[                Load] NASA Langley
+2016-02-26 13:19:45.026   DEBUG --- [         ICARTT_File].[                Load] In-situ Particle Size Distributions from the TSI APS on the NASA P-3B
+2016-02-26 13:19:45.026   DEBUG --- [         ICARTT_File].[                Load] DISCOVER-AQ Texas 2013
+2016-02-26 13:19:45.026   DEBUG --- [         ICARTT_File].[                Load] 1,1
+2016-02-26 13:19:45.026   DEBUG --- [         ICARTT_File].[                Load] 2013,09,06,2014,01,30
+2016-02-26 13:19:45.026   DEBUG --- [         ICARTT_File].[                Load] 1.0
+2016-02-26 13:19:45.026   DEBUG --- [         ICARTT_File].[                Load] Start_UTC,Secs after midnight,Time of acquisition
+2016-02-26 13:19:45.026   DEBUG --- [         ICARTT_File].[                Load] 17
+2016-02-26 13:19:45.026   DEBUG --- [         ICARTT_File].[                Load] 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+2016-02-26 13:19:45.026   DEBUG --- [         ICARTT_File].[                Load] -9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999
+2016-02-26 13:19:45.026   DEBUG --- [         ICARTT_File].[                Load] nAPS, #/cm3, integrated Dry Aerosol Number Concentration by the APS
+2016-02-26 13:19:45.026   DEBUG --- [         ICARTT_File].[                Load] sAPS, um2/cm3, integrated Dry Aerosol Surface Area Concentration by the APS
+2016-02-26 13:19:45.026   DEBUG --- [         ICARTT_File].[                Load] vAPS, um3/cm3, integrated Dry Aerosol Volume Concentration by the APS
+2016-02-26 13:19:45.026   DEBUG --- [         ICARTT_File].[                Load] APS_562nm, #/cm3, Dry Aerosol Number Size Distribution (dNdlogD) by the APS (aerodynamic diameter)
+2016-02-26 13:19:45.026   DEBUG --- [         ICARTT_File].[                Load] APS_631nm, #/cm3, Dry Aerosol Number Size Distribution (dNdlogD) by the APS (aerodynamic diameter)
+2016-02-26 13:19:45.026   DEBUG --- [         ICARTT_File].[                Load] APS_708nm, #/cm3, Dry Aerosol Number Size Distribution (dNdlogD) by the APS (aerodynamic diameter)
+2016-02-26 13:19:45.026   DEBUG --- [         ICARTT_File].[                Load] APS_794nm, #/cm3, Dry Aerosol Number Size Distribution (dNdlogD) by the APS (aerodynamic diameter)
+2016-02-26 13:19:45.026   DEBUG --- [         ICARTT_File].[                Load] APS_891nm, #/cm3, Dry Aerosol Number Size Distribution (dNdlogD) by the APS (aerodynamic diameter)
+2016-02-26 13:19:45.026   DEBUG --- [         ICARTT_File].[                Load] APS_1000nm, #/cm3, Dry Aerosol Number Size Distribution (dNdlogD) by the APS (aerodynamic diameter)
+2016-02-26 13:19:45.026   DEBUG --- [         ICARTT_File].[                Load] APS_1259nm, #/cm3, Dry Aerosol Number Size Distribution (dNdlogD) by the APS (aerodynamic diameter)
+2016-02-26 13:19:45.026   DEBUG --- [         ICARTT_File].[                Load] APS_1585nm, #/cm3, Dry Aerosol Number Size Distribution (dNdlogD) by the APS (aerodynamic diameter)
+2016-02-26 13:19:45.026   DEBUG --- [         ICARTT_File].[                Load] APS_1995nm, #/cm3, Dry Aerosol Number Size Distribution (dNdlogD) by the APS (aerodynamic diameter)
+2016-02-26 13:19:45.026   DEBUG --- [         ICARTT_File].[                Load] APS_2512nm, #/cm3, Dry Aerosol Number Size Distribution (dNdlogD) by the APS (aerodynamic diameter)
+2016-02-26 13:19:45.026   DEBUG --- [         ICARTT_File].[                Load] APS_3162nm, #/cm3, Dry Aerosol Number Size Distribution (dNdlogD) by the APS (aerodynamic diameter)
+2016-02-26 13:19:45.026   DEBUG --- [         ICARTT_File].[                Load] APS_3981nm, #/cm3, Dry Aerosol Number Size Distribution (dNdlogD) by the APS (aerodynamic diameter)
+2016-02-26 13:19:45.026   DEBUG --- [         ICARTT_File].[                Load] APS_5012nm, #/cm3, Dry Aerosol Number Size Distribution (dNdlogD) by the APS (aerodynamic diameter)
+2016-02-26 13:19:45.047   DEBUG --- [         ICARTT_File].[                Load] APS_6310nm, #/cm3, Dry Aerosol Number Size Distribution (dNdlogD) by the APS (aerodynamic diameter)
+2016-02-26 13:19:45.047   DEBUG --- [         ICARTT_File].[                Load] 0
+2016-02-26 13:19:45.047   DEBUG --- [         ICARTT_File].[                Load] 26
+2016-02-26 13:19:45.047   DEBUG --- [         ICARTT_File].[                Load] ***************************************************************************************************************
+2016-02-26 13:19:45.047   DEBUG --- [         ICARTT_File].[                Load] Langley Aerosol data from the 2013 DISCOVER-AQ field campaign
+2016-02-26 13:19:45.047   DEBUG --- [         ICARTT_File].[                Load]  
+2016-02-26 13:19:45.047   DEBUG --- [         ICARTT_File].[                Load] PI_CONTACT_INFO: Bruce.E.Anderson@nasa.gov
+2016-02-26 13:19:45.047   DEBUG --- [         ICARTT_File].[                Load] PLATFORM: NASA P-3B aircraft
+2016-02-26 13:19:45.047   DEBUG --- [         ICARTT_File].[                Load] LOCATION: Latitude, Longitude, and Altitude included in data records
+2016-02-26 13:19:45.047   DEBUG --- [         ICARTT_File].[                Load] ASSOCIATED_DATA: N/A
+2016-02-26 13:19:45.047   DEBUG --- [         ICARTT_File].[                Load] INSTRUMENT_INFO: Aerodynamic Size Distribution Data From the TSI Aerodynamic Particle Sizer (APS), Model 3321
+2016-02-26 13:19:45.047   DEBUG --- [         ICARTT_File].[                Load]   - Flagged data are due to missing data or to instrument issues
+2016-02-26 13:19:45.047   DEBUG --- [         ICARTT_File].[                Load]   - Comparisons with other sizing instruments requires a conversion from aerodynamic to geometric diameter.
+2016-02-26 13:19:45.047   DEBUG --- [         ICARTT_File].[                Load]   - This is accomplished by D_geo = D_aero*sqrt(shape_factor/density)
+2016-02-26 13:19:45.047   DEBUG --- [         ICARTT_File].[                Load] DATA_INFO: Aerosol measurements are reported at ambient temperature and pressure
+2016-02-26 13:19:45.047   DEBUG --- [         ICARTT_File].[                Load] UNCERTAINTY:  all data are 20%
+2016-02-26 13:19:45.067   DEBUG --- [         ICARTT_File].[                Load] ULOD_FLAG: -7777
+2016-02-26 13:19:45.067   DEBUG --- [         ICARTT_File].[                Load] ULOD_VALUE: N/A
+2016-02-26 13:19:45.067   DEBUG --- [         ICARTT_File].[                Load] LLOD_FLAG: -8888
+2016-02-26 13:19:45.067   DEBUG --- [         ICARTT_File].[                Load] LLOD_VALUE: N/A
+2016-02-26 13:19:45.067   DEBUG --- [         ICARTT_File].[                Load] DM_CONTACT_INFO: Lee Thornhill (Kenneth.L.Thornhill@nasa.gov)
+2016-02-26 13:19:45.067   DEBUG --- [         ICARTT_File].[                Load] PROJECT_INFO: DISCOVER-AQ Texas 2013
+2016-02-26 13:19:45.067   DEBUG --- [         ICARTT_File].[                Load] STIPULATIONS_ON_USE: This is FINAL data, no stipulations on use
+2016-02-26 13:19:45.067   DEBUG --- [         ICARTT_File].[                Load] OTHER_COMMENTS: dlogD for Diameters less than 1000 nm is 0.05 (20 channels per decade). For Diameters greater that or equal to 1000 nm, dlogD is 0.1 (10 channels per decade)
+2016-02-26 13:19:45.067   DEBUG --- [         ICARTT_File].[                Load] OTHER_COMMENTS: Data are processed with respect to mid-point polystyrene-latex-equivalent optical diameters and are rebinned to a standard binning scheme
+2016-02-26 13:19:45.067   DEBUG --- [         ICARTT_File].[                Load] REVISION: R0
+2016-02-26 13:19:45.067   DEBUG --- [         ICARTT_File].[                Load] R0: Data is corrected over the version RA data for time lags and error in the volume calculation
+2016-02-26 13:19:45.067   DEBUG --- [         ICARTT_File].[                Load] *******************************************************************************************************************************
+2016-02-26 13:19:45.067   DEBUG --- [         ICARTT_File].[                Load] Start_UTC,nAPS,sAPS,vAPS,APS_562nm,APS_631nm,APS_708nm,APS_794nm,APS_891nm,APS_1000nm,APS_1259nm,APS_1585nm,APS_1995nm,APS_2512nm,APS_3162nm,APS_3981nm,APS_5012nm,APS_6310nm
+2016-02-26 13:19:45.067 MESSAGE --- [             Program].[                Main] Main thread terminating.
+2016-02-26 13:19:45.068 MESSAGE --- [              Logger].[               Close] Close requested. Remaining 183 messages will be written to file.

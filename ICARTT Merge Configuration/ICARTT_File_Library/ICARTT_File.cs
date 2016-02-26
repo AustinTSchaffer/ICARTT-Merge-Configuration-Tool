@@ -1,11 +1,11 @@
-﻿using System;
+﻿using ICARTT_Merge_Configuration.ICARTT_File_Library.Variables;
+using ICARTT_Merge_Configuration.Utilities;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Reflection;
 
 namespace ICARTT_Merge_Configuration.ICARTT_File_Library
-{                        
+{
     class ICARTT_File
     {
 
@@ -33,24 +33,25 @@ namespace ICARTT_Merge_Configuration.ICARTT_File_Library
         /// <summary>
         /// Returns a copy of the member. Can not be used for altering class members.
         /// </summary>
-        public string FileName
-        {
-            get { return FileNameInformation.FileName; }
-        }
+        public string FileName { get { return String.Copy(FileNameInformation.FileName); } }
 
         /// <summary>
         /// Returns a copy of the member. Can not be used for altering class members.
         /// </summary>
-        public string FilePath
-        {
-            get { return FileNameInformation.FilePath; }
-        }
+        public string FilePath { get { return String.Copy(FileNameInformation.FilePath); } }
 
 
         /// <summary>
         /// Contains all information from an ICARTT file header, not including data related to variables in the file.
         /// </summary>
         private ICARTT_FileProperties FileProperties;
+
+
+        /// <summary>
+        /// Contains a list of unmapped, raw variable data from file.
+        /// </summary>
+        private List<ICARTT_Variable> ICARTT_Variables;
+
 
         #endregion
 
@@ -60,9 +61,54 @@ namespace ICARTT_Merge_Configuration.ICARTT_File_Library
         /// </summary>
         /// <param name="inputFileName"></param>
         /// <param name="inputFilePath"></param>
-        public ICARTT_File(string inputFileName, string inputFilePath)
+        public ICARTT_File(string inputFileName, string inputFilePath) { FileNameInformation = new ICARTT_FileName(inputFileName, inputFilePath); }
+
+
+        /// <summary>
+        /// Loads header information from ICARTT file.
+        /// </summary>
+        public void Load()
         {
-            FileNameInformation = new ICARTT_FileName(inputFileName, inputFilePath);
+
+            try
+            {
+                System.IO.StreamReader file = new System.IO.StreamReader(FilePath + FileName);
+
+                string[] linesAndFFI                 = file.ReadLine().Split(',');
+                FileProperties.LinesInHeader         = int.Parse(linesAndFFI[0].Trim());
+                FileProperties.FileFormatIndex       = int.Parse(linesAndFFI[1].Trim());
+
+                FileProperties.PI                    = file.ReadLine();
+                FileProperties.Organization          = file.ReadLine();
+                FileProperties.DateInformation       = file.ReadLine();
+                FileProperties.MissionName           = file.ReadLine();
+                FileProperties.FileVolumeInformation = file.ReadLine();
+
+                // TODO: Finish this list.
+
+
+                string line;
+                for (int linenum = 0; linenum + 1 < FileProperties.LinesInHeader && (null != (line = file.ReadLine())); ++linenum)
+                {
+                    Logger.Log(Logger.MessageCode.Debug, typeof(ICARTT_File), MethodBase.GetCurrentMethod(), line);
+                }
+
+                file.Close();
+            }
+            catch(Exception e)
+            {
+                Logger.Log(typeof(ICARTT_File), MethodBase.GetCurrentMethod(), e);
+                Logger.Log(Logger.MessageCode.Error, typeof(ICARTT_File), MethodBase.GetCurrentMethod(), "LOAD ERROR: " + FilePath + FileName);
+            }
+
+            
+
+            // TODO: File existance checking
+            // TODO: File contents checking
+
+            // TODO: Load header information from file. Make it thread safe, because we will absulutely use threads for this. Probably will look at a threadpool, so that we arent trying to populate memory from 100 files at the same time. Maybe 10 max?
+            //throw new NotImplementedException();
+
         }
 
 
@@ -97,39 +143,27 @@ namespace ICARTT_Merge_Configuration.ICARTT_File_Library
 
 
         /// <summary>
-        /// Returns true if the filtering fields of the two objects all have the same value.
+        /// Returns true if the FileNameProperty fields of the two objects all have the same value. Fields are not case sensitive.
         /// </summary>
         /// <param name="obj">Other ICARTT_File object</param>
         /// <returns>True if the two ICARTT files are equivalent.</returns>
         public override bool Equals(object obj)
         {
-            if (null == obj)
-                return false;
-
-            if (GetType() != obj.GetType())
-                return false;
+            if (null == obj || GetType() != obj.GetType()) return false;
 
             ICARTT_File icarttFile = (ICARTT_File) obj;
 
-            foreach (FileNameProperty fnp in Enum.GetValues(typeof(FileNameProperty)))
-            {
-                if (!(this.GetProperty(fnp).ToUpper()).Equals(icarttFile.GetProperty(fnp).ToUpper()))
-                {
-                    return false;
-                }
-            }
+            foreach (FileNameProperty property in Enum.GetValues(typeof(FileNameProperty))) if (!(this.GetProperty(property).ToUpper()).Equals(icarttFile.GetProperty(property).ToUpper())) return false;
+
             return true;
         }
 
 
         /// <summary>
-        /// Returns the hash of the name of the file.
+        /// Returns the hash of the name and path of the file.
         /// </summary>
-        /// <returns>Hash of the name of the file.</returns>
-        public override int GetHashCode()
-        {
-            return FileNameInformation.FileName.GetHashCode();
-        }
+        /// <returns>Hash of the name and path of the file.</returns>
+        public override int GetHashCode() { return (FileNameInformation.FilePath + FileNameInformation.FileName).GetHashCode(); }
 
 
         /// <summary>

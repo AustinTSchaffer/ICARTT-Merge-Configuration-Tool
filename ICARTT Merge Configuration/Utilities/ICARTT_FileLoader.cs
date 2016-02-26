@@ -131,37 +131,32 @@ namespace ICARTT_Merge_Configuration.Utilities
         }
 
         /// <summary>
-        /// Removes all ICARTT files from the list of ICARTT files to merge that do not have the specified location ID in the name of the file. ICARTT merges can only contain one location ID.
+        /// Removes all ICARTT files from the list of ICARTT files to merge based on the specified property. A file will be kept in the list if and only if its specified property can be found in the list of values. Values will not be considered case sensitive.
         /// </summary>
-        /// <param name="locationID"></param>
-        public static void Filter_LocationID(string locationID)
+        /// <param name="property">Filtering property</param>
+        /// <param name="values">Values to keep in list of ICARTT files to merge</param>
+        public static List<ICARTT_File> Filter(ICARTT_File.FileNameProperty property, List<string> values)
         {
             List<ICARTT_File> filteredFiles = new List<ICARTT_File>();
 
-            foreach (ICARTT_File icarttFile in icarttFilesToMerge) if (!icarttFile.GetProperty(ICARTT_File.FileNameProperty.LocationID).ToUpper().Equals(locationID.ToUpper())) filteredFiles.Add(icarttFile);
+            values = values.ConvertAll(v => v.ToUpper());
 
-            icarttFilesToMerge.RemoveAll(ictFile => filteredFiles.Contains(ictFile));
+            foreach (ICARTT_File ict in icarttFilesToMerge) if (!values.Contains(ict.GetProperty(property).ToUpper())) filteredFiles.Add(ict);
+
+            icarttFilesToMerge.RemoveAll(i => filteredFiles.Contains(i));
             omittedIcarttFiles.AddRange(filteredFiles);
 
             Logger.Log(typeof(ICARTT_FileLoader), MethodBase.GetCurrentMethod(),
-                "Filtered ICARTT Files by Location ID: " + locationID, "Number of ICARTT Files Filtered: " + filteredFiles.Count, "New Number of ICARTT Files to Merge: " + icarttFilesToMerge.Count, "New number of Omitted ICARTT Files: " + omittedIcarttFiles.Count);
+                "Filtered ICARTT Files by " , String.Format("Values: [{0}]", String.Join(", ", values)), "Number of ICARTT Files Filtered: " + filteredFiles.Count, "New Number of ICARTT Files to Merge: " + icarttFilesToMerge.Count, "New number of Omitted ICARTT Files: " + omittedIcarttFiles.Count);
+
+            return icarttFilesToMerge;
         }
 
         /// <summary>
-        /// Removes all ICARTT files from the list of ICARTT files to merge that have a date that does not occur in the list of dates specified by the parameter.
+        /// Removes all ICARTT files from the list of ICARTT files to merge based on the specified property. A file will be kept in the list if and only if its specified property mathces the specified value. Value will not be considered case sensitive.
         /// </summary>
-        /// <param name="dates">A list of dates formatted: "YYYYMMDD[hh[mm[ss]]]" (ICARTT file name date specification)</param>
-        public static void Filter_Dates(List<string> dates)
-        {
-            List<ICARTT_File> filteredFiles = new List<ICARTT_File>();
-
-            foreach (ICARTT_File icarttFile in icarttFilesToMerge) if (!dates.Contains(icarttFile.GetProperty(ICARTT_File.FileNameProperty.Date))) filteredFiles.Add(icarttFile);
-
-            icarttFilesToMerge.RemoveAll(ictFile => filteredFiles.Contains(ictFile));
-            omittedIcarttFiles.AddRange(filteredFiles);
-
-            Logger.Log(typeof(ICARTT_FileLoader), MethodBase.GetCurrentMethod(),
-                "Filtered ICARTT Files by Dates", String.Format("Dates: [{0}]", String.Join(", ", dates)), "Number of ICARTT Files Filtered: " + filteredFiles.Count, "New Number of ICARTT Files to Merge: " + icarttFilesToMerge.Count, "New number of Omitted ICARTT Files: " + omittedIcarttFiles.Count);
-        }
+        /// <param name="property">Filtering property</param>
+        /// <param name="value">Value to keep in list of ICARTT files to merge</param>
+        public static List<ICARTT_File> Filter(ICARTT_File.FileNameProperty property, string value){  return Filter(property, new List<string>() { value }); }
     }
 }

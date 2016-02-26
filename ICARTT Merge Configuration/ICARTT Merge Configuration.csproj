@@ -82,11 +82,10 @@
       <DependentUpon>ConfigurationBuilderWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Utilities\ICARTT_FileLoader.cs" />
-    <Compile Include="ICARTT_File\ICARTT_File.cs" />
-    <Compile Include="ICARTT_File\ICARTT_FileName.cs" />
-    <Compile Include="ICARTT_File\ICARTT_FileProperties.cs" />
-    <Compile Include="ICARTT_File\ICARTT_Variable.cs" />
-    <Compile Include="ICARTT_File\ICARTT_Variables.cs" />
+    <Compile Include="ICARTT_File_Library\ICARTT_File.cs" />
+    <Compile Include="ICARTT_File_Library\ICARTT_FileName.cs" />
+    <Compile Include="ICARTT_File_Library\ICARTT_FileProperties.cs" />
+    <Compile Include="ICARTT_File_Library\Variables\ICARTT_Variable.cs" />
     <Compile Include="Utilities\Logger.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

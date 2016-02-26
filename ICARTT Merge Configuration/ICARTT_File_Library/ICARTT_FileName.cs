@@ -183,7 +183,7 @@ namespace ICARTT_Merge_Configuration.ICARTT_File_Library
         {
 
             // Null check before copying file path
-            filePath = (null == inputFilePath)? DEFAULT_FILE_PATH : string.Copy(inputFilePath);
+            filePath = (String.IsNullOrEmpty(inputFilePath))? DEFAULT_FILE_PATH : string.Copy(inputFilePath);
 
             // Default initialization.
             fileName   = DEFAULT_FILE_NAME;
@@ -216,7 +216,7 @@ namespace ICARTT_Merge_Configuration.ICARTT_File_Library
         public static bool ValidateFileName(string inputFileName)
         {
             // Null checking.
-            if (null == inputFileName)
+            if (String.IsNullOrEmpty(inputFileName))
             {
                 Logger.Log(Logger.MessageCode.Warning, typeof(ICARTT_FileName), MethodBase.GetCurrentMethod(), "Input file name was null");
                 return false;
@@ -371,7 +371,7 @@ namespace ICARTT_Merge_Configuration.ICARTT_File_Library
             }
 
             string commentsFound = commentsStringBuilder.ToString();
-            comments = (null == commentsFound || commentsFound.Equals(""))? DEFAULT_COMMENTS : commentsFound;
+            comments = (String.IsNullOrEmpty(commentsFound) || commentsFound.Equals(""))? DEFAULT_COMMENTS : commentsFound;
         }
 
 
