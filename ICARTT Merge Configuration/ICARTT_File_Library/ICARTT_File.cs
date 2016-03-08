@@ -23,6 +23,43 @@ namespace ICARTT_Merge_Configuration.ICARTT_File_Library
         }
 
 
+        #region Readonly getters
+
+        public string FileName { get { return String.Copy(FileNameInformation.FileName); } }
+
+        public string FilePath { get { return String.Copy(FileNameInformation.FilePath); } }
+
+        public long FileSize { get { return FileInformation.Length; } }
+
+        public int LinesInHeader { get { return this.FileProperties.LinesInHeader; } }
+
+        public int FileFormatIndex { get { return this.FileProperties.FileFormatIndex; } }
+
+        public int NumDependentVariables { get { return this.FileProperties.NumDependentVariables; } }
+
+        public double DataInterval { get { return this.FileProperties.DataInterval; } }
+
+        public string PI { get { return String.Copy(this.FileProperties.PI); } }
+
+        public string Organization { get { return String.Copy(this.FileProperties.Organization); } }
+
+        public string DataSourceDescription { get { return String.Copy(this.FileProperties.DataSourceDescription); } }
+
+        public string MissionName { get { return String.Copy(this.FileProperties.MissionName); } }
+
+        public string FileVolumeInformation { get { return String.Copy(this.FileProperties.FileVolumeInformation); } }
+
+        public string DateInformation { get { return String.Copy(this.FileProperties.DateInformation); } }
+
+        public List<string> SpecialComments { get { return new List<string>(this.FileProperties.SpecialComments); } }
+
+        public List<string> NormalComments { get { return new List<string>(this.FileProperties.NormalComments); } }
+
+        
+
+        #endregion
+
+
         #region Information from file
 
         /// <summary>
@@ -30,27 +67,16 @@ namespace ICARTT_Merge_Configuration.ICARTT_File_Library
         /// </summary>
         private ICARTT_FileName FileNameInformation;
 
-        /// <summary>
-        /// Returns a copy of the member. Can not be used for altering class members.
-        /// </summary>
-        public string FileName { get { return String.Copy(FileNameInformation.FileName); } }
-
-        /// <summary>
-        /// Returns a copy of the member. Can not be used for altering class members.
-        /// </summary>
-        public string FilePath { get { return String.Copy(FileNameInformation.FilePath); } }
+        
 
 
         /// <summary>
         /// Contains all information from an ICARTT file header, not including data related to variables in the file.
         /// </summary>
         private ICARTT_FileProperties FileProperties;
-
-
-        /// <summary>
-        /// Contains a list of unmapped, raw variable data from file.
-        /// </summary>
-        private List<ICARTT_Variable> ICARTT_Variables;
+        private System.IO.FileInfo FileInformation;
+        private ICARTT_Variable independentVariable;
+        private List<ICARTT_Variable> dependentVariables;
 
 
         #endregion
@@ -61,7 +87,12 @@ namespace ICARTT_Merge_Configuration.ICARTT_File_Library
         /// </summary>
         /// <param name="inputFileName"></param>
         /// <param name="inputFilePath"></param>
-        public ICARTT_File(string inputFileName, string inputFilePath) { FileNameInformation = new ICARTT_FileName(inputFileName, inputFilePath); }
+        public ICARTT_File(string inputFileName, string inputFilePath)
+        {
+            FileNameInformation = new ICARTT_FileName(inputFileName, inputFilePath);
+            FileProperties = new ICARTT_FileProperties(GetHashCode());
+            dependentVariables = new List<ICARTT_Variable>();
+        }
 
 
         /// <summary>
@@ -72,6 +103,9 @@ namespace ICARTT_Merge_Configuration.ICARTT_File_Library
 
             try
             {
+                this.FileInformation = new System.IO.FileInfo(FilePath + FileName);
+                if (!FileInformation.Exists) throw new System.IO.FileNotFoundException();
+
                 System.IO.StreamReader file = new System.IO.StreamReader(FilePath + FileName);
 
                 string[] linesAndFFI                 = file.ReadLine().Split(',');
@@ -80,35 +114,47 @@ namespace ICARTT_Merge_Configuration.ICARTT_File_Library
 
                 FileProperties.PI                    = file.ReadLine();
                 FileProperties.Organization          = file.ReadLine();
-                FileProperties.DateInformation       = file.ReadLine();
+                FileProperties.DataSourceDescription = file.ReadLine();
                 FileProperties.MissionName           = file.ReadLine();
                 FileProperties.FileVolumeInformation = file.ReadLine();
+                FileProperties.DateInformation       = file.ReadLine();
+                FileProperties.DataInterval          = double.Parse(file.ReadLine());
+                independentVariable = new ICARTT_Variable(file.ReadLine(), 0, 1, -1);
+                FileProperties.NumDependentVariables = int.Parse(file.ReadLine());
 
-                // TODO: Finish this list.
+                string[] scalingFactors              = file.ReadLine().Split(',');
+                string[] missingDataIndicators       = file.ReadLine().Split(',');
 
+                // Error logging on number of variables and quantity of variable metadata
+                if (scalingFactors.Length != missingDataIndicators.Length || scalingFactors.Length != FileProperties.NumDependentVariables) Logger.Log(Logger.MessageCode.Error, typeof(ICARTT_File), MethodBase.GetCurrentMethod(), "ERROR: Mismatch (scaling factors, missing data indicators, dependent variables).", scalingFactors.Length + " scaling factors", missingDataIndicators.Length + " missing data indicators", FileProperties.NumDependentVariables + " dependent variables", "File: " + FilePath + FileName, "Expect an IndexOutOfRangeException");
 
-                string line;
-                for (int linenum = 0; linenum + 1 < FileProperties.LinesInHeader && (null != (line = file.ReadLine())); ++linenum)
+                // Read in all dependent variables.
+                for (int varCol = 1; varCol <= FileProperties.NumDependentVariables; ++varCol)
                 {
-                    Logger.Log(Logger.MessageCode.Debug, typeof(ICARTT_File), MethodBase.GetCurrentMethod(), line);
+                    dependentVariables.Add(
+                        new ICARTT_Variable(
+                            file.ReadLine(), 
+                            varCol, 
+                            double.Parse(scalingFactors[varCol - 1]), 
+                            double.Parse(missingDataIndicators[varCol - 1])
+                            ));
                 }
+
+                // Read in special comments
+                FileProperties.SpecialCommentLines = int.Parse(file.ReadLine());
+                for (int i = 0; i < FileProperties.SpecialCommentLines; ++i)FileProperties.SpecialComments.Add(file.ReadLine());
+
+                // Read in normal comments
+                FileProperties.NormalCommentLines = int.Parse(file.ReadLine());
+                for (int i = 0; i < FileProperties.NormalCommentLines; ++i) FileProperties.NormalComments.Add(file.ReadLine());
 
                 file.Close();
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Logger.Log(typeof(ICARTT_File), MethodBase.GetCurrentMethod(), e);
                 Logger.Log(Logger.MessageCode.Error, typeof(ICARTT_File), MethodBase.GetCurrentMethod(), "LOAD ERROR: " + FilePath + FileName);
             }
-
-            
-
-            // TODO: File existance checking
-            // TODO: File contents checking
-
-            // TODO: Load header information from file. Make it thread safe, because we will absulutely use threads for this. Probably will look at a threadpool, so that we arent trying to populate memory from 100 files at the same time. Maybe 10 max?
-            //throw new NotImplementedException();
-
         }
 
 
@@ -120,7 +166,12 @@ namespace ICARTT_Merge_Configuration.ICARTT_File_Library
         public string GetProperty(FileNameProperty field)
         {
             if (null == FileNameInformation)
-                throw new MemberAccessException();
+            {
+                Exception e = new MemberAccessException();
+                Logger.Log(Logger.MessageCode.Error, typeof(ICARTT_File), MethodBase.GetCurrentMethod(), "File '" + FileName + "' not loaded correctly. Throwing exception.");
+                Logger.Log(typeof(ICARTT_File), MethodBase.GetCurrentMethod(), e);
+                throw e;
+            }
 
             switch (field)
             {
@@ -137,7 +188,9 @@ namespace ICARTT_Merge_Configuration.ICARTT_File_Library
                 case FileNameProperty.Volume:
                     return FileNameInformation.Volume;
                 default:
-                    return FileNameInformation.FileName;
+                    Exception e = new InvalidOperationException();
+                    Logger.Log(typeof(ICARTT_File), MethodBase.GetCurrentMethod(), e);
+                    throw e;
             }
         }
 
@@ -192,6 +245,12 @@ namespace ICARTT_Merge_Configuration.ICARTT_File_Library
 
             // All others. Cut off first character. Parse the integer. Compare the integers.
             return int.Parse(this.GetProperty(FileNameProperty.Revision).Remove(0,1)) > int.Parse(icarttFile.GetProperty(FileNameProperty.Revision).Remove(0,1));
+        }
+
+
+        public override string ToString()
+        {
+            return String.Format("File Name: {1}{0}File Path: {2}{0}FFI: {3}{0}PI: {4}{0}Organization: {5}{0}Mission: {6}{0}Data Source: {7}{0}Number of Variables: {8}", Environment.NewLine, this.FileName, this.FilePath, this.FileProperties.FileFormatIndex, this.FileProperties.PI, this.FileProperties.Organization, this.FileProperties.MissionName, this.FileProperties.DataSourceDescription, this.FileProperties.NumDependentVariables + 1);
         }
 
     }

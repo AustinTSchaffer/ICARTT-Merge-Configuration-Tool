@@ -64,6 +64,7 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -75,13 +76,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConfigurationBuilderWindow.cs">
+    <Compile Include="GUI\ProcessControl_FileSelect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ProcessControl_FileSelect.Designer.cs">
+      <DependentUpon>ProcessControl_FileSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ProcessControl_DirectorySelect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ProcessControl_DirectorySelect.Designer.cs">
+      <DependentUpon>ProcessControl_DirectorySelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ICARTT_ConfigurationBuilder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ConfigurationBuilderWindow.Designer.cs">
-      <DependentUpon>ConfigurationBuilderWindow.cs</DependentUpon>
+    <Compile Include="GUI\ICARTT_ConfigurationBuilder.Designer.cs">
+      <DependentUpon>ICARTT_ConfigurationBuilder.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utilities\ICARTT_FileLoader.cs" />
+    <Compile Include="GUI\ProcessControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ProcessControl.Designer.cs">
+      <DependentUpon>ProcessControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ProcessControl_FileNameFilters.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ProcessControl_FileNameFilters.Designer.cs">
+      <DependentUpon>ProcessControl_FileNameFilters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\ICARTT_FileManager.cs" />
     <Compile Include="ICARTT_File_Library\ICARTT_File.cs" />
     <Compile Include="ICARTT_File_Library\ICARTT_FileName.cs" />
     <Compile Include="ICARTT_File_Library\ICARTT_FileProperties.cs" />
@@ -89,6 +114,21 @@
     <Compile Include="Utilities\Logger.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\ICARTT_ConfigurationBuilder.resx">
+      <DependentUpon>ICARTT_ConfigurationBuilder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ProcessControl.resx">
+      <DependentUpon>ProcessControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ProcessControl_DirectorySelect.resx">
+      <DependentUpon>ProcessControl_DirectorySelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ProcessControl_FileNameFilters.resx">
+      <DependentUpon>ProcessControl_FileNameFilters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ProcessControl_FileSelect.resx">
+      <DependentUpon>ProcessControl_FileSelect.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -98,6 +138,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Properties\DataSources\ICARTT_Merge_Configuration.Utilities.ICARTT_FileManager.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -9,7 +9,7 @@ namespace ICARTT_Merge_Configuration.ICARTT_File_Library
     /// <summary>
     /// This struct holds header information from an ICARTT file.
     /// </summary>
-    struct ICARTT_FileProperties
+    class ICARTT_FileProperties
     {
         /// <summary>
         /// Struct constructor.
@@ -20,7 +20,11 @@ namespace ICARTT_Merge_Configuration.ICARTT_File_Library
             ParentHash = parentHash;
             LinesInHeader = 0;
             FileFormatIndex = 0;
+            NumDependentVariables = 0;
+            SpecialCommentLines = 0;
+            NormalCommentLines = 0;
 
+            DataInterval = 0.0;
 
             PI = "";
             Organization = "";
@@ -36,7 +40,13 @@ namespace ICARTT_Merge_Configuration.ICARTT_File_Library
         public int
             ParentHash,
             LinesInHeader,
-            FileFormatIndex;
+            FileFormatIndex,
+            NumDependentVariables,
+            SpecialCommentLines,
+            NormalCommentLines;
+
+        public double
+            DataInterval;
 
         public string 
             PI, 
@@ -45,7 +55,6 @@ namespace ICARTT_Merge_Configuration.ICARTT_File_Library
             MissionName,
             FileVolumeInformation,
             DateInformation;
-        
 
         public List<string> SpecialComments, NormalComments;
     }

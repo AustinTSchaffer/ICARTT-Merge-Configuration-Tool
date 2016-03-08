@@ -216,40 +216,18 @@ namespace ICARTT_Merge_Configuration.ICARTT_File_Library
         public static bool ValidateFileName(string inputFileName)
         {
             // Null checking.
-            if (String.IsNullOrEmpty(inputFileName))
-            {
-                Logger.Log(Logger.MessageCode.Warning, typeof(ICARTT_FileName), MethodBase.GetCurrentMethod(), "Input file name was null");
-                return false;
-            }
-
-
+            if (String.IsNullOrEmpty(inputFileName))return false;
+            
             // File name must be proper length.
-            if (inputFileName.Length > FILE_NAME_MAXIMUM_LENGTH)
-            {
-                Logger.Log(Logger.MessageCode.Message, typeof(ICARTT_FileName), MethodBase.GetCurrentMethod(), "File name is too long", String.Format("File name: {0}", inputFileName), String.Format("Maximum length: {0,3} Actual length: {1,3}", FILE_NAME_MAXIMUM_LENGTH, inputFileName.Length));
-                return false;
-            }
-            if (inputFileName.Length < FILE_NAME_MINIMUM_LENGTH)
-            {
-                Logger.Log(Logger.MessageCode.Message, typeof(ICARTT_FileName), MethodBase.GetCurrentMethod(), "File name is too short", String.Format("File name: {0}", inputFileName), String.Format("Minimum length: {0,3} Actual length: {1,3}", FILE_NAME_MINIMUM_LENGTH, inputFileName.Length));
-                return false;
-            }
+            if (inputFileName.Length > FILE_NAME_MAXIMUM_LENGTH) return false;
 
+            if (inputFileName.Length < FILE_NAME_MINIMUM_LENGTH) return false;
 
             // File name must not contain invalid characters.
-            if (invalidFileNameCharactersRegex.IsMatch(inputFileName))
-            {
-                Logger.Log(Logger.MessageCode.Message, typeof(ICARTT_FileName), MethodBase.GetCurrentMethod(), "File name contains an invalid character", String.Format("File name: {0}", inputFileName), String.Format("Character found: {0}", invalidFileNameCharactersRegex.Match(inputFileName).ToString()));
-                return false;
-            }
+            if (invalidFileNameCharactersRegex.IsMatch(inputFileName)) return false;
 
             // File name must contain proper extension.
-            if (!inputFileName.Substring(inputFileName.Length - ICARTT_FILE_EXTENSION.Length).ToUpper().Equals(ICARTT_FILE_EXTENSION.ToUpper()))
-            {
-                Logger.Log(Logger.MessageCode.Message, typeof(ICARTT_FileName), MethodBase.GetCurrentMethod(), "File name does not contain an ICARTT extension", String.Format("File name: {0}", inputFileName), String.Format("Expected extension: {0}", ICARTT_FILE_EXTENSION));
-                return false;
-            }
-
+            if (!inputFileName.Substring(inputFileName.Length - ICARTT_FILE_EXTENSION.Length).ToUpper().Equals(ICARTT_FILE_EXTENSION.ToUpper()))return false;
 
             // Remove the ICARTT file extension and split into components
             string[] unverifiedComponents =
@@ -259,54 +237,24 @@ namespace ICARTT_Merge_Configuration.ICARTT_File_Library
 
 
             // A file name has 4 non-optional fields.
-            if (unverifiedComponents.Length < 4)
-            {
-                Logger.Log(Logger.MessageCode.Message, typeof(ICARTT_FileName), MethodBase.GetCurrentMethod(), "File name does not contain all 4 required fields", String.Format("File name: {0}", inputFileName));
-                return false;
-            }
+            if (unverifiedComponents.Length < 4) return false;
 
 
             // Cannot have a blank data ID
-            if (unverifiedComponents[0].Length == 0)
-            {
-                Logger.Log(Logger.MessageCode.Message, typeof(ICARTT_FileName), MethodBase.GetCurrentMethod(), "File name contains a blank data ID", String.Format("File name: {0}", inputFileName));
-                return false;
-            }
+            if (unverifiedComponents[0].Length == 0) return false;
 
 
             // Cannot have a blank location ID
-            if (unverifiedComponents[1].Length == 0)
-            {
-                Logger.Log(Logger.MessageCode.Message, typeof(ICARTT_FileName), MethodBase.GetCurrentMethod(), "File name contains a blank location ID", String.Format("File name: {0}", inputFileName));
-                return false;
-            }
-
+            if (unverifiedComponents[1].Length == 0) return false;
 
             // Date must be formatted properly and in correct position.
             // These tests check the length and check for non-digit characters
-            if (allNonDigitsRegex.IsMatch(unverifiedComponents[2]))
-            {
-                Logger.Log(Logger.MessageCode.Message, typeof(ICARTT_FileName), MethodBase.GetCurrentMethod(), "File name date information contains a non-digit character", String.Format("File name: {0}", inputFileName), String.Format("Character found: {0}", allNonDigitsRegex.Match(unverifiedComponents[2]).ToString()));
-                return false;
-            }
-            if (unverifiedComponents[2].Length < DATE_MINIMUM_LENGTH)
-            {
-                Logger.Log(Logger.MessageCode.Message, typeof(ICARTT_FileName), MethodBase.GetCurrentMethod(), "File name date information is too short", String.Format("File name: {0}", inputFileName), String.Format("Minimum Length: {0} Actual Length: {1}", DATE_MINIMUM_LENGTH, unverifiedComponents[2].Length));
-                return false;
-            }
-            if (unverifiedComponents[2].Length > DATE_MAXIMUM_LENGTH)
-            {
-                Logger.Log(Logger.MessageCode.Message, typeof(ICARTT_FileName), MethodBase.GetCurrentMethod(), "File name date information is too long", String.Format("File name: {0}", inputFileName), String.Format("Maximum Length: {0} Actual Length: {1}", DATE_MINIMUM_LENGTH, unverifiedComponents[2].Length));
-                return false;
-            }
-
+            if (allNonDigitsRegex.IsMatch(unverifiedComponents[2])) return false;
+            if (unverifiedComponents[2].Length < DATE_MINIMUM_LENGTH) return false;
+            if (unverifiedComponents[2].Length > DATE_MAXIMUM_LENGTH) return false;
 
             // Revision must be formatted correctly and in correct position.
-            if (unverifiedComponents[3].ToUpper()[0] != 'R')
-            {
-                Logger.Log(Logger.MessageCode.Message, typeof(ICARTT_FileName), MethodBase.GetCurrentMethod(), "File name does not contain a recognizable revision number", String.Format("File name: {0}", inputFileName));
-                return false;
-            }
+            if (unverifiedComponents[3].ToUpper()[0] != 'R') return false;
             
             return true;
         }

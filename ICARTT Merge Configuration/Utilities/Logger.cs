@@ -114,12 +114,36 @@ namespace ICARTT_Merge_Configuration.Utilities
         /// </summary>
         public enum MessageCode
         {
+            /// <summary>
+            /// Regular Message
+            /// </summary>
             Message,
-            Warning,
+
+            /// <summary>
+            /// Logs that should go to the text box in the ICARTT_ConfigurationBuilder window.
+            /// </summary>
+            Console,
+            
+            /// <summary>
+            /// Issues where some occurrance may cause future errors.
+            /// </summary>
+            Warning, // 
+
+            /// <summary>
+            /// Issues where a known error was caught and handled.
+            /// </summary>
             Error,
+
+            /// <summary>
+            /// Exception. Should only be used for stack traces.
+            /// </summary>
             Except,
-            Test,
-            Debug
+                        
+            /// <summary>
+            /// Logs that should only show when running in debug mode.
+            /// </summary>
+            Debug,
+
         }
 
 
@@ -158,7 +182,7 @@ namespace ICARTT_Merge_Configuration.Utilities
 
 
         /// <summary>
-        /// Loop for digesting messages in the queue. Must be used in its own thread.
+        /// Loop for digesting messages in the queue. Should be used in its own thread.
         /// </summary>
         private static void LogUpdateLoop()
         {
@@ -166,8 +190,8 @@ namespace ICARTT_Merge_Configuration.Utilities
             {
                 if (messageQueue.Count() != 0)
                 {
-                    WatchHighMessageTraffic();
                     Trace.WriteLine(messageQueue.Dequeue());
+                    WatchHighMessageTraffic();
                 }
                 else if (messageLoggingThreadClosing)
                 {
@@ -227,6 +251,10 @@ namespace ICARTT_Merge_Configuration.Utilities
         {
             if (!messageQueueIsOpen && !currentClass.Name.Equals("Logger"))
                 return;
+
+            if (code == MessageCode.Debug && !System.Diagnostics.Debugger.IsAttached) return;
+
+
 
             DateTime messDT = DateTime.Now;
 
