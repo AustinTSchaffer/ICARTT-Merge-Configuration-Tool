@@ -14,10 +14,8 @@ namespace ICARTT_Merge_Configuration.ICARTT_File_Library
         /// <summary>
         /// Struct constructor.
         /// </summary>
-        /// <param name="parentHash">Hash of the ICARTT_File object that contains this struct</param>
-        public ICARTT_FileProperties(int parentHash)
+        public ICARTT_FileProperties()
         {
-            ParentHash = parentHash;
             LinesInHeader = 0;
             FileFormatIndex = 0;
             NumDependentVariables = 0;
@@ -38,7 +36,6 @@ namespace ICARTT_Merge_Configuration.ICARTT_File_Library
         }
 
         public int
-            ParentHash,
             LinesInHeader,
             FileFormatIndex,
             NumDependentVariables,

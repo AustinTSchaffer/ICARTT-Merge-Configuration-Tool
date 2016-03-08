@@ -19,7 +19,8 @@ namespace ICARTT_Merge_Configuration.ICARTT_File_Library
             Date,
             Revision,
             Launch,
-            Volume
+            Volume,
+            Comments
         }
 
 
@@ -90,7 +91,7 @@ namespace ICARTT_Merge_Configuration.ICARTT_File_Library
         public ICARTT_File(string inputFileName, string inputFilePath)
         {
             FileNameInformation = new ICARTT_FileName(inputFileName, inputFilePath);
-            FileProperties = new ICARTT_FileProperties(GetHashCode());
+            FileProperties = new ICARTT_FileProperties();
             dependentVariables = new List<ICARTT_Variable>();
         }
 
@@ -100,7 +101,6 @@ namespace ICARTT_Merge_Configuration.ICARTT_File_Library
         /// </summary>
         public void Load()
         {
-
             try
             {
                 this.FileInformation = new System.IO.FileInfo(FilePath + FileName);
@@ -187,6 +187,8 @@ namespace ICARTT_Merge_Configuration.ICARTT_File_Library
                     return FileNameInformation.Launch;
                 case FileNameProperty.Volume:
                     return FileNameInformation.Volume;
+                case FileNameProperty.Comments:
+                    return FileNameInformation.Comments;
                 default:
                     Exception e = new InvalidOperationException();
                     Logger.Log(typeof(ICARTT_File), MethodBase.GetCurrentMethod(), e);
@@ -220,31 +222,27 @@ namespace ICARTT_Merge_Configuration.ICARTT_File_Library
 
 
         /// <summary>
-        /// Returns true if this ICARTT_File file object is a newer version than the specified ICARTT_File object.
+        /// Returns true if (1) this ICARTT_File file object is the same as the specified data file other than the launch and (2) this ICARTT_File's launch flag is a lower number than the specified data file.
         /// </summary>
         /// <returns>Specified file.</returns>
-        public bool IsNewerVersionOf(ICARTT_File icarttFile)
+        public bool IsEarlierLaunchThan(ICARTT_File icarttFile)
         {
             if (null == icarttFile)
                 return false;
 
-            // Check all fields other than Revision for equality
+            // Check all fields other than Launch for equality
             foreach (FileNameProperty fnp in Enum.GetValues(typeof(FileNameProperty)))
-                if ((fnp != FileNameProperty.Revision) && !(this.GetProperty(fnp).ToUpper()).Equals(icarttFile.GetProperty(fnp).ToUpper()))
-                    return false;
-            
-            // Archive data? No Yes
-            if (!this.GetProperty(FileNameProperty.Revision).Equals("RA") && icarttFile.GetProperty(FileNameProperty.Revision).Equals("RA"))
-                return true;
-            // Archive data? Yes No
-            if (this.GetProperty(FileNameProperty.Revision).Equals("RA") && !icarttFile.GetProperty(FileNameProperty.Revision).Equals("RA"))
-                return false;
-            // Archive data? Yes Yes
-            if (this.GetProperty(FileNameProperty.Revision).Equals("RA") && icarttFile.GetProperty(FileNameProperty.Revision).Equals("RA"))
-                return false;
+            {
+                if ((fnp == FileNameProperty.Launch) && this.GetProperty(fnp).ToUpper().Equals(icarttFile.GetProperty(fnp).ToUpper())) return false;
+
+                if ((fnp != FileNameProperty.Launch) && !(this.GetProperty(fnp).ToUpper()).Equals(icarttFile.GetProperty(fnp).ToUpper())) return false;
+            }
 
             // All others. Cut off first character. Parse the integer. Compare the integers.
-            return int.Parse(this.GetProperty(FileNameProperty.Revision).Remove(0,1)) > int.Parse(icarttFile.GetProperty(FileNameProperty.Revision).Remove(0,1));
+            return 
+                int.Parse(this.GetProperty(FileNameProperty.Launch).Remove(0, 1)) 
+                <
+                int.Parse(icarttFile.GetProperty(FileNameProperty.Launch).Remove(0, 1));
         }
 
 

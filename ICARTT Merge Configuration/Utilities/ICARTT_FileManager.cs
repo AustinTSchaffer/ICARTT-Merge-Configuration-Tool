@@ -247,7 +247,7 @@ namespace ICARTT_Merge_Configuration.Utilities
 
 
         /// <summary>
-        /// Adds an ICARTT_File to the list of files to merge if it is the newest version and not already in the list of files to merge. Will remove files from merge list if a newer version is found.
+        /// Adds an ICARTT_File to the list of files to merge if it is not already in the list of files to merge.
         /// </summary>
         /// <param name="icarttFile"></param>
         /// <returns>True if file was added.</returns>
@@ -258,17 +258,6 @@ namespace ICARTT_Merge_Configuration.Utilities
             {
                 // No duplicate ICARTT files will be added
                 if (icarttFile.Equals(previouslyFoundIcarttFile)) return false;
-
-                // Don't add file if older revision of a previously found file.
-                if (previouslyFoundIcarttFile.IsNewerVersionOf(icarttFile)) return false;
-
-                // Add file if newer revision of previously found file.
-                if (icarttFile.IsNewerVersionOf(previouslyFoundIcarttFile))
-                {
-                    icarttFilesToMerge.Remove(previouslyFoundIcarttFile);
-                    icarttFilesToMerge.Add(icarttFile);
-                    return true;
-                }
             }
 
             // Add if all loop conditions are met, or first record.
