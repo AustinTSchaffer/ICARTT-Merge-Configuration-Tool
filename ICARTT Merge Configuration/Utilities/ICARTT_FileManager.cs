@@ -12,15 +12,11 @@ namespace ICARTT_Merge_Configuration.Utilities
 {
     static class ICARTT_FileManager
     {
-        /// <summary>
-        /// List of ICARTT files that are to be merged.
-        /// </summary>
-        private static List<ICARTT_File> icarttFilesToMerge;
 
         /// <summary>
         /// List of all ICARTT files that could be considered for merge.
         /// </summary>
-        private static List<ICARTT_File> icarttFilesInScope;
+        private static List<ICARTT_File> allIcarttFiles;
 
         /// <summary>
         /// Parent directory of all ICARTT files in merge.
@@ -33,17 +29,41 @@ namespace ICARTT_Merge_Configuration.Utilities
         /// <summary>
         /// Readonly. Returns parent directory of all icartt files in IcarttFilesInDirec.
         /// </summary>
-        public static string Directory { get { return String.Copy(directory); } }
+        public static string Directory
+        {
+            get
+            {
+                return String.Copy(directory);
+            }
+        }
 
         /// <summary>
         /// Readonly. Returns a copy of the list of all the ICARTT files that can be considered in the scope of this merge.
         /// </summary>
-        public static List<ICARTT_File> IcarttFilesInScope { get { return icarttFilesInScope; } }
+        public static List<ICARTT_File> IcarttFilesInScope
+        {
+            get
+            {
+                List<ICARTT_File> filesInScope = new List<ICARTT_File>();
+                if (null != allIcarttFiles) filesInScope.AddRange(allIcarttFiles);
+                return allIcarttFiles;
+            }
+        }
 
         /// <summary>
         /// Readonly. Returns a copy of the list of ICARTT files that have been chosen to be merged.
         /// </summary>
-        public static List<ICARTT_File> IcarttFilesToMerge { get { return icarttFilesToMerge; } }
+        public static List<ICARTT_File> IcarttFilesToMerge
+        {
+            get
+            {
+                List<ICARTT_File> filesToMerge = new List<ICARTT_File>();
+
+                foreach (ICARTT_File ictFile in allIcarttFiles) if (ictFile.IncludeInMerge) filesToMerge.Add(ictFile);
+
+                return filesToMerge;
+            }
+        }
 
         #endregion
 
@@ -53,17 +73,14 @@ namespace ICARTT_Merge_Configuration.Utilities
         /// </summary>
         public static void LoadAll()
         {
-            if (null == icarttFilesToMerge)
+            foreach (ICARTT_File ictFile in allIcarttFiles)
             {
-                Logger.Log(Logger.MessageCode.Warning, typeof(ICARTT_FileManager), MethodBase.GetCurrentMethod(), "User attempted to load files without first selecting a directory.");
-                return;
-            }
+                if (ictFile.IncludeInMerge)
+                {
+                    Logger.Log(Logger.MessageCode.Debug, typeof(ICARTT_FileManager), MethodBase.GetCurrentMethod(), "Loading: " + ictFile.FilePath + ictFile.FileName);
 
-            foreach (ICARTT_File ictFile in icarttFilesToMerge)
-            {
-                Logger.Log(Logger.MessageCode.Message, typeof(ICARTT_FileManager), MethodBase.GetCurrentMethod(), "Loading: " + ictFile.FilePath + ictFile.FileName);
-
-                ictFile.Load();
+                    ictFile.Load();
+                }
             }
         }
 
@@ -83,8 +100,8 @@ namespace ICARTT_Merge_Configuration.Utilities
         public static List<ICARTT_File> GetICARTTFilesFromDir(string dir)
         {
 
-            if (null == icarttFilesInScope) icarttFilesInScope = new List<ICARTT_File>();
-            else icarttFilesInScope.Clear();
+            if (null == allIcarttFiles) allIcarttFiles = new List<ICARTT_File>();
+            else allIcarttFiles.Clear();
 
             directory = String.Copy(dir);
 
@@ -107,7 +124,7 @@ namespace ICARTT_Merge_Configuration.Utilities
 
                     // Create a new ICARTT file reference object.
                     ICARTT_File icarttFile = new ICARTT_File(fileName, filePath);
-                    icarttFilesInScope.Add(icarttFile);
+                    allIcarttFiles.Add(icarttFile);
 
                 }
             }
@@ -117,7 +134,7 @@ namespace ICARTT_Merge_Configuration.Utilities
             }
 
             // Log results of file system grab.
-            Logger.Log(typeof(ICARTT_FileManager), MethodBase.GetCurrentMethod(), "Searched for ICARTT files", "Directory: " + dir, "Number of ICARTT Files Found: " + icarttFilesInScope.Count);
+            Logger.Log(typeof(ICARTT_FileManager), MethodBase.GetCurrentMethod(), "Searched for ICARTT files", "Directory: " + dir, "Number of ICARTT Files Found: " + allIcarttFiles.Count);
 
             return IcarttFilesInScope;
         }
@@ -136,28 +153,83 @@ namespace ICARTT_Merge_Configuration.Utilities
 
             return uniqueStrings;
         }
+        
 
+        #region Hash functions
 
         /// <summary>
         /// Returns a hashing of the collection of ICARTT files in scope. Can be used to determine if more files were added or removed.
         /// </summary>
-        /// <returns>0 if null</returns>
-        public static int Hash()
+        /// <returns></returns>
+        public static int AllHash()
         {
-            if (null == icarttFilesInScope || icarttFilesInScope.Count == 0) return 0;
-
             unchecked
             {
+                if (null == allIcarttFiles || allIcarttFiles.Count == 0) return 0;
+
                 int hash = 19;
 
-                foreach (ICARTT_File i in icarttFilesInScope) hash = hash * 31 + ((null == i)? 7 : i.GetHashCode());
+                foreach (ICARTT_File i in allIcarttFiles)
+                {
+                    hash = hash * 31 + ((null == i) ? 7 : i.GetHashCode());
+                }
 
                 return hash;
             }
-        } 
+        }
+        
+
+        /// <summary>
+        /// Returns a hashing of the collection of ICARTT files that have been selected to merge. Can be used to determine if more files were checked or unchecked.
+        /// </summary>
+        /// <returns></returns>
+        public static int MergeHash()
+        {
+            unchecked
+            {
+                if (null == allIcarttFiles || allIcarttFiles.Count == 0) return 0;
+
+                List<ICARTT_File> mergelist = IcarttFilesToMerge;
+
+                if (null == mergelist || mergelist.Count == 0) return 0;
+
+                int hash = 19;
+
+                foreach (ICARTT_File i in mergelist)
+                {
+                    hash = hash * 31 + ((null == i) ? 7 : i.GetHashCode());
+                }
+
+                return hash;
+            }
+        }
+
+
+        /// <summary>
+        /// Returns a hashing of the collection of ICARTT file filters that have been selected to narrow the list of ICARTT files to merge. Can be used to determine if any filters were added, removed, or altered.
+        /// </summary>
+        /// <returns></returns>
+        public static int FilterHash()
+        {
+            unchecked
+            {
+                if (null == filters || filters.Count == 0) return 0;
+
+                int hash = 19;
+
+                foreach (FileNameFilter f in filters)
+                {
+                    hash = hash * 31 + ((null == f) ? 7 : f.GetHashCode());
+                }
+
+                return hash;
+            }
+        }
+
+        #endregion
+
 
         #region Filtering methods and structures
-
 
         /// <summary>
         /// Small class used to determine if an ICARTT file contains a previously selected value of a particular property in its file name.
@@ -196,10 +268,34 @@ namespace ICARTT_Merge_Configuration.Utilities
                 return ((FileNameFilter)obj).property == this.property;
             }
 
-            public override int GetHashCode() { return values.GetHashCode(); }
+
+            /// <summary>
+            /// Returns a combined hash of the list of filtering values.
+            /// </summary>
+            /// <returns></returns>
+            public override int GetHashCode()
+            {
+                unchecked
+                {
+                    if (null == values || values.Count == 0) return 0;
+
+                    int hash = 19;
+
+                    foreach (string value in values)
+                    {
+                        hash = hash * 31 + ((null == value) ? 7 : value.GetHashCode());
+                    }
+
+                    return hash;
+                }
+            }
         }
 
 
+
+        /// <summary>
+        /// List of filters that every ICARTT file must pass through in order to be included in the merge.
+        /// </summary>
         private static List<FileNameFilter> filters;
 
 
@@ -234,50 +330,19 @@ namespace ICARTT_Merge_Configuration.Utilities
         /// <summary>
         /// Filters a list based on previously specifed properties. Files that pass through the filters will also be selected based on their equivalence to other files and .
         /// </summary>
-        /// <returns>Reference to list of ICARTT files to include in merge.</returns>
-        public static List<ICARTT_File> Filter()
+        public static void Filter()
         {
-            if (null == icarttFilesToMerge) icarttFilesToMerge = new List<ICARTT_File>();
-            else icarttFilesToMerge.Clear();
-
-            foreach (ICARTT_File icarttFile in icarttFilesInScope) if (ICARTT_FileManager.Pass(icarttFile)) AddToMergeList(icarttFile);
-
-            return IcarttFilesToMerge;
-        }
-
-
-        /// <summary>
-        /// Adds an ICARTT_File to the list of files to merge if it is not already in the list of files to merge.
-        /// </summary>
-        /// <param name="icarttFile"></param>
-        /// <returns>True if file was added.</returns>
-        private static bool AddToMergeList(ICARTT_File icarttFile)
-        {
-            // Iterate through all ICARTT files that have already been added to the merge list to search for conflicts.
-            foreach (ICARTT_File previouslyFoundIcarttFile in icarttFilesToMerge)
+            foreach (ICARTT_File icarttFile in allIcarttFiles)
             {
-                // No duplicate ICARTT files will be added
-                if (icarttFile.Equals(previouslyFoundIcarttFile)) return false;
+                bool pass = true;
+
+                if (null != filters && filters.Count > 0)
+                {
+                    filters.ForEach(filter => pass &= filter.Pass(icarttFile));
+                }
+
+                icarttFile.IncludeInMerge = pass;
             }
-
-            // Add if all loop conditions are met, or first record.
-            icarttFilesToMerge.Add(icarttFile);
-            return true;
-        }
-
-
-        /// <summary>
-        /// Checks the specified ICARTT_File against all of the specified filters. If no filters have been specified, then the file passes automatically.
-        /// </summary>
-        /// <param name="icarttFile">Specified file</param>
-        /// <returns>True if file passes through all specified filters.</returns>
-        private static bool Pass(ICARTT_File icarttFile)
-        {
-            if (null == filters || filters.Count == 0) return true;
-
-            bool pass = true;
-            filters.ForEach(filter => pass &= filter.Pass(icarttFile));
-            return pass;
         }
 
         #endregion

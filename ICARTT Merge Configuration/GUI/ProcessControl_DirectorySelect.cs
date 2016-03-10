@@ -31,20 +31,7 @@ namespace ICARTT_Merge_Configuration.GUI
         private void ModifyExistingMergeCheckbox_CheckedChanged(object sender, EventArgs e)
         {
             this.existingMerge = this.CheckBox_ExistingMergeConfig.CheckState == CheckState.Checked;
-
-            switch (this.CheckBox_ExistingMergeConfig.CheckState)
-            {
-                case CheckState.Checked:
-                    this.existingMerge = true;
-                    this.ExistingMergeControlsEnableState(true);
-                    break;
-                case CheckState.Indeterminate:
-                case CheckState.Unchecked:
-                default:
-                    this.existingMerge = false;
-                    this.ExistingMergeControlsEnableState(false);
-                    break;
-            }
+            this.ExistingMergeControlsEnableState(this.existingMerge);
         }
 
         /// <summary>

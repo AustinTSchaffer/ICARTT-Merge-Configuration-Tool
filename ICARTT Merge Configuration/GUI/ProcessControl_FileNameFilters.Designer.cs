@@ -50,6 +50,8 @@
             // 
             this.ComboBox_LocationIDs.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.ComboBox_LocationIDs.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.ComboBox_LocationIDs.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.ComboBox_LocationIDs.BackColor = System.Drawing.SystemColors.Window;
             this.tableLayoutPanel1.SetColumnSpan(this.ComboBox_LocationIDs, 3);
             this.ComboBox_LocationIDs.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);

@@ -28,7 +28,7 @@ namespace ICARTT_Merge_Configuration.GUI
         private void InitializeComponent()
         {
             this.LoadedIcarttFilesLabel = new System.Windows.Forms.Label();
-            this.LoadedIcarttFiles = new System.Windows.Forms.CheckedListBox();
+            this.CheckedListBox_AllIcarttFiles = new System.Windows.Forms.CheckedListBox();
             this.MetadataViewerLabel = new System.Windows.Forms.Label();
             this.MetadataViewerPanel = new System.Windows.Forms.Panel();
             this.TextBox_Variables = new System.Windows.Forms.TextBox();
@@ -77,19 +77,19 @@ namespace ICARTT_Merge_Configuration.GUI
             this.LoadedIcarttFilesLabel.TabIndex = 1;
             this.LoadedIcarttFilesLabel.Text = "Loaded ICARTT Files";
             // 
-            // LoadedIcarttFiles
+            // CheckedListBox_AllIcarttFiles
             // 
-            this.LoadedIcarttFiles.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.CheckedListBox_AllIcarttFiles.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.LoadedIcarttFiles.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.LoadedIcarttFiles.FormattingEnabled = true;
-            this.LoadedIcarttFiles.IntegralHeight = false;
-            this.LoadedIcarttFiles.Location = new System.Drawing.Point(3, 23);
-            this.LoadedIcarttFiles.Name = "LoadedIcarttFiles";
-            this.LoadedIcarttFiles.Size = new System.Drawing.Size(294, 427);
-            this.LoadedIcarttFiles.TabIndex = 2;
-            this.LoadedIcarttFiles.SelectedIndexChanged += new System.EventHandler(this.LoadedIcarttFiles_SelectedIndexChanged);
+            this.CheckedListBox_AllIcarttFiles.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.CheckedListBox_AllIcarttFiles.FormattingEnabled = true;
+            this.CheckedListBox_AllIcarttFiles.IntegralHeight = false;
+            this.CheckedListBox_AllIcarttFiles.Location = new System.Drawing.Point(3, 23);
+            this.CheckedListBox_AllIcarttFiles.Name = "CheckedListBox_AllIcarttFiles";
+            this.CheckedListBox_AllIcarttFiles.Size = new System.Drawing.Size(294, 427);
+            this.CheckedListBox_AllIcarttFiles.TabIndex = 2;
+            this.CheckedListBox_AllIcarttFiles.SelectedIndexChanged += new System.EventHandler(this.LoadedIcarttFiles_SelectedIndexChanged);
             // 
             // MetadataViewerLabel
             // 
@@ -412,7 +412,7 @@ namespace ICARTT_Merge_Configuration.GUI
             this.tableLayoutPanel1.Controls.Add(this.MetadataViewerLabel, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.MetadataViewerPanel, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.LoadedIcarttFilesLabel, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.LoadedIcarttFiles, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.CheckedListBox_AllIcarttFiles, 0, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
@@ -440,7 +440,7 @@ namespace ICARTT_Merge_Configuration.GUI
 
         #endregion
         private System.Windows.Forms.Label LoadedIcarttFilesLabel;
-        private System.Windows.Forms.CheckedListBox LoadedIcarttFiles;
+        private System.Windows.Forms.CheckedListBox CheckedListBox_AllIcarttFiles;
         private System.Windows.Forms.Panel MetadataViewerPanel;
         private System.Windows.Forms.TextBox TextBox_FileName;
         private System.Windows.Forms.Label MetadataViewerLabel;

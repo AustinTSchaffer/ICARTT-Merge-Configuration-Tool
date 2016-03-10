@@ -16,13 +16,13 @@ namespace ICARTT_Merge_Configuration.ICARTT_File_Library
         /// </summary>
         public ICARTT_FileProperties()
         {
-            LinesInHeader = 0;
-            FileFormatIndex = 0;
-            NumDependentVariables = 0;
-            SpecialCommentLines = 0;
-            NormalCommentLines = 0;
+            LinesInHeader = -1;
+            FileFormatIndex = -1;
+            NumDependentVariables = -1;
+            SpecialCommentLines = -1;
+            NormalCommentLines = -1;
 
-            DataInterval = 0.0;
+            DataInterval = -1.0;
 
             PI = "";
             Organization = "";

@@ -6,7 +6,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ICARTT_Merge_Configuration.ICARTT_File_Library.Variables
+namespace ICARTT_Merge_Configuration.ICARTT_File_Library
 {
     class ICARTT_Variable
     {
@@ -42,12 +42,16 @@ namespace ICARTT_Merge_Configuration.ICARTT_File_Library.Variables
 
 
         /// <summary>
+        /// Holds all properties that have not already been specified.
+        /// </summary>
+        public Dictionary<string, string> properties;
+
+
+        /// <summary>
         /// Character that separates fields in the name of an ICARTT variable.
         /// </summary>
-        private static readonly char VARIABLE_FIELD_SEPARATOR = ',';
-
-
-
+        private const char VARIABLE_FIELD_SEPARATOR = ',';
+        
         private const double
             DEFAULT_SF  =       1.0,
             DEFAULT_MDI = -999999.0;
@@ -71,6 +75,7 @@ namespace ICARTT_Merge_Configuration.ICARTT_File_Library.Variables
             scaleFactor = sF;
             missingDataIndicator = mDI;
 
+            properties = new Dictionary<string, string>();
 
             if (String.IsNullOrWhiteSpace(fullNameFromFile))
             {

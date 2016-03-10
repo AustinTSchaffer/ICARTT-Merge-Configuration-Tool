@@ -30,7 +30,7 @@ namespace ICARTT_Merge_Configuration.GUI
 
         public override void Activate()
         {
-            int hash = ICARTT_FileManager.Hash();
+            int hash = ICARTT_FileManager.AllHash();
             if (hash == previousFileManagerHash) return;
             previousFileManagerHash = hash;
 
