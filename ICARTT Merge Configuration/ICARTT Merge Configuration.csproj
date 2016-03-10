@@ -135,6 +135,9 @@
     <EmbeddedResource Include="GUI\ProcessControl_FileSelect.resx">
       <DependentUpon>ProcessControl_FileSelect.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ProcessControl_VariableViewer.resx">
+      <DependentUpon>ProcessControl_VariableViewer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

@@ -55,24 +55,23 @@ namespace ICARTT_Merge_Configuration.GUI
             this.Label_FilePath = new System.Windows.Forms.Label();
             this.Label_FileName = new System.Windows.Forms.Label();
             this.TextBox_FileName = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.controlsPanel.SuspendLayout();
             this.MetadataViewerPanel.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // controlsPanel
             // 
             this.controlsPanel.BackColor = System.Drawing.SystemColors.Control;
-            this.controlsPanel.Controls.Add(this.MetadataViewerPanel);
-            this.controlsPanel.Controls.Add(this.MetadataViewerLabel);
-            this.controlsPanel.Controls.Add(this.LoadedIcarttFiles);
-            this.controlsPanel.Controls.Add(this.LoadedIcarttFilesLabel);
-            this.controlsPanel.Size = new System.Drawing.Size(615, 901);
+            this.controlsPanel.Controls.Add(this.tableLayoutPanel1);
+            this.controlsPanel.Size = new System.Drawing.Size(761, 453);
             // 
             // LoadedIcarttFilesLabel
             // 
             this.LoadedIcarttFilesLabel.AutoSize = true;
             this.LoadedIcarttFilesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.LoadedIcarttFilesLabel.Location = new System.Drawing.Point(-4, 0);
+            this.LoadedIcarttFilesLabel.Location = new System.Drawing.Point(3, 0);
             this.LoadedIcarttFilesLabel.Name = "LoadedIcarttFilesLabel";
             this.LoadedIcarttFilesLabel.Size = new System.Drawing.Size(142, 17);
             this.LoadedIcarttFilesLabel.TabIndex = 1;
@@ -86,26 +85,26 @@ namespace ICARTT_Merge_Configuration.GUI
             this.LoadedIcarttFiles.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.LoadedIcarttFiles.FormattingEnabled = true;
             this.LoadedIcarttFiles.IntegralHeight = false;
-            this.LoadedIcarttFiles.Location = new System.Drawing.Point(0, 17);
+            this.LoadedIcarttFiles.Location = new System.Drawing.Point(3, 23);
             this.LoadedIcarttFiles.Name = "LoadedIcarttFiles";
-            this.LoadedIcarttFiles.Size = new System.Drawing.Size(615, 520);
+            this.LoadedIcarttFiles.Size = new System.Drawing.Size(294, 427);
             this.LoadedIcarttFiles.TabIndex = 2;
             this.LoadedIcarttFiles.SelectedIndexChanged += new System.EventHandler(this.LoadedIcarttFiles_SelectedIndexChanged);
             // 
             // MetadataViewerLabel
             // 
-            this.MetadataViewerLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.MetadataViewerLabel.AutoSize = true;
             this.MetadataViewerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.MetadataViewerLabel.Location = new System.Drawing.Point(-3, 540);
+            this.MetadataViewerLabel.Location = new System.Drawing.Point(313, 0);
             this.MetadataViewerLabel.Name = "MetadataViewerLabel";
-            this.MetadataViewerLabel.Size = new System.Drawing.Size(67, 17);
+            this.MetadataViewerLabel.Size = new System.Drawing.Size(146, 17);
             this.MetadataViewerLabel.TabIndex = 5;
-            this.MetadataViewerLabel.Text = "Metadata";
+            this.MetadataViewerLabel.Text = "ICARTT File Metadata";
             // 
             // MetadataViewerPanel
             // 
-            this.MetadataViewerPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.MetadataViewerPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.MetadataViewerPanel.AutoScroll = true;
             this.MetadataViewerPanel.Controls.Add(this.TextBox_Variables);
@@ -132,9 +131,9 @@ namespace ICARTT_Merge_Configuration.GUI
             this.MetadataViewerPanel.Controls.Add(this.Label_FilePath);
             this.MetadataViewerPanel.Controls.Add(this.Label_FileName);
             this.MetadataViewerPanel.Controls.Add(this.TextBox_FileName);
-            this.MetadataViewerPanel.Location = new System.Drawing.Point(3, 560);
+            this.MetadataViewerPanel.Location = new System.Drawing.Point(313, 23);
             this.MetadataViewerPanel.Name = "MetadataViewerPanel";
-            this.MetadataViewerPanel.Size = new System.Drawing.Size(609, 341);
+            this.MetadataViewerPanel.Size = new System.Drawing.Size(445, 427);
             this.MetadataViewerPanel.TabIndex = 3;
             // 
             // TextBox_Variables
@@ -146,7 +145,7 @@ namespace ICARTT_Merge_Configuration.GUI
             this.TextBox_Variables.Location = new System.Drawing.Point(80, 317);
             this.TextBox_Variables.Name = "TextBox_Variables";
             this.TextBox_Variables.ReadOnly = true;
-            this.TextBox_Variables.Size = new System.Drawing.Size(526, 21);
+            this.TextBox_Variables.Size = new System.Drawing.Size(365, 21);
             this.TextBox_Variables.TabIndex = 28;
             // 
             // Label_Variables
@@ -178,7 +177,7 @@ namespace ICARTT_Merge_Configuration.GUI
             this.TextBox_Mission.Location = new System.Drawing.Point(80, 291);
             this.TextBox_Mission.Name = "TextBox_Mission";
             this.TextBox_Mission.ReadOnly = true;
-            this.TextBox_Mission.Size = new System.Drawing.Size(526, 21);
+            this.TextBox_Mission.Size = new System.Drawing.Size(365, 21);
             this.TextBox_Mission.TabIndex = 25;
             // 
             // Label_FileSize
@@ -200,7 +199,7 @@ namespace ICARTT_Merge_Configuration.GUI
             this.TextBox_FileSize.Location = new System.Drawing.Point(67, 57);
             this.TextBox_FileSize.Name = "TextBox_FileSize";
             this.TextBox_FileSize.ReadOnly = true;
-            this.TextBox_FileSize.Size = new System.Drawing.Size(539, 21);
+            this.TextBox_FileSize.Size = new System.Drawing.Size(378, 21);
             this.TextBox_FileSize.TabIndex = 23;
             // 
             // Label_DataSource
@@ -222,7 +221,7 @@ namespace ICARTT_Merge_Configuration.GUI
             this.TextBox_DataSource.Location = new System.Drawing.Point(80, 264);
             this.TextBox_DataSource.Name = "TextBox_DataSource";
             this.TextBox_DataSource.ReadOnly = true;
-            this.TextBox_DataSource.Size = new System.Drawing.Size(526, 21);
+            this.TextBox_DataSource.Size = new System.Drawing.Size(365, 21);
             this.TextBox_DataSource.TabIndex = 21;
             // 
             // Label_Organization
@@ -244,7 +243,7 @@ namespace ICARTT_Merge_Configuration.GUI
             this.TextBox_Organization.Location = new System.Drawing.Point(80, 237);
             this.TextBox_Organization.Name = "TextBox_Organization";
             this.TextBox_Organization.ReadOnly = true;
-            this.TextBox_Organization.Size = new System.Drawing.Size(526, 21);
+            this.TextBox_Organization.Size = new System.Drawing.Size(365, 21);
             this.TextBox_Organization.TabIndex = 19;
             // 
             // TextBox_PI
@@ -256,7 +255,7 @@ namespace ICARTT_Merge_Configuration.GUI
             this.TextBox_PI.Location = new System.Drawing.Point(80, 210);
             this.TextBox_PI.Name = "TextBox_PI";
             this.TextBox_PI.ReadOnly = true;
-            this.TextBox_PI.Size = new System.Drawing.Size(526, 21);
+            this.TextBox_PI.Size = new System.Drawing.Size(365, 21);
             this.TextBox_PI.TabIndex = 18;
             // 
             // TextBox_Revision
@@ -268,7 +267,7 @@ namespace ICARTT_Merge_Configuration.GUI
             this.TextBox_Revision.Location = new System.Drawing.Point(72, 174);
             this.TextBox_Revision.Name = "TextBox_Revision";
             this.TextBox_Revision.ReadOnly = true;
-            this.TextBox_Revision.Size = new System.Drawing.Size(534, 21);
+            this.TextBox_Revision.Size = new System.Drawing.Size(373, 21);
             this.TextBox_Revision.TabIndex = 17;
             // 
             // TextBox_Date
@@ -280,7 +279,7 @@ namespace ICARTT_Merge_Configuration.GUI
             this.TextBox_Date.Location = new System.Drawing.Point(72, 147);
             this.TextBox_Date.Name = "TextBox_Date";
             this.TextBox_Date.ReadOnly = true;
-            this.TextBox_Date.Size = new System.Drawing.Size(534, 21);
+            this.TextBox_Date.Size = new System.Drawing.Size(373, 21);
             this.TextBox_Date.TabIndex = 16;
             // 
             // TextBox_LocationID
@@ -292,7 +291,7 @@ namespace ICARTT_Merge_Configuration.GUI
             this.TextBox_LocationID.Location = new System.Drawing.Point(72, 120);
             this.TextBox_LocationID.Name = "TextBox_LocationID";
             this.TextBox_LocationID.ReadOnly = true;
-            this.TextBox_LocationID.Size = new System.Drawing.Size(534, 21);
+            this.TextBox_LocationID.Size = new System.Drawing.Size(373, 21);
             this.TextBox_LocationID.TabIndex = 15;
             // 
             // TextBox_DataID
@@ -304,7 +303,7 @@ namespace ICARTT_Merge_Configuration.GUI
             this.TextBox_DataID.Location = new System.Drawing.Point(72, 93);
             this.TextBox_DataID.Name = "TextBox_DataID";
             this.TextBox_DataID.ReadOnly = true;
-            this.TextBox_DataID.Size = new System.Drawing.Size(534, 21);
+            this.TextBox_DataID.Size = new System.Drawing.Size(373, 21);
             this.TextBox_DataID.TabIndex = 14;
             // 
             // Label_PI
@@ -366,7 +365,7 @@ namespace ICARTT_Merge_Configuration.GUI
             this.TextBox_FilePath.Location = new System.Drawing.Point(67, 30);
             this.TextBox_FilePath.Name = "TextBox_FilePath";
             this.TextBox_FilePath.ReadOnly = true;
-            this.TextBox_FilePath.Size = new System.Drawing.Size(539, 21);
+            this.TextBox_FilePath.Size = new System.Drawing.Size(378, 21);
             this.TextBox_FilePath.TabIndex = 8;
             // 
             // Label_FilePath
@@ -398,19 +397,41 @@ namespace ICARTT_Merge_Configuration.GUI
             this.TextBox_FileName.Location = new System.Drawing.Point(67, 3);
             this.TextBox_FileName.Name = "TextBox_FileName";
             this.TextBox_FileName.ReadOnly = true;
-            this.TextBox_FileName.Size = new System.Drawing.Size(539, 21);
+            this.TextBox_FileName.Size = new System.Drawing.Size(378, 21);
             this.TextBox_FileName.TabIndex = 4;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 10F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel1.Controls.Add(this.MetadataViewerLabel, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.MetadataViewerPanel, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.LoadedIcarttFilesLabel, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.LoadedIcarttFiles, 0, 1);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(761, 453);
+            this.tableLayoutPanel1.TabIndex = 6;
             // 
             // ProcessControl_FileSelect
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "ProcessControl_FileSelect";
-            this.Size = new System.Drawing.Size(615, 929);
+            this.Size = new System.Drawing.Size(761, 481);
             this.controlsPanel.ResumeLayout(false);
-            this.controlsPanel.PerformLayout();
             this.MetadataViewerPanel.ResumeLayout(false);
             this.MetadataViewerPanel.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -446,5 +467,6 @@ namespace ICARTT_Merge_Configuration.GUI
         private System.Windows.Forms.TextBox TextBox_Mission;
         private System.Windows.Forms.TextBox TextBox_Variables;
         private System.Windows.Forms.Label Label_Variables;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }

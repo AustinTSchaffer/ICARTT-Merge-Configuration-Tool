@@ -137,6 +137,7 @@
             // 
             this.FolderBrowserDialog.Description = "Select ICARTT Directory";
             this.FolderBrowserDialog.ShowNewFolderButton = false;
+            
             // 
             // ProcessControl_DirectorySelect
             // 

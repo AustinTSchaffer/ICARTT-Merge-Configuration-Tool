@@ -49,12 +49,12 @@ namespace ICARTT_Merge_Configuration.GUI
             // 
             this.ConsoleOutTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ConsoleOutTextBox.Location = new System.Drawing.Point(12, 547);
+            this.ConsoleOutTextBox.Location = new System.Drawing.Point(12, 482);
             this.ConsoleOutTextBox.Multiline = true;
             this.ConsoleOutTextBox.Name = "ConsoleOutTextBox";
             this.ConsoleOutTextBox.ReadOnly = true;
             this.ConsoleOutTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.ConsoleOutTextBox.Size = new System.Drawing.Size(557, 167);
+            this.ConsoleOutTextBox.Size = new System.Drawing.Size(794, 167);
             this.ConsoleOutTextBox.TabIndex = 4;
             this.ConsoleOutTextBox.TabStop = false;
             // 
@@ -64,9 +64,9 @@ namespace ICARTT_Merge_Configuration.GUI
             | System.Windows.Forms.AnchorStyles.Right)));
             this.BackAndNextPanel.Controls.Add(this.NextButton);
             this.BackAndNextPanel.Controls.Add(this.BackButton);
-            this.BackAndNextPanel.Location = new System.Drawing.Point(183, 512);
+            this.BackAndNextPanel.Location = new System.Drawing.Point(183, 447);
             this.BackAndNextPanel.Name = "BackAndNextPanel";
-            this.BackAndNextPanel.Size = new System.Drawing.Size(386, 29);
+            this.BackAndNextPanel.Size = new System.Drawing.Size(623, 29);
             this.BackAndNextPanel.TabIndex = 2;
             // 
             // NextButton
@@ -74,7 +74,7 @@ namespace ICARTT_Merge_Configuration.GUI
             this.NextButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.NextButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.NextButton.Location = new System.Drawing.Point(311, 0);
+            this.NextButton.Location = new System.Drawing.Point(548, 0);
             this.NextButton.Name = "NextButton";
             this.NextButton.Size = new System.Drawing.Size(75, 29);
             this.NextButton.TabIndex = 2;
@@ -107,7 +107,7 @@ namespace ICARTT_Merge_Configuration.GUI
             this.NavigationListBox.ItemHeight = 20;
             this.NavigationListBox.Location = new System.Drawing.Point(12, 37);
             this.NavigationListBox.Name = "NavigationListBox";
-            this.NavigationListBox.Size = new System.Drawing.Size(161, 504);
+            this.NavigationListBox.Size = new System.Drawing.Size(161, 439);
             this.NavigationListBox.TabIndex = 0;
             this.NavigationListBox.SelectedIndexChanged += new System.EventHandler(this.NavigationListBox_SelectedIndexChanged);
             // 
@@ -128,14 +128,14 @@ namespace ICARTT_Merge_Configuration.GUI
             | System.Windows.Forms.AnchorStyles.Right)));
             this.CurrentProcessControl.Location = new System.Drawing.Point(182, 9);
             this.CurrentProcessControl.Name = "CurrentProcessControl";
-            this.CurrentProcessControl.Size = new System.Drawing.Size(387, 497);
+            this.CurrentProcessControl.Size = new System.Drawing.Size(624, 432);
             this.CurrentProcessControl.TabIndex = 3;
             // 
             // ICARTT_ConfigurationBuilder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(581, 726);
+            this.ClientSize = new System.Drawing.Size(818, 661);
             this.Controls.Add(this.NavigationListBoxLabel);
             this.Controls.Add(this.CurrentProcessControl);
             this.Controls.Add(this.BackAndNextPanel);
