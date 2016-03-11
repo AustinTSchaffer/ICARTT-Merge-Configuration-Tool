@@ -106,6 +106,12 @@
     <Compile Include="GUI\ProcessControl_FileNameFilters.Designer.cs">
       <DependentUpon>ProcessControl_FileNameFilters.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\ProcessControl_TimeVariableSelection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ProcessControl_TimeVariableSelection.Designer.cs">
+      <DependentUpon>ProcessControl_TimeVariableSelection.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\ProcessControl_VariableViewer.cs">
       <SubType>UserControl</SubType>
     </Compile>

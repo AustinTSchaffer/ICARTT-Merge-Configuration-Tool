@@ -39,7 +39,7 @@ namespace ICARTT_Merge_Configuration.GUI
             this.BackAndNextPanel = new System.Windows.Forms.Panel();
             this.NextButton = new System.Windows.Forms.Button();
             this.BackButton = new System.Windows.Forms.Button();
-            this.NavigationListBox = new System.Windows.Forms.ListBox();
+            this.ListBox_Navigation = new System.Windows.Forms.ListBox();
             this.NavigationListBoxLabel = new System.Windows.Forms.Label();
             this.CurrentProcessControl = new ICARTT_Merge_Configuration.GUI.ProcessControl();
             this.BackAndNextPanel.SuspendLayout();
@@ -95,21 +95,21 @@ namespace ICARTT_Merge_Configuration.GUI
             this.BackButton.UseVisualStyleBackColor = true;
             this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
-            // NavigationListBox
+            // ListBox_Navigation
             // 
-            this.NavigationListBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.ListBox_Navigation.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.NavigationListBox.BackColor = System.Drawing.SystemColors.Control;
-            this.NavigationListBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.NavigationListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.NavigationListBox.FormattingEnabled = true;
-            this.NavigationListBox.IntegralHeight = false;
-            this.NavigationListBox.ItemHeight = 20;
-            this.NavigationListBox.Location = new System.Drawing.Point(12, 37);
-            this.NavigationListBox.Name = "NavigationListBox";
-            this.NavigationListBox.Size = new System.Drawing.Size(161, 504);
-            this.NavigationListBox.TabIndex = 0;
-            this.NavigationListBox.SelectedIndexChanged += new System.EventHandler(this.NavigationListBox_SelectedIndexChanged);
+            this.ListBox_Navigation.BackColor = System.Drawing.SystemColors.Control;
+            this.ListBox_Navigation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ListBox_Navigation.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.ListBox_Navigation.FormattingEnabled = true;
+            this.ListBox_Navigation.IntegralHeight = false;
+            this.ListBox_Navigation.ItemHeight = 20;
+            this.ListBox_Navigation.Location = new System.Drawing.Point(12, 37);
+            this.ListBox_Navigation.Name = "ListBox_Navigation";
+            this.ListBox_Navigation.Size = new System.Drawing.Size(161, 504);
+            this.ListBox_Navigation.TabIndex = 0;
+            this.ListBox_Navigation.SelectedIndexChanged += new System.EventHandler(this.NavigationListBox_SelectedIndexChanged);
             // 
             // NavigationListBoxLabel
             // 
@@ -139,7 +139,7 @@ namespace ICARTT_Merge_Configuration.GUI
             this.Controls.Add(this.NavigationListBoxLabel);
             this.Controls.Add(this.CurrentProcessControl);
             this.Controls.Add(this.BackAndNextPanel);
-            this.Controls.Add(this.NavigationListBox);
+            this.Controls.Add(this.ListBox_Navigation);
             this.Controls.Add(this.ConsoleOutTextBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ICARTT_ConfigurationBuilder";
@@ -153,7 +153,7 @@ namespace ICARTT_Merge_Configuration.GUI
         #endregion
 
         private List<ProcessControl> ProcessControls;
-        private System.Windows.Forms.ListBox NavigationListBox;
+        private System.Windows.Forms.ListBox ListBox_Navigation;
         private System.Windows.Forms.Button NextButton;
         private System.Windows.Forms.Button BackButton;
         private System.Windows.Forms.Panel BackAndNextPanel;
