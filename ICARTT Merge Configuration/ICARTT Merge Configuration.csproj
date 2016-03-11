@@ -112,6 +112,12 @@
     <Compile Include="GUI\ProcessControl_TimeVariableSelection.Designer.cs">
       <DependentUpon>ProcessControl_TimeVariableSelection.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\ProcessControl_TimeVariableSelectionControls\TimeVariableSelectionControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ProcessControl_TimeVariableSelectionControls\TimeVariableSelectionControl.Designer.cs">
+      <DependentUpon>TimeVariableSelectionControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\ProcessControl_VariableViewer.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -141,6 +147,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ProcessControl_FileSelect.resx">
       <DependentUpon>ProcessControl_FileSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ProcessControl_TimeVariableSelection.resx">
+      <DependentUpon>ProcessControl_TimeVariableSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ProcessControl_TimeVariableSelectionControls\TimeVariableSelectionControl.resx">
+      <DependentUpon>TimeVariableSelectionControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ProcessControl_VariableViewer.resx">
       <DependentUpon>ProcessControl_VariableViewer.cs</DependentUpon>

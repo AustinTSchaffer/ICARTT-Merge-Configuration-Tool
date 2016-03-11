@@ -66,30 +66,6 @@ namespace ICARTT_Merge_Configuration.Utilities
         }
 
 
-        /// <summary>
-        /// Returns a list containing all of the ICARTT files with the specified property. Can be used to only get files with a particular data ID.
-        /// </summary>
-        /// <param name="property">Desired property</param>
-        /// <param name="value">Desired Value</param>
-        /// <param name="inMergeRequired">Set false if user wants all files in directory. Defaults to true, which will make the method only grab files that have been selected for mergins.</param>
-        /// <returns></returns>
-        public static List<ICARTT_File> GetIcarttFiles(ICARTT_File.FileNameProperty property, string value, bool inMergeRequired = true)
-        {
-            List<ICARTT_File> files = new List<ICARTT_File>();
-            if (null == allIcarttFiles || allIcarttFiles.Count <= 0) return files;
-
-            foreach (ICARTT_File ictFile in allIcarttFiles)
-            {
-                if (null == ictFile) continue;
-
-                bool flagMatch = !inMergeRequired || (ictFile.IncludeInMerge && inMergeRequired);
-
-                if (flagMatch && ictFile.GetProperty(property).ToUpper().Equals(value.ToUpper())) files.Add(ictFile);
-            }
-
-            return files;
-        }
-
         #endregion
 
 

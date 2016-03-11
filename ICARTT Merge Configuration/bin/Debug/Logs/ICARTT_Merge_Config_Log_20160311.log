@@ -970,3 +970,423 @@
 2016-03-11 10:38:11.693   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   File Select
 2016-03-11 10:38:20.084 MESSAGE --- [             Program].[                Main] Main thread terminating.
 2016-03-11 10:38:20.084 MESSAGE --- [              Logger].[               Close] Close requested. Remaining 0 messages will be written to file.
+2016-03-11 11:49:02.276 MESSAGE --- [              Logger].[               Setup] Ready to accept and digest messages.
+2016-03-11 11:49:02.541   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 11:49:02.541   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: DEFAULT NAME
+2016-03-11 11:49:02.541   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   Directory Select
+2016-03-11 11:49:04.103 MESSAGE --- [             Program].[                Main] Main thread terminating.
+2016-03-11 11:49:04.103 MESSAGE --- [              Logger].[               Close] Close requested. Remaining 0 messages will be written to file.
+2016-03-11 11:49:28.009 MESSAGE --- [              Logger].[               Setup] Ready to accept and digest messages.
+2016-03-11 11:49:28.243   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 11:49:28.243   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: DEFAULT NAME
+2016-03-11 11:49:28.243   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   Directory Select
+2016-03-11 11:49:29.540   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 11:49:29.540   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: Directory Select
+2016-03-11 11:49:29.540   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   Time Variable Selection
+2016-03-11 11:49:29.680  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir] System.ArgumentException: The path is not of a legal form.
+2016-03-11 11:49:29.680  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Path.NormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+2016-03-11 11:49:29.680  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Path.GetFullPathInternal(String path)
+2016-03-11 11:49:29.680  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+2016-03-11 11:49:29.680  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Directory.GetFiles(String path, String searchPattern, SearchOption searchOption)
+2016-03-11 11:49:29.680  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at ICARTT_Merge_Configuration.Utilities.ICARTT_FileManager.GetICARTTFilesFromDir(String dir) in C:\Users\atschaff\Documents\Visual Studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\Utilities\ICARTT_FileManager.cs:line 141
+2016-03-11 11:49:29.680 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir] Searched for ICARTT files
+2016-03-11 11:49:29.680 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir]     Directory: 
+2016-03-11 11:49:29.680 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir]     Number of ICARTT Files Found: 0
+2016-03-11 11:49:41.720 MESSAGE --- [             Program].[                Main] Main thread terminating.
+2016-03-11 11:49:41.720 MESSAGE --- [              Logger].[               Close] Close requested. Remaining 0 messages will be written to file.
+2016-03-11 12:02:03.023 MESSAGE --- [              Logger].[               Setup] Ready to accept and digest messages.
+2016-03-11 12:02:03.304   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 12:02:03.304   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: DEFAULT NAME
+2016-03-11 12:02:03.304   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   Directory Select
+2016-03-11 12:02:04.368   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 12:02:04.368   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: Directory Select
+2016-03-11 12:02:04.368   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   Time Variables
+2016-03-11 12:02:04.446  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir] System.ArgumentException: The path is not of a legal form.
+2016-03-11 12:02:04.446  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Path.NormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+2016-03-11 12:02:04.446  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Path.GetFullPathInternal(String path)
+2016-03-11 12:02:04.446  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+2016-03-11 12:02:04.446  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Directory.GetFiles(String path, String searchPattern, SearchOption searchOption)
+2016-03-11 12:02:04.446  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at ICARTT_Merge_Configuration.Utilities.ICARTT_FileManager.GetICARTTFilesFromDir(String dir) in C:\Users\atschaff\Documents\Visual Studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\Utilities\ICARTT_FileManager.cs:line 117
+2016-03-11 12:02:04.446 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir] Searched for ICARTT files
+2016-03-11 12:02:04.446 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir]     Directory: 
+2016-03-11 12:02:04.446 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir]     Number of ICARTT Files Found: 0
+2016-03-11 12:02:18.135 MESSAGE --- [             Program].[                Main] Main thread terminating.
+2016-03-11 12:02:18.135 MESSAGE --- [              Logger].[               Close] Close requested. Remaining 0 messages will be written to file.
+2016-03-11 12:06:16.572 MESSAGE --- [              Logger].[               Setup] Ready to accept and digest messages.
+2016-03-11 12:06:16.821   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 12:06:16.821   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: DEFAULT NAME
+2016-03-11 12:06:16.821   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   Directory Select
+2016-03-11 12:06:17.789   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 12:06:17.789   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: Directory Select
+2016-03-11 12:06:17.789   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   Time Variables
+2016-03-11 12:06:17.835  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir] System.ArgumentException: The path is not of a legal form.
+2016-03-11 12:06:17.835  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Path.NormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+2016-03-11 12:06:17.835  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Path.GetFullPathInternal(String path)
+2016-03-11 12:06:17.835  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+2016-03-11 12:06:17.835  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Directory.GetFiles(String path, String searchPattern, SearchOption searchOption)
+2016-03-11 12:06:17.835  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at ICARTT_Merge_Configuration.Utilities.ICARTT_FileManager.GetICARTTFilesFromDir(String dir) in C:\Users\atschaff\Documents\Visual Studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\Utilities\ICARTT_FileManager.cs:line 117
+2016-03-11 12:06:17.835 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir] Searched for ICARTT files
+2016-03-11 12:06:17.835 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir]     Directory: 
+2016-03-11 12:06:17.835 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir]     Number of ICARTT Files Found: 0
+2016-03-11 12:19:56.744 MESSAGE --- [              Logger].[               Setup] Ready to accept and digest messages.
+2016-03-11 12:19:56.961   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 12:19:56.961   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: DEFAULT NAME
+2016-03-11 12:19:56.961   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   Directory Select
+2016-03-11 12:20:03.761 MESSAGE --- [...l_DirectorySelect].[...TTDirectory_Click] User selected directory: C:\Users\atschaff\ICARTT Data\BALTIMORE_WASH_DC_2011
+2016-03-11 12:20:04.541   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 12:20:04.541   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: Directory Select
+2016-03-11 12:20:04.541   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   File Name Filters
+2016-03-11 12:20:04.619 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir] Searched for ICARTT files
+2016-03-11 12:20:04.619 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir]     Directory: C:\Users\atschaff\ICARTT Data\BALTIMORE_WASH_DC_2011
+2016-03-11 12:20:04.619 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir]     Number of ICARTT Files Found: 1516
+2016-03-11 12:20:40.539 MESSAGE --- [             Program].[                Main] Main thread terminating.
+2016-03-11 12:20:40.539 MESSAGE --- [              Logger].[               Close] Close requested. Remaining 0 messages will be written to file.
+2016-03-11 12:21:45.507 MESSAGE --- [              Logger].[               Setup] Ready to accept and digest messages.
+2016-03-11 12:21:45.725   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 12:21:45.725   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: DEFAULT NAME
+2016-03-11 12:21:45.725   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   Directory Select
+2016-03-11 12:21:53.048 MESSAGE --- [...l_DirectorySelect].[...TTDirectory_Click] User selected directory: C:\Users\atschaff\ICARTT Data\BALTIMORE_WASH_DC_2011
+2016-03-11 12:21:53.892   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 12:21:53.892   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: Directory Select
+2016-03-11 12:21:53.892   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   File Name Filters
+2016-03-11 12:21:53.970 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir] Searched for ICARTT files
+2016-03-11 12:21:53.970 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir]     Directory: C:\Users\atschaff\ICARTT Data\BALTIMORE_WASH_DC_2011
+2016-03-11 12:21:53.970 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir]     Number of ICARTT Files Found: 1516
+2016-03-11 12:22:08.672 MESSAGE --- [             Program].[                Main] Main thread terminating.
+2016-03-11 12:22:08.672 MESSAGE --- [              Logger].[               Close] Close requested. Remaining 1 messages will be written to file.
+2016-03-11 13:50:17.163 MESSAGE --- [              Logger].[               Setup] Ready to accept and digest messages.
+2016-03-11 13:50:17.395   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 13:50:17.395   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: DEFAULT NAME
+2016-03-11 13:50:17.395   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   Directory Select
+2016-03-11 13:50:18.480   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 13:50:18.480   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: Directory Select
+2016-03-11 13:50:18.480   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   File Name Filters
+2016-03-11 13:50:18.514  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir] System.ArgumentException: The path is not of a legal form.
+2016-03-11 13:50:18.514  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Path.NormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+2016-03-11 13:50:18.514  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Path.GetFullPathInternal(String path)
+2016-03-11 13:50:18.514  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+2016-03-11 13:50:18.514  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Directory.GetFiles(String path, String searchPattern, SearchOption searchOption)
+2016-03-11 13:50:18.514  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at ICARTT_Merge_Configuration.Utilities.ICARTT_FileManager.GetICARTTFilesFromDir(String dir) in C:\Users\atschaff\Documents\Visual Studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\Utilities\ICARTT_FileManager.cs:line 117
+2016-03-11 13:50:18.514 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir] Searched for ICARTT files
+2016-03-11 13:50:18.514 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir]     Directory: 
+2016-03-11 13:50:18.514 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir]     Number of ICARTT Files Found: 0
+2016-03-11 13:50:19.184   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 13:50:19.184   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: File Name Filters
+2016-03-11 13:50:19.184   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   File Select
+2016-03-11 13:50:19.808   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 13:50:19.808   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: File Select
+2016-03-11 13:50:19.808   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   File Name Filters
+2016-03-11 13:50:20.440   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 13:50:20.440   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: File Name Filters
+2016-03-11 13:50:20.440   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   Time Variables
+2016-03-11 13:50:29.983 MESSAGE --- [             Program].[                Main] Main thread terminating.
+2016-03-11 13:50:29.984 MESSAGE --- [              Logger].[               Close] Close requested. Remaining 0 messages will be written to file.
+2016-03-11 13:53:49.616 MESSAGE --- [              Logger].[               Setup] Ready to accept and digest messages.
+2016-03-11 13:53:49.831   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 13:53:49.831   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: DEFAULT NAME
+2016-03-11 13:53:49.831   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   Directory Select
+2016-03-11 13:53:50.924   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 13:53:50.924   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: Directory Select
+2016-03-11 13:53:50.924   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   File Name Filters
+2016-03-11 13:53:50.971  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir] System.ArgumentException: The path is not of a legal form.
+2016-03-11 13:53:50.971  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Path.NormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+2016-03-11 13:53:50.971  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Path.GetFullPathInternal(String path)
+2016-03-11 13:53:50.971  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+2016-03-11 13:53:50.971  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Directory.GetFiles(String path, String searchPattern, SearchOption searchOption)
+2016-03-11 13:53:50.971  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at ICARTT_Merge_Configuration.Utilities.ICARTT_FileManager.GetICARTTFilesFromDir(String dir) in C:\Users\atschaff\Documents\Visual Studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\Utilities\ICARTT_FileManager.cs:line 117
+2016-03-11 13:53:50.971 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir] Searched for ICARTT files
+2016-03-11 13:53:50.971 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir]     Directory: 
+2016-03-11 13:53:50.971 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir]     Number of ICARTT Files Found: 0
+2016-03-11 13:53:51.534   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 13:53:51.534   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: File Name Filters
+2016-03-11 13:53:51.534   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   File Select
+2016-03-11 13:53:51.992   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 13:53:51.992   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: File Select
+2016-03-11 13:53:51.992   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   Time Variables
+2016-03-11 13:53:52.492   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 13:53:52.492   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: Time Variables
+2016-03-11 13:53:52.492   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   View Variables
+2016-03-11 13:53:52.788   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 13:53:52.788   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: View Variables
+2016-03-11 13:53:52.788   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   Time Variables
+2016-03-11 13:54:08.613 MESSAGE --- [             Program].[                Main] Main thread terminating.
+2016-03-11 13:54:08.613 MESSAGE --- [              Logger].[               Close] Close requested. Remaining 0 messages will be written to file.
+2016-03-11 13:55:06.286 MESSAGE --- [              Logger].[               Setup] Ready to accept and digest messages.
+2016-03-11 13:55:06.527   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 13:55:06.527   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: DEFAULT NAME
+2016-03-11 13:55:06.527   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   Directory Select
+2016-03-11 13:55:07.666   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 13:55:07.666   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: Directory Select
+2016-03-11 13:55:07.666   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   Time Variables
+2016-03-11 13:55:07.697  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir] System.ArgumentException: The path is not of a legal form.
+2016-03-11 13:55:07.697  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Path.NormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+2016-03-11 13:55:07.697  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Path.GetFullPathInternal(String path)
+2016-03-11 13:55:07.697  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+2016-03-11 13:55:07.697  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Directory.GetFiles(String path, String searchPattern, SearchOption searchOption)
+2016-03-11 13:55:07.697  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at ICARTT_Merge_Configuration.Utilities.ICARTT_FileManager.GetICARTTFilesFromDir(String dir) in C:\Users\atschaff\Documents\Visual Studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\Utilities\ICARTT_FileManager.cs:line 117
+2016-03-11 13:55:07.697 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir] Searched for ICARTT files
+2016-03-11 13:55:07.697 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir]     Directory: 
+2016-03-11 13:55:07.697 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir]     Number of ICARTT Files Found: 0
+2016-03-11 13:55:24.072 MESSAGE --- [             Program].[                Main] Main thread terminating.
+2016-03-11 13:55:24.072 MESSAGE --- [              Logger].[               Close] Close requested. Remaining 0 messages will be written to file.
+2016-03-11 13:57:16.104 MESSAGE --- [              Logger].[               Setup] Ready to accept and digest messages.
+2016-03-11 13:57:16.341   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 13:57:16.341   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: DEFAULT NAME
+2016-03-11 13:57:16.341   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   Directory Select
+2016-03-11 13:57:17.350   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 13:57:17.350   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: Directory Select
+2016-03-11 13:57:17.350   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   Time Variables
+2016-03-11 13:57:17.428  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir] System.ArgumentException: The path is not of a legal form.
+2016-03-11 13:57:17.428  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Path.NormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+2016-03-11 13:57:17.428  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Path.GetFullPathInternal(String path)
+2016-03-11 13:57:17.428  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+2016-03-11 13:57:17.428  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Directory.GetFiles(String path, String searchPattern, SearchOption searchOption)
+2016-03-11 13:57:17.428  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at ICARTT_Merge_Configuration.Utilities.ICARTT_FileManager.GetICARTTFilesFromDir(String dir) in C:\Users\atschaff\Documents\Visual Studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\Utilities\ICARTT_FileManager.cs:line 117
+2016-03-11 13:57:17.428 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir] Searched for ICARTT files
+2016-03-11 13:57:17.428 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir]     Directory: 
+2016-03-11 13:57:17.428 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir]     Number of ICARTT Files Found: 0
+2016-03-11 13:57:20.174 MESSAGE --- [             Program].[                Main] Main thread terminating.
+2016-03-11 13:57:20.174 MESSAGE --- [              Logger].[               Close] Close requested. Remaining 0 messages will be written to file.
+2016-03-11 13:57:46.755 MESSAGE --- [              Logger].[               Setup] Ready to accept and digest messages.
+2016-03-11 13:57:46.944   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 13:57:46.944   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: DEFAULT NAME
+2016-03-11 13:57:46.944   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   Directory Select
+2016-03-11 13:57:47.872   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 13:57:47.872   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: Directory Select
+2016-03-11 13:57:47.872   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   View Variables
+2016-03-11 13:57:47.921  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir] System.ArgumentException: The path is not of a legal form.
+2016-03-11 13:57:47.921  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Path.NormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+2016-03-11 13:57:47.921  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Path.GetFullPathInternal(String path)
+2016-03-11 13:57:47.921  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+2016-03-11 13:57:47.921  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Directory.GetFiles(String path, String searchPattern, SearchOption searchOption)
+2016-03-11 13:57:47.921  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at ICARTT_Merge_Configuration.Utilities.ICARTT_FileManager.GetICARTTFilesFromDir(String dir) in C:\Users\atschaff\Documents\Visual Studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\Utilities\ICARTT_FileManager.cs:line 117
+2016-03-11 13:57:47.922 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir] Searched for ICARTT files
+2016-03-11 13:57:47.922 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir]     Directory: 
+2016-03-11 13:57:47.922 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir]     Number of ICARTT Files Found: 0
+2016-03-11 13:57:48.160   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 13:57:48.160   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: View Variables
+2016-03-11 13:57:48.160   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   Time Variables
+2016-03-11 13:57:52.070 MESSAGE --- [             Program].[                Main] Main thread terminating.
+2016-03-11 13:57:52.070 MESSAGE --- [              Logger].[               Close] Close requested. Remaining 0 messages will be written to file.
+2016-03-11 13:58:04.547 MESSAGE --- [              Logger].[               Setup] Ready to accept and digest messages.
+2016-03-11 13:58:04.782   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 13:58:04.782   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: DEFAULT NAME
+2016-03-11 13:58:04.782   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   Directory Select
+2016-03-11 13:58:05.952   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 13:58:05.952   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: Directory Select
+2016-03-11 13:58:05.952   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   Time Variables
+2016-03-11 13:58:06.108  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir] System.ArgumentException: The path is not of a legal form.
+2016-03-11 13:58:06.108  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Path.NormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+2016-03-11 13:58:06.108  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Path.GetFullPathInternal(String path)
+2016-03-11 13:58:06.108  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+2016-03-11 13:58:06.108  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Directory.GetFiles(String path, String searchPattern, SearchOption searchOption)
+2016-03-11 13:58:06.108  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at ICARTT_Merge_Configuration.Utilities.ICARTT_FileManager.GetICARTTFilesFromDir(String dir) in C:\Users\atschaff\Documents\Visual Studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\Utilities\ICARTT_FileManager.cs:line 117
+2016-03-11 13:58:06.108 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir] Searched for ICARTT files
+2016-03-11 13:58:06.108 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir]     Directory: 
+2016-03-11 13:58:06.108 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir]     Number of ICARTT Files Found: 0
+2016-03-11 13:58:08.513 MESSAGE --- [             Program].[                Main] Main thread terminating.
+2016-03-11 13:58:08.513 MESSAGE --- [              Logger].[               Close] Close requested. Remaining 1 messages will be written to file.
+2016-03-11 14:00:55.877 MESSAGE --- [              Logger].[               Setup] Ready to accept and digest messages.
+2016-03-11 14:00:56.147   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 14:00:56.147   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: DEFAULT NAME
+2016-03-11 14:00:56.147   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   Directory Select
+2016-03-11 14:00:57.198   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 14:00:57.198   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: Directory Select
+2016-03-11 14:00:57.198   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   Time Variables
+2016-03-11 14:00:57.245  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir] System.ArgumentException: The path is not of a legal form.
+2016-03-11 14:00:57.245  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Path.NormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+2016-03-11 14:00:57.245  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Path.GetFullPathInternal(String path)
+2016-03-11 14:00:57.245  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+2016-03-11 14:00:57.245  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Directory.GetFiles(String path, String searchPattern, SearchOption searchOption)
+2016-03-11 14:00:57.245  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at ICARTT_Merge_Configuration.Utilities.ICARTT_FileManager.GetICARTTFilesFromDir(String dir) in C:\Users\atschaff\Documents\Visual Studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\Utilities\ICARTT_FileManager.cs:line 117
+2016-03-11 14:00:57.245 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir] Searched for ICARTT files
+2016-03-11 14:00:57.245 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir]     Directory: 
+2016-03-11 14:00:57.245 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir]     Number of ICARTT Files Found: 0
+2016-03-11 14:01:02.144 MESSAGE --- [             Program].[                Main] Main thread terminating.
+2016-03-11 14:01:02.144 MESSAGE --- [              Logger].[               Close] Close requested. Remaining 0 messages will be written to file.
+2016-03-11 14:04:53.637 MESSAGE --- [              Logger].[               Setup] Ready to accept and digest messages.
+2016-03-11 14:04:53.885   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 14:04:53.885   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: DEFAULT NAME
+2016-03-11 14:04:53.885   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   Directory Select
+2016-03-11 14:04:54.930   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 14:04:54.930   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: Directory Select
+2016-03-11 14:04:54.930   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   Time Variables
+2016-03-11 14:04:55.024  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir] System.ArgumentException: The path is not of a legal form.
+2016-03-11 14:04:55.024  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Path.NormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+2016-03-11 14:04:55.024  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Path.GetFullPathInternal(String path)
+2016-03-11 14:04:55.024  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+2016-03-11 14:04:55.024  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Directory.GetFiles(String path, String searchPattern, SearchOption searchOption)
+2016-03-11 14:04:55.024  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at ICARTT_Merge_Configuration.Utilities.ICARTT_FileManager.GetICARTTFilesFromDir(String dir) in C:\Users\atschaff\Documents\Visual Studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\Utilities\ICARTT_FileManager.cs:line 117
+2016-03-11 14:04:55.024 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir] Searched for ICARTT files
+2016-03-11 14:04:55.024 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir]     Directory: 
+2016-03-11 14:04:55.024 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir]     Number of ICARTT Files Found: 0
+2016-03-11 14:05:00.874 MESSAGE --- [             Program].[                Main] Main thread terminating.
+2016-03-11 14:05:00.874 MESSAGE --- [              Logger].[               Close] Close requested. Remaining 0 messages will be written to file.
+2016-03-11 14:05:25.382 MESSAGE --- [              Logger].[               Setup] Ready to accept and digest messages.
+2016-03-11 14:05:25.616   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 14:05:25.616   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: DEFAULT NAME
+2016-03-11 14:05:25.616   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   Directory Select
+2016-03-11 14:05:26.536   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 14:05:26.536   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: Directory Select
+2016-03-11 14:05:26.536   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   Time Variables
+2016-03-11 14:05:26.676  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir] System.ArgumentException: The path is not of a legal form.
+2016-03-11 14:05:26.676  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Path.NormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+2016-03-11 14:05:26.676  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Path.GetFullPathInternal(String path)
+2016-03-11 14:05:26.676  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+2016-03-11 14:05:26.676  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Directory.GetFiles(String path, String searchPattern, SearchOption searchOption)
+2016-03-11 14:05:26.676  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at ICARTT_Merge_Configuration.Utilities.ICARTT_FileManager.GetICARTTFilesFromDir(String dir) in C:\Users\atschaff\Documents\Visual Studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\Utilities\ICARTT_FileManager.cs:line 117
+2016-03-11 14:05:26.676 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir] Searched for ICARTT files
+2016-03-11 14:05:26.676 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir]     Directory: 
+2016-03-11 14:05:26.676 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir]     Number of ICARTT Files Found: 0
+2016-03-11 14:05:27.362   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 14:05:27.362   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: Time Variables
+2016-03-11 14:05:27.362   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   File Select
+2016-03-11 14:05:27.674   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 14:05:27.674   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: File Select
+2016-03-11 14:05:27.674   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   Time Variables
+2016-03-11 14:05:28.735   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 14:05:28.735   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: Time Variables
+2016-03-11 14:05:28.735   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   View Variables
+2016-03-11 14:05:29.344   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 14:05:29.344   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: View Variables
+2016-03-11 14:05:29.344   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   Time Variables
+2016-03-11 14:05:32.621 MESSAGE --- [             Program].[                Main] Main thread terminating.
+2016-03-11 14:05:32.621 MESSAGE --- [              Logger].[               Close] Close requested. Remaining 0 messages will be written to file.
+2016-03-11 14:05:49.549 MESSAGE --- [              Logger].[               Setup] Ready to accept and digest messages.
+2016-03-11 14:05:49.751   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 14:05:49.751   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: DEFAULT NAME
+2016-03-11 14:05:49.751   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   Directory Select
+2016-03-11 14:05:50.841   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 14:05:50.841   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: Directory Select
+2016-03-11 14:05:50.841   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   Time Variables
+2016-03-11 14:05:50.919  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir] System.ArgumentException: The path is not of a legal form.
+2016-03-11 14:05:50.919  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Path.NormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+2016-03-11 14:05:50.919  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Path.GetFullPathInternal(String path)
+2016-03-11 14:05:50.919  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+2016-03-11 14:05:50.919  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Directory.GetFiles(String path, String searchPattern, SearchOption searchOption)
+2016-03-11 14:05:50.919  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at ICARTT_Merge_Configuration.Utilities.ICARTT_FileManager.GetICARTTFilesFromDir(String dir) in C:\Users\atschaff\Documents\Visual Studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\Utilities\ICARTT_FileManager.cs:line 117
+2016-03-11 14:05:50.919 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir] Searched for ICARTT files
+2016-03-11 14:05:50.919 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir]     Directory: 
+2016-03-11 14:05:50.919 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir]     Number of ICARTT Files Found: 0
+2016-03-11 14:06:07.444 MESSAGE --- [             Program].[                Main] Main thread terminating.
+2016-03-11 14:06:07.444 MESSAGE --- [              Logger].[               Close] Close requested. Remaining 0 messages will be written to file.
+2016-03-11 14:07:05.508 MESSAGE --- [              Logger].[               Setup] Ready to accept and digest messages.
+2016-03-11 14:07:05.804   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 14:07:05.804   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: DEFAULT NAME
+2016-03-11 14:07:05.804   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   Directory Select
+2016-03-11 14:07:06.896   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 14:07:06.896   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: Directory Select
+2016-03-11 14:07:06.896   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   File Select
+2016-03-11 14:07:06.928  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir] System.ArgumentException: The path is not of a legal form.
+2016-03-11 14:07:06.928  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Path.NormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+2016-03-11 14:07:06.928  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Path.GetFullPathInternal(String path)
+2016-03-11 14:07:06.928  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+2016-03-11 14:07:06.928  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Directory.GetFiles(String path, String searchPattern, SearchOption searchOption)
+2016-03-11 14:07:06.928  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at ICARTT_Merge_Configuration.Utilities.ICARTT_FileManager.GetICARTTFilesFromDir(String dir) in C:\Users\atschaff\Documents\Visual Studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\Utilities\ICARTT_FileManager.cs:line 117
+2016-03-11 14:07:06.928 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir] Searched for ICARTT files
+2016-03-11 14:07:06.928 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir]     Directory: 
+2016-03-11 14:07:06.928 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir]     Number of ICARTT Files Found: 0
+2016-03-11 14:07:07.287   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 14:07:07.287   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: File Select
+2016-03-11 14:07:07.287   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   Time Variables
+2016-03-11 14:07:11.692 MESSAGE --- [             Program].[                Main] Main thread terminating.
+2016-03-11 14:07:11.692 MESSAGE --- [              Logger].[               Close] Close requested. Remaining 0 messages will be written to file.
+2016-03-11 14:07:18.382 MESSAGE --- [              Logger].[               Setup] Ready to accept and digest messages.
+2016-03-11 14:07:18.597   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 14:07:18.597   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: DEFAULT NAME
+2016-03-11 14:07:18.597   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   Directory Select
+2016-03-11 14:07:19.809   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 14:07:19.809   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: Directory Select
+2016-03-11 14:07:19.809   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   Time Variables
+2016-03-11 14:07:19.879  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir] System.ArgumentException: The path is not of a legal form.
+2016-03-11 14:07:19.879  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Path.NormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+2016-03-11 14:07:19.879  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Path.GetFullPathInternal(String path)
+2016-03-11 14:07:19.879  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+2016-03-11 14:07:19.879  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Directory.GetFiles(String path, String searchPattern, SearchOption searchOption)
+2016-03-11 14:07:19.879  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at ICARTT_Merge_Configuration.Utilities.ICARTT_FileManager.GetICARTTFilesFromDir(String dir) in C:\Users\atschaff\Documents\Visual Studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\Utilities\ICARTT_FileManager.cs:line 117
+2016-03-11 14:07:19.880 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir] Searched for ICARTT files
+2016-03-11 14:07:19.880 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir]     Directory: 
+2016-03-11 14:07:19.880 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir]     Number of ICARTT Files Found: 0
+2016-03-11 14:07:21.855 MESSAGE --- [             Program].[                Main] Main thread terminating.
+2016-03-11 14:07:21.856 MESSAGE --- [              Logger].[               Close] Close requested. Remaining 0 messages will be written to file.
+2016-03-11 14:08:12.840 MESSAGE --- [              Logger].[               Setup] Ready to accept and digest messages.
+2016-03-11 14:08:13.075   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 14:08:13.075   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: DEFAULT NAME
+2016-03-11 14:08:13.075   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   Directory Select
+2016-03-11 14:08:23.475   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 14:08:23.475   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: Directory Select
+2016-03-11 14:08:23.475   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   Time Variables
+2016-03-11 14:08:23.506  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir] System.ArgumentException: The path is not of a legal form.
+2016-03-11 14:08:23.506  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Path.NormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+2016-03-11 14:08:23.506  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Path.GetFullPathInternal(String path)
+2016-03-11 14:08:23.506  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+2016-03-11 14:08:23.506  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Directory.GetFiles(String path, String searchPattern, SearchOption searchOption)
+2016-03-11 14:08:23.506  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at ICARTT_Merge_Configuration.Utilities.ICARTT_FileManager.GetICARTTFilesFromDir(String dir) in C:\Users\atschaff\Documents\Visual Studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\Utilities\ICARTT_FileManager.cs:line 117
+2016-03-11 14:08:23.506 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir] Searched for ICARTT files
+2016-03-11 14:08:23.506 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir]     Directory: 
+2016-03-11 14:08:23.506 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir]     Number of ICARTT Files Found: 0
+2016-03-11 14:08:37.072 MESSAGE --- [             Program].[                Main] Main thread terminating.
+2016-03-11 14:08:37.072 MESSAGE --- [              Logger].[               Close] Close requested. Remaining 0 messages will be written to file.
+2016-03-11 14:09:00.570 MESSAGE --- [              Logger].[               Setup] Ready to accept and digest messages.
+2016-03-11 14:09:00.761   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 14:09:00.761   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: DEFAULT NAME
+2016-03-11 14:09:00.761   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   Directory Select
+2016-03-11 14:09:01.809   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 14:09:01.809   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: Directory Select
+2016-03-11 14:09:01.809   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   Time Variables
+2016-03-11 14:09:01.841  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir] System.ArgumentException: The path is not of a legal form.
+2016-03-11 14:09:01.841  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Path.NormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+2016-03-11 14:09:01.841  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Path.GetFullPathInternal(String path)
+2016-03-11 14:09:01.841  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+2016-03-11 14:09:01.841  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Directory.GetFiles(String path, String searchPattern, SearchOption searchOption)
+2016-03-11 14:09:01.841  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at ICARTT_Merge_Configuration.Utilities.ICARTT_FileManager.GetICARTTFilesFromDir(String dir) in C:\Users\atschaff\Documents\Visual Studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\Utilities\ICARTT_FileManager.cs:line 117
+2016-03-11 14:09:01.841 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir] Searched for ICARTT files
+2016-03-11 14:09:01.841 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir]     Directory: 
+2016-03-11 14:09:01.841 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir]     Number of ICARTT Files Found: 0
+2016-03-11 14:10:29.383 MESSAGE --- [             Program].[                Main] Main thread terminating.
+2016-03-11 14:10:29.383 MESSAGE --- [              Logger].[               Close] Close requested. Remaining 0 messages will be written to file.
+2016-03-11 14:13:37.456 MESSAGE --- [              Logger].[               Setup] Ready to accept and digest messages.
+2016-03-11 14:13:37.718   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 14:13:37.718   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: DEFAULT NAME
+2016-03-11 14:13:37.718   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   Directory Select
+2016-03-11 14:13:38.685   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 14:13:38.685   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: Directory Select
+2016-03-11 14:13:38.685   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   File Select
+2016-03-11 14:13:38.716  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir] System.ArgumentException: The path is not of a legal form.
+2016-03-11 14:13:38.716  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Path.NormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+2016-03-11 14:13:38.716  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Path.GetFullPathInternal(String path)
+2016-03-11 14:13:38.716  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+2016-03-11 14:13:38.716  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Directory.GetFiles(String path, String searchPattern, SearchOption searchOption)
+2016-03-11 14:13:38.716  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at ICARTT_Merge_Configuration.Utilities.ICARTT_FileManager.GetICARTTFilesFromDir(String dir) in C:\Users\atschaff\Documents\Visual Studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\Utilities\ICARTT_FileManager.cs:line 117
+2016-03-11 14:13:38.716 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir] Searched for ICARTT files
+2016-03-11 14:13:38.716 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir]     Directory: 
+2016-03-11 14:13:38.716 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir]     Number of ICARTT Files Found: 0
+2016-03-11 14:13:38.937   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 14:13:38.937   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: File Select
+2016-03-11 14:13:38.937   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   Time Variables
+2016-03-11 14:13:45.874 MESSAGE --- [             Program].[                Main] Main thread terminating.
+2016-03-11 14:13:45.890 MESSAGE --- [              Logger].[               Close] Close requested. Remaining 0 messages will be written to file.
+2016-03-11 14:14:26.425 MESSAGE --- [              Logger].[               Setup] Ready to accept and digest messages.
+2016-03-11 14:14:26.679   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 14:14:26.679   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: DEFAULT NAME
+2016-03-11 14:14:26.679   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   Directory Select
+2016-03-11 14:14:27.520   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 14:14:27.520   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: Directory Select
+2016-03-11 14:14:27.520   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   Time Variables
+2016-03-11 14:14:27.660  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir] System.ArgumentException: The path is not of a legal form.
+2016-03-11 14:14:27.660  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Path.NormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+2016-03-11 14:14:27.660  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Path.GetFullPathInternal(String path)
+2016-03-11 14:14:27.660  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+2016-03-11 14:14:27.660  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at System.IO.Directory.GetFiles(String path, String searchPattern, SearchOption searchOption)
+2016-03-11 14:14:27.660  EXCEPT --- [  ICARTT_FileManager].[...CARTTFilesFromDir]        at ICARTT_Merge_Configuration.Utilities.ICARTT_FileManager.GetICARTTFilesFromDir(String dir) in C:\Users\atschaff\Documents\Visual Studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\Utilities\ICARTT_FileManager.cs:line 117
+2016-03-11 14:14:27.660 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir] Searched for ICARTT files
+2016-03-11 14:14:27.660 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir]     Directory: 
+2016-03-11 14:14:27.660 MESSAGE --- [  ICARTT_FileManager].[...CARTTFilesFromDir]     Number of ICARTT Files Found: 0
+2016-03-11 14:14:40.032   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 14:14:40.032   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: Time Variables
+2016-03-11 14:14:40.032   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   View Variables
+2016-03-11 14:14:40.780   DEBUG --- [...figurationBuilder].[...entProcessControl] Changing Process View
+2016-03-11 14:14:40.780   DEBUG --- [...figurationBuilder].[...entProcessControl]     From: View Variables
+2016-03-11 14:14:40.780   DEBUG --- [...figurationBuilder].[...entProcessControl]     To:   Time Variables
+2016-03-11 14:14:44.407 MESSAGE --- [             Program].[                Main] Main thread terminating.
+2016-03-11 14:14:44.407 MESSAGE --- [              Logger].[               Close] Close requested. Remaining 1 messages will be written to file.

@@ -22,6 +22,7 @@ namespace ICARTT_Merge_Configuration.GUI
                 new ProcessControl_DirectorySelect(),
                 new ProcessControl_FileNameFilters(),
                 new ProcessControl_FileSelect(),
+                new ProcessControl_TimeVariableSelection(),
                 new ProcessControl_VariableViewer()
             };
 
