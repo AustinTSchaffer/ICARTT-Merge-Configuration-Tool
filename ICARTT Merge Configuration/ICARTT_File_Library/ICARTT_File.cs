@@ -179,12 +179,12 @@ namespace ICARTT_Merge_Configuration.ICARTT_File_Library
         /// <summary>
         /// Flag to show if this ICARTT_File will be included in the merge. Default value is 'true'.
         /// </summary>
-        public bool IncludeInMerge = true;
+        public bool IncludeInMerge;
 
         /// <summary>
         /// Flag to show if this ICARTT_File has been loaded.
         /// </summary>
-        private bool loaded = false;
+        private bool loaded;
 
         #endregion
 
@@ -196,6 +196,9 @@ namespace ICARTT_Merge_Configuration.ICARTT_File_Library
         /// <param name="inputFilePath"></param>
         public ICARTT_File(string inputFileName, string inputFilePath)
         {
+            this.IncludeInMerge = true;
+            this.loaded = false;
+
             fileNameInformation = new ICARTT_FileName(inputFileName, inputFilePath);
             fileProperties = new ICARTT_FileProperties();
             dependentVariables = new List<ICARTT_Variable>();
@@ -303,6 +306,20 @@ namespace ICARTT_Merge_Configuration.ICARTT_File_Library
                     Logger.Log(typeof(ICARTT_File), MethodBase.GetCurrentMethod(), e);
                     throw e;
             }
+        }
+
+
+        /// <summary>
+        /// Returns true if the two ICARTT Files have equivalent variable lists. Will return false based on a mismatch between the name and column number of any two ICARTT variables.
+        /// </summary>
+        /// <returns></returns>
+        public bool VariableListMatch(ICARTT_File ictFile)
+        {
+            if (null == ictFile) return false;
+
+            // TODO
+
+            return true;
         }
 
 

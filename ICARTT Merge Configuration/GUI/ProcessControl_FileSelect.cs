@@ -22,9 +22,9 @@ namespace ICARTT_Merge_Configuration.GUI
 
 
         /// <summary>
-        /// Value to determine if the ICARTT_FileManager loaded new files. If the ICARTT_FileManager changes the files in its scope, then the return of ICARTT_FileManager.Hash() should change.
+        /// Value to determine if the ICARTT_FileManager changed its filters. There is no need to reload the list of files unless the filters have changed.
         /// </summary>
-        private int previousFileManagerHash = int.MinValue;
+        private int previousFilterHash = int.MinValue;
 
 
         /// <summary>
@@ -38,11 +38,13 @@ namespace ICARTT_Merge_Configuration.GUI
         /// </summary>
         public override void Activate()
         {
-            if (ICARTT_FileManager.FilterHash() != this.previousFileManagerHash)
+            int hash = ICARTT_FileManager.FilterHash();
+
+            if (hash != this.previousFilterHash)
             {
                 ICARTT_FileManager.Filter();
                 ICARTT_FileManager.LoadAll();
-                this.previousFileManagerHash = ICARTT_FileManager.FilterHash();
+                this.previousFilterHash = hash;
             }
             
             this.CheckedListBox_AllIcarttFiles.Items.Clear();

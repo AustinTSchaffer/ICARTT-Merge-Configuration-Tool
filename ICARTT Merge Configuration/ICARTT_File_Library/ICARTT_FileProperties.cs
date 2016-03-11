@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 namespace ICARTT_Merge_Configuration.ICARTT_File_Library
 {
     /// <summary>
-    /// This struct holds header information from an ICARTT file.
+    /// This class holds ICARTT header information that is not directly related to the contained variables.
     /// </summary>
     class ICARTT_FileProperties
     {
         /// <summary>
-        /// Struct constructor.
+        /// Initializes all structures with default values to prevent access errors before file is loaded.
         /// </summary>
         public ICARTT_FileProperties()
         {
