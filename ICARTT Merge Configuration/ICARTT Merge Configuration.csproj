@@ -49,7 +49,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>7B124343AD7DB4BF41D56C88D9D5610197F4DA11</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>2F954DA0495A4E925647C9C5D7548428CB3C2148</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestKeyFile>ICARTT Merge Configuration_TemporaryKey.pfx</ManifestKeyFile>
@@ -138,6 +138,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="ICARTT Merge Configuration_TemporaryKey.pfx" />
     <None Include="Properties\DataSources\ICARTT_Merge_Configuration.Utilities.ICARTT_FileManager.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
