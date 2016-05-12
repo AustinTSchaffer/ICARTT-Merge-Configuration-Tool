@@ -106,28 +106,60 @@
     <Compile Include="GUI\ProcessControl_FileNameFilters.Designer.cs">
       <DependentUpon>ProcessControl_FileNameFilters.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\ProcessControl_TimeVariableSelection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ProcessControl_TimeVariableSelection.Designer.cs">
+      <DependentUpon>ProcessControl_TimeVariableSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ProcessControl_TimeVariableSelectionControls\TimeVariableSelectionControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ProcessControl_TimeVariableSelectionControls\TimeVariableSelectionControl.Designer.cs">
+      <DependentUpon>TimeVariableSelectionControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ProcessControl_VariableViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ProcessControl_VariableViewer.Designer.cs">
+      <DependentUpon>ProcessControl_VariableViewer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utilities\ICARTT_FileManager.cs" />
     <Compile Include="ICARTT_File_Library\ICARTT_File.cs" />
     <Compile Include="ICARTT_File_Library\ICARTT_FileName.cs" />
     <Compile Include="ICARTT_File_Library\ICARTT_FileProperties.cs" />
-    <Compile Include="ICARTT_File_Library\Variables\ICARTT_Variable.cs" />
+    <Compile Include="ICARTT_File_Library\ICARTT_Variable.cs" />
+    <Compile Include="Utilities\ICARTT_VariableManager.cs" />
     <Compile Include="Utilities\Logger.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\ICARTT_ConfigurationBuilder.resx">
       <DependentUpon>ICARTT_ConfigurationBuilder.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ProcessControl.resx">
       <DependentUpon>ProcessControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ProcessControl_DirectorySelect.resx">
       <DependentUpon>ProcessControl_DirectorySelect.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ProcessControl_FileNameFilters.resx">
       <DependentUpon>ProcessControl_FileNameFilters.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ProcessControl_FileSelect.resx">
       <DependentUpon>ProcessControl_FileSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ProcessControl_TimeVariableSelection.resx">
+      <DependentUpon>ProcessControl_TimeVariableSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ProcessControl_TimeVariableSelectionControls\TimeVariableSelectionControl.resx">
+      <DependentUpon>TimeVariableSelectionControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ProcessControl_VariableViewer.resx">
+      <DependentUpon>ProcessControl_VariableViewer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

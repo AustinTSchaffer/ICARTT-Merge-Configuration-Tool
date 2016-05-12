@@ -16,11 +16,16 @@ namespace ICARTT_Merge_Configuration.GUI
     public partial class ProcessControl_FileNameFilters : ProcessControl
     {
 
-
         /// <summary>
         /// Value to determine if the ICARTT_FileManager loaded new files. If the ICARTT_FileManager changes the files in its scope, then the return of ICARTT_FileManager.Hash() should change.
         /// </summary>
-        private int previousFileManagerHash = int.MinValue;
+        private int previousFileListHash = int.MinValue;
+
+
+        /// <summary>
+        /// Value to determine if the ICARTT_FileManager changed its filters. There is no need to reload the list of files unless the filters have changed.
+        /// </summary>
+        private int previousFilterHash = int.MinValue;
 
 
         public ProcessControl_FileNameFilters() : base("File Name Filters")
@@ -28,11 +33,12 @@ namespace ICARTT_Merge_Configuration.GUI
             InitializeComponent();
         }
 
+
         public override void Activate()
         {
-            int hash = ICARTT_FileManager.Hash();
-            if (hash == previousFileManagerHash) return;
-            previousFileManagerHash = hash;
+            int hash = ICARTT_FileManager.AllFilesHash();
+            if (hash == previousFileListHash) return;
+            previousFileListHash = hash;
 
             List<ICARTT_File> listOfFilesInScope = ICARTT_FileManager.IcarttFilesInScope;
 
@@ -53,6 +59,7 @@ namespace ICARTT_Merge_Configuration.GUI
             base.Activate();
         }
 
+
         public override void Deactivate()
         {
             List<string> selectedLocationID = new List<string>();
@@ -70,8 +77,15 @@ namespace ICARTT_Merge_Configuration.GUI
             ICARTT_FileManager.AddFilter(ICARTT_File.FileNameProperty.DataID, selectedDataIDs);
             ICARTT_FileManager.AddFilter(ICARTT_File.FileNameProperty.Date, selectedDates);
 
-            // Don't filter during this step, in the event the user does not go directly to the file selection portion of the process.
-            // ICARTT_FileManager.Filter();
+
+            int hash = ICARTT_FileManager.FilterHash();
+
+            if (hash != this.previousFilterHash)
+            {
+                ICARTT_FileManager.Filter();
+                ICARTT_FileManager.LoadAll();
+                this.previousFilterHash = hash;
+            }
 
             base.Deactivate();
         }

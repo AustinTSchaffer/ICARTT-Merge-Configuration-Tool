@@ -31,19 +31,20 @@
             this.BrowseButton_ICARTTDirectory = new System.Windows.Forms.Button();
             this.SelectRootDirectoryLabel = new System.Windows.Forms.Label();
             this.FolderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
+            this.WebBrowser_ProbablyNotUsefulWhoCares = new System.Windows.Forms.WebBrowser();
             this.controlsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // controlsPanel
             // 
             this.controlsPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.controlsPanel.Controls.Add(this.WebBrowser_ProbablyNotUsefulWhoCares);
             this.controlsPanel.Controls.Add(this.SelectRootDirectoryLabel);
             this.controlsPanel.Controls.Add(this.BrowseButton_ICARTTDirectory);
             this.controlsPanel.Controls.Add(this.BrowseButton_ExistingMergeConfig);
             this.controlsPanel.Controls.Add(this.TextField_RootDirectory);
             this.controlsPanel.Controls.Add(this.CheckBox_ExistingMergeConfig);
             this.controlsPanel.Controls.Add(this.TextField_ExistingMergeConfig);
-            this.controlsPanel.Controls.Add(this.AboutTextBox);
             this.controlsPanel.Size = new System.Drawing.Size(417, 490);
             // 
             // AboutTextBox
@@ -59,7 +60,7 @@
             this.AboutTextBox.Size = new System.Drawing.Size(417, 374);
             this.AboutTextBox.TabIndex = 0;
             this.AboutTextBox.TabStop = false;
-            this.AboutTextBox.Text = "ASDF\nasdfasdf\nasdfasdf\nasdfasdfasdf\nasdfasdfasdf\n\nafafafaf.";
+            this.AboutTextBox.Text = "";
             // 
             // TextField_ExistingMergeConfig
             // 
@@ -138,6 +139,18 @@
             this.FolderBrowserDialog.Description = "Select ICARTT Directory";
             this.FolderBrowserDialog.ShowNewFolderButton = false;
             // 
+            // WebBrowser_ProbablyNotUsefulWhoCares
+            // 
+            this.WebBrowser_ProbablyNotUsefulWhoCares.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.WebBrowser_ProbablyNotUsefulWhoCares.Location = new System.Drawing.Point(0, 0);
+            this.WebBrowser_ProbablyNotUsefulWhoCares.MinimumSize = new System.Drawing.Size(20, 20);
+            this.WebBrowser_ProbablyNotUsefulWhoCares.Name = "WebBrowser_ProbablyNotUsefulWhoCares";
+            this.WebBrowser_ProbablyNotUsefulWhoCares.Size = new System.Drawing.Size(417, 386);
+            this.WebBrowser_ProbablyNotUsefulWhoCares.TabIndex = 33;
+            this.WebBrowser_ProbablyNotUsefulWhoCares.Url = new System.Uri("http://www-air.larc.nasa.gov/missions/etc/IcarttDataFormat.htm", System.UriKind.Absolute);
+            // 
             // ProcessControl_DirectorySelect
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -161,5 +174,6 @@
         private System.Windows.Forms.Button BrowseButton_ICARTTDirectory;
         private System.Windows.Forms.Label SelectRootDirectoryLabel;
         private System.Windows.Forms.FolderBrowserDialog FolderBrowserDialog;
+        private System.Windows.Forms.WebBrowser WebBrowser_ProbablyNotUsefulWhoCares;
     }
 }

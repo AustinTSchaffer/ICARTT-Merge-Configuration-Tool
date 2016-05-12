@@ -22,7 +22,8 @@ namespace ICARTT_Merge_Configuration.GUI
                 new ProcessControl_DirectorySelect(),
                 new ProcessControl_FileNameFilters(),
                 new ProcessControl_FileSelect(),
-                new ProcessControl()
+                new ProcessControl_TimeVariableSelection(),
+                new ProcessControl_VariableViewer()
             };
 
             InitializeComponent();
@@ -33,8 +34,8 @@ namespace ICARTT_Merge_Configuration.GUI
 
         private void PopulateNavigationListBox()
         {
-            foreach (ProcessControl pc in this.ProcessControls) this.NavigationListBox.Items.Add(pc.DisplayName);
-            this.NavigationListBox.SelectedIndex = 0;
+            foreach (ProcessControl pc in this.ProcessControls) this.ListBox_Navigation.Items.Add(pc.DisplayName);
+            this.ListBox_Navigation.SelectedIndex = 0;
         }
 
 
@@ -58,7 +59,7 @@ namespace ICARTT_Merge_Configuration.GUI
 
             this.ToggleNextAndBackButtonState();
 
-            this.NavigationListBox.SelectedIndex = this.ProcessControls.IndexOf(CurrentProcessControl);
+            this.ListBox_Navigation.SelectedIndex = this.ProcessControls.IndexOf(CurrentProcessControl);
 
             this.CurrentProcessControl.Activate();
         }
@@ -73,13 +74,13 @@ namespace ICARTT_Merge_Configuration.GUI
             this.BackButton.Enabled = (pos > 0);
             this.NextButton.Enabled = (pos + 1 < this.ProcessControls.Count);
         }
-        
+
 
         private void NavigationListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             foreach (ProcessControl pc in ProcessControls)
             {
-                if (pc.DisplayName.Equals(this.NavigationListBox.SelectedItem))
+                if (pc.DisplayName.Equals(this.ListBox_Navigation.SelectedItem))
                 {
                     this.ChangeCurrentProcessControl(pc);
                     return;
