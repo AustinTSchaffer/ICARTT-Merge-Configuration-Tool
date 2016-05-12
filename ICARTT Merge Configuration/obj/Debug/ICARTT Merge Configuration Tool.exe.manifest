@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ICARTT Merge Configuration Tool.exe" size="63400">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ICARTT Merge Configuration Tool.exe" size="75176">
       <assemblyIdentity name="ICARTT Merge Configuration Tool" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>QAyWfjLpGwcESLMZqjt11M6Ckq6HcpYeUEWWNZmFytA=</dsig:DigestValue>
+        <dsig:DigestValue>IQETZ5itQL8lpedULbBAbbCXIsqf1Io4F6ib5Qrc35Q=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

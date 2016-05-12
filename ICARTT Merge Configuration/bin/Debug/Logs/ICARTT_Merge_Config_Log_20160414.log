@@ -1,0 +1,361 @@
+2016-04-14 15:38:21.747 MESSAGE --- [                   Logger].[                    Setup] Ready to accept and digest messages.
+2016-04-14 15:38:22.335   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 15:38:22.335   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: DEFAULT NAME
+2016-04-14 15:38:22.335   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   Directory Select
+2016-04-14 15:38:29.213 MESSAGE --- [...ontrol_DirectorySelect].[..._ICARTTDirectory_Click] User selected directory: C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT
+2016-04-14 15:38:30.182   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 15:38:30.182   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: Directory Select
+2016-04-14 15:38:30.182   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   File Name Filters
+2016-04-14 15:38:30.216 MESSAGE --- [       ICARTT_FileManager].[    GetICARTTFilesFromDir] Searched for ICARTT files
+2016-04-14 15:38:30.216 MESSAGE --- [       ICARTT_FileManager].[    GetICARTTFilesFromDir]     Directory: C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT
+2016-04-14 15:38:30.216 MESSAGE --- [       ICARTT_FileManager].[    GetICARTTFilesFromDir]     Number of ICARTT Files Found: 188
+2016-04-14 15:38:31.133   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 15:38:31.133   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: File Name Filters
+2016-04-14 15:38:31.133   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   File Select
+2016-04-14 15:38:32.237   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 15:38:32.237   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: File Select
+2016-04-14 15:38:32.237   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   File Name Filters
+2016-04-14 15:38:34.445   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 15:38:34.445   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: File Name Filters
+2016-04-14 15:38:34.445   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   File Select
+2016-04-14 15:38:38.437   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 15:38:38.437   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: File Select
+2016-04-14 15:38:38.437   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   Time Variables
+2016-04-14 15:39:02.171   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 15:39:02.171   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: Time Variables
+2016-04-14 15:39:02.171   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   Map Variables
+2016-04-14 15:39:09.483   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 15:39:09.483   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: Map Variables
+2016-04-14 15:39:09.483   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   Time Variables
+2016-04-14 15:39:11.115   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 15:39:11.115   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: Time Variables
+2016-04-14 15:39:11.115   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   Map Variables
+2016-04-14 15:39:17.238 MESSAGE --- [                  Program].[                     Main] Main thread terminating.
+2016-04-14 15:39:17.238 MESSAGE --- [                   Logger].[                    Close] Close requested. Remaining 0 messages will be written to file.
+2016-04-14 15:42:01.165 MESSAGE --- [                   Logger].[                    Setup] Ready to accept and digest messages.
+2016-04-14 15:42:01.424   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 15:42:01.424   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: DEFAULT NAME
+2016-04-14 15:42:01.424   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   Directory Select
+2016-04-14 15:42:09.387 MESSAGE --- [...ontrol_DirectorySelect].[..._ICARTTDirectory_Click] User selected directory: C:\Users\atschaff\ICARTT Data\CALIFORNIA_2013\P3B_AIRCRAFT
+2016-04-14 15:42:10.335   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 15:42:10.335   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: Directory Select
+2016-04-14 15:42:10.335   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   File Name Filters
+2016-04-14 15:42:10.445 MESSAGE --- [       ICARTT_FileManager].[    GetICARTTFilesFromDir] Searched for ICARTT files
+2016-04-14 15:42:10.445 MESSAGE --- [       ICARTT_FileManager].[    GetICARTTFilesFromDir]     Directory: C:\Users\atschaff\ICARTT Data\CALIFORNIA_2013\P3B_AIRCRAFT
+2016-04-14 15:42:10.445 MESSAGE --- [       ICARTT_FileManager].[    GetICARTTFilesFromDir]     Number of ICARTT Files Found: 349
+2016-04-14 15:42:17.928   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 15:42:17.928   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: File Name Filters
+2016-04-14 15:42:17.928   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   File Select
+2016-04-14 15:42:21.766  EXCEPT --- [              ICARTT_File].[                     Load] System.FormatException: Input string was not in a correct format.
+2016-04-14 15:42:21.766  EXCEPT --- [              ICARTT_File].[                     Load]        at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+2016-04-14 15:42:21.766  EXCEPT --- [              ICARTT_File].[                     Load]        at System.Double.Parse(String s)
+2016-04-14 15:42:21.766  EXCEPT --- [              ICARTT_File].[                     Load]        at ICARTT_Merge_Configuration.ICARTT_File_Library.ICARTT_File.Load() in C:\Users\atschaff\Documents\Visual Studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\ICARTT_File_Library\ICARTT_File.cs:line 256
+2016-04-14 15:42:21.780   ERROR --- [              ICARTT_File].[                     Load] LOAD ERROR: C:\Users\atschaff\ICARTT Data\CALIFORNIA_2013\P3B_AIRCRAFT\FRIED.ALAN\discoveraq-CH2O_P3B_20130128_R0_1Min.ict
+2016-04-14 15:42:23.344  EXCEPT --- [              ICARTT_File].[                     Load] System.FormatException: Input string was not in a correct format.
+2016-04-14 15:42:23.344  EXCEPT --- [              ICARTT_File].[                     Load]        at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+2016-04-14 15:42:23.344  EXCEPT --- [              ICARTT_File].[                     Load]        at System.Double.Parse(String s)
+2016-04-14 15:42:23.344  EXCEPT --- [              ICARTT_File].[                     Load]        at ICARTT_Merge_Configuration.ICARTT_File_Library.ICARTT_File.Load() in C:\Users\atschaff\Documents\Visual Studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\ICARTT_File_Library\ICARTT_File.cs:line 256
+2016-04-14 15:42:23.359   ERROR --- [              ICARTT_File].[                     Load] LOAD ERROR: C:\Users\atschaff\ICARTT Data\CALIFORNIA_2013\P3B_AIRCRAFT\FRIED.ALAN\discoveraq-CH2O_P3B_20130128_R0_1Min.ict
+2016-04-14 15:42:32.057   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 15:42:32.057   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: File Select
+2016-04-14 15:42:32.057   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   File Name Filters
+2016-04-14 15:42:37.752   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 15:42:37.752   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: File Name Filters
+2016-04-14 15:42:37.752   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   File Select
+2016-04-14 15:42:54.991  EXCEPT --- [              ICARTT_File].[                     Load] System.FormatException: Input string was not in a correct format.
+2016-04-14 15:42:54.991  EXCEPT --- [              ICARTT_File].[                     Load]        at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+2016-04-14 15:42:54.991  EXCEPT --- [              ICARTT_File].[                     Load]        at System.Double.Parse(String s)
+2016-04-14 15:42:54.991  EXCEPT --- [              ICARTT_File].[                     Load]        at ICARTT_Merge_Configuration.ICARTT_File_Library.ICARTT_File.Load() in C:\Users\atschaff\Documents\Visual Studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\ICARTT_File_Library\ICARTT_File.cs:line 256
+2016-04-14 15:42:55.010   ERROR --- [              ICARTT_File].[                     Load] LOAD ERROR: C:\Users\atschaff\ICARTT Data\CALIFORNIA_2013\P3B_AIRCRAFT\FRIED.ALAN\discoveraq-CH2O_P3B_20130128_R0_1Min.ict
+2016-04-14 15:43:49.259   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 15:43:49.259   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: File Select
+2016-04-14 15:43:49.259   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   Time Variables
+2016-04-14 15:44:44.797   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 15:44:44.797   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: Time Variables
+2016-04-14 15:44:44.797   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   Map Variables
+2016-04-14 15:46:38.365 MESSAGE --- [                  Program].[                     Main] Main thread terminating.
+2016-04-14 15:46:38.365 MESSAGE --- [                   Logger].[                    Close] Close requested. Remaining 0 messages will be written to file.
+2016-04-14 15:52:12.950 MESSAGE --- [                   Logger].[                    Setup] Ready to accept and digest messages.
+2016-04-14 15:52:13.244   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 15:52:13.244   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: DEFAULT NAME
+2016-04-14 15:52:13.244   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   Directory Select
+2016-04-14 15:52:23.515 MESSAGE --- [...ontrol_DirectorySelect].[..._ICARTTDirectory_Click] User selected directory: C:\Users\atschaff\ICARTT Data\CALIFORNIA_2013\P3B_AIRCRAFT
+2016-04-14 15:52:24.366   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 15:52:24.366   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: Directory Select
+2016-04-14 15:52:24.366   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   File Name Filters
+2016-04-14 15:52:24.391 MESSAGE --- [       ICARTT_FileManager].[    GetICARTTFilesFromDir] Searched for ICARTT files
+2016-04-14 15:52:24.391 MESSAGE --- [       ICARTT_FileManager].[    GetICARTTFilesFromDir]     Directory: C:\Users\atschaff\ICARTT Data\CALIFORNIA_2013\P3B_AIRCRAFT
+2016-04-14 15:52:24.391 MESSAGE --- [       ICARTT_FileManager].[    GetICARTTFilesFromDir]     Number of ICARTT Files Found: 349
+2016-04-14 15:52:29.629   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 15:52:29.629   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: File Name Filters
+2016-04-14 15:52:29.629   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   File Select
+2016-04-14 15:52:29.798  EXCEPT --- [              ICARTT_File].[                     Load] System.FormatException: Input string was not in a correct format.
+2016-04-14 15:52:29.798  EXCEPT --- [              ICARTT_File].[                     Load]        at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+2016-04-14 15:52:29.798  EXCEPT --- [              ICARTT_File].[                     Load]        at System.Double.Parse(String s)
+2016-04-14 15:52:29.798  EXCEPT --- [              ICARTT_File].[                     Load]        at ICARTT_Merge_Configuration.ICARTT_File_Library.ICARTT_File.Load() in C:\Users\atschaff\Documents\Visual Studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\ICARTT_File_Library\ICARTT_File.cs:line 256
+2016-04-14 15:52:29.809   ERROR --- [              ICARTT_File].[                     Load] LOAD ERROR: C:\Users\atschaff\ICARTT Data\CALIFORNIA_2013\P3B_AIRCRAFT\FRIED.ALAN\discoveraq-CH2O_P3B_20130128_R0_1Min.ict
+2016-04-14 15:52:29.873  EXCEPT --- [              ICARTT_File].[                     Load] System.FormatException: Input string was not in a correct format.
+2016-04-14 15:52:29.873  EXCEPT --- [              ICARTT_File].[                     Load]        at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+2016-04-14 15:52:29.873  EXCEPT --- [              ICARTT_File].[                     Load]        at System.Double.Parse(String s)
+2016-04-14 15:52:29.873  EXCEPT --- [              ICARTT_File].[                     Load]        at ICARTT_Merge_Configuration.ICARTT_File_Library.ICARTT_File.Load() in C:\Users\atschaff\Documents\Visual Studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\ICARTT_File_Library\ICARTT_File.cs:line 256
+2016-04-14 15:52:29.888   ERROR --- [              ICARTT_File].[                     Load] LOAD ERROR: C:\Users\atschaff\ICARTT Data\CALIFORNIA_2013\P3B_AIRCRAFT\FRIED.ALAN\discoveraq-CH2O_P3B_20130128_R0_1Min.ict
+2016-04-14 15:52:41.198   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 15:52:41.198   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: File Select
+2016-04-14 15:52:41.198   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   Time Variables
+2016-04-14 15:53:19.183   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 15:53:19.183   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: Time Variables
+2016-04-14 15:53:19.183   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   Map Variables
+2016-04-14 15:55:32.567 MESSAGE --- [                   Logger].[                    Setup] Ready to accept and digest messages.
+2016-04-14 15:55:32.860   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 15:55:32.860   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: DEFAULT NAME
+2016-04-14 15:55:32.860   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   Directory Select
+2016-04-14 15:55:40.750 MESSAGE --- [...ontrol_DirectorySelect].[..._ICARTTDirectory_Click] User selected directory: C:\Users\atschaff\ICARTT Data\BALTIMORE_WASH_DC_2011\P3B_AIRCRAFT
+2016-04-14 15:55:41.582   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 15:55:41.582   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: Directory Select
+2016-04-14 15:55:41.582   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   File Name Filters
+2016-04-14 15:55:41.760 MESSAGE --- [       ICARTT_FileManager].[    GetICARTTFilesFromDir] Searched for ICARTT files
+2016-04-14 15:55:41.760 MESSAGE --- [       ICARTT_FileManager].[    GetICARTTFilesFromDir]     Directory: C:\Users\atschaff\ICARTT Data\BALTIMORE_WASH_DC_2011\P3B_AIRCRAFT
+2016-04-14 15:55:41.760 MESSAGE --- [       ICARTT_FileManager].[    GetICARTTFilesFromDir]     Number of ICARTT Files Found: 457
+2016-04-14 15:55:48.005   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 15:55:48.005   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: File Name Filters
+2016-04-14 15:55:48.005   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   File Select
+2016-04-14 15:56:05.549   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 15:56:05.549   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: File Select
+2016-04-14 15:56:05.549   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   Time Variables
+2016-04-14 15:56:39.270   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 15:56:39.270   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: Time Variables
+2016-04-14 15:56:39.270   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   Map Variables
+2016-04-14 16:03:10.072 MESSAGE --- [                   Logger].[                    Setup] Ready to accept and digest messages.
+2016-04-14 16:03:10.329   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 16:03:10.329   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: DEFAULT NAME
+2016-04-14 16:03:10.329   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   Directory Select
+2016-04-14 16:03:22.564 MESSAGE --- [...ontrol_DirectorySelect].[..._ICARTTDirectory_Click] User selected directory: C:\Users\atschaff\ICARTT Data\BALTIMORE_WASH_DC_2011\P3B_AIRCRAFT
+2016-04-14 16:03:23.398   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 16:03:23.398   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: Directory Select
+2016-04-14 16:03:23.398   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   File Name Filters
+2016-04-14 16:03:23.434 MESSAGE --- [       ICARTT_FileManager].[    GetICARTTFilesFromDir] Searched for ICARTT files
+2016-04-14 16:03:23.434 MESSAGE --- [       ICARTT_FileManager].[    GetICARTTFilesFromDir]     Directory: C:\Users\atschaff\ICARTT Data\BALTIMORE_WASH_DC_2011\P3B_AIRCRAFT
+2016-04-14 16:03:23.434 MESSAGE --- [       ICARTT_FileManager].[    GetICARTTFilesFromDir]     Number of ICARTT Files Found: 457
+2016-04-14 16:03:41.982   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 16:03:41.982   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: File Name Filters
+2016-04-14 16:03:41.982   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   File Select
+2016-04-14 16:03:43.022   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 16:03:43.022   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: File Select
+2016-04-14 16:03:43.022   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   Time Variables
+2016-04-14 16:03:46.302   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 16:03:46.302   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: Time Variables
+2016-04-14 16:03:46.302   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   Map Variables
+2016-04-14 16:04:07.573 MESSAGE --- [                  Program].[                     Main] Main thread terminating.
+2016-04-14 16:04:07.574 MESSAGE --- [                   Logger].[                    Close] Close requested. Remaining 0 messages will be written to file.
+2016-04-14 16:04:20.141 MESSAGE --- [                   Logger].[                    Setup] Ready to accept and digest messages.
+2016-04-14 16:04:20.412   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 16:04:20.412   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: DEFAULT NAME
+2016-04-14 16:04:20.412   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   Directory Select
+2016-04-14 16:04:28.446 MESSAGE --- [...ontrol_DirectorySelect].[..._ICARTTDirectory_Click] User selected directory: C:\Users\atschaff\ICARTT Data\CALIFORNIA_2013\P3B_AIRCRAFT
+2016-04-14 16:04:29.567   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 16:04:29.567   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: Directory Select
+2016-04-14 16:04:29.567   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   File Name Filters
+2016-04-14 16:04:29.583 MESSAGE --- [       ICARTT_FileManager].[    GetICARTTFilesFromDir] Searched for ICARTT files
+2016-04-14 16:04:29.583 MESSAGE --- [       ICARTT_FileManager].[    GetICARTTFilesFromDir]     Directory: C:\Users\atschaff\ICARTT Data\CALIFORNIA_2013\P3B_AIRCRAFT
+2016-04-14 16:04:29.583 MESSAGE --- [       ICARTT_FileManager].[    GetICARTTFilesFromDir]     Number of ICARTT Files Found: 349
+2016-04-14 16:04:30.887   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 16:04:30.887   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: File Name Filters
+2016-04-14 16:04:30.887   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   File Select
+2016-04-14 16:04:30.971  EXCEPT --- [              ICARTT_File].[                     Load] System.FormatException: Input string was not in a correct format.
+2016-04-14 16:04:30.971  EXCEPT --- [              ICARTT_File].[                     Load]        at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+2016-04-14 16:04:30.971  EXCEPT --- [              ICARTT_File].[                     Load]        at System.Double.Parse(String s)
+2016-04-14 16:04:30.971  EXCEPT --- [              ICARTT_File].[                     Load]        at ICARTT_Merge_Configuration.ICARTT_File_Library.ICARTT_File.Load() in C:\Users\atschaff\Documents\Visual Studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\ICARTT_File_Library\ICARTT_File.cs:line 256
+2016-04-14 16:04:30.983   ERROR --- [              ICARTT_File].[                     Load] LOAD ERROR: C:\Users\atschaff\ICARTT Data\CALIFORNIA_2013\P3B_AIRCRAFT\FRIED.ALAN\discoveraq-CH2O_P3B_20130128_R0_1Min.ict
+2016-04-14 16:04:31.063  EXCEPT --- [              ICARTT_File].[                     Load] System.FormatException: Input string was not in a correct format.
+2016-04-14 16:04:31.063  EXCEPT --- [              ICARTT_File].[                     Load]        at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+2016-04-14 16:04:31.063  EXCEPT --- [              ICARTT_File].[                     Load]        at System.Double.Parse(String s)
+2016-04-14 16:04:31.063  EXCEPT --- [              ICARTT_File].[                     Load]        at ICARTT_Merge_Configuration.ICARTT_File_Library.ICARTT_File.Load() in C:\Users\atschaff\Documents\Visual Studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\ICARTT_File_Library\ICARTT_File.cs:line 256
+2016-04-14 16:04:31.078   ERROR --- [              ICARTT_File].[                     Load] LOAD ERROR: C:\Users\atschaff\ICARTT Data\CALIFORNIA_2013\P3B_AIRCRAFT\FRIED.ALAN\discoveraq-CH2O_P3B_20130128_R0_1Min.ict
+2016-04-14 16:04:32.800   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 16:04:32.800   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: File Select
+2016-04-14 16:04:32.800   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   Time Variables
+2016-04-14 16:04:35.168   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 16:04:35.168   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: Time Variables
+2016-04-14 16:04:35.168   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   Map Variables
+2016-04-14 16:06:08.330   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 16:06:08.330   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: Map Variables
+2016-04-14 16:06:08.330   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   Directory Select
+2016-04-14 16:06:12.372 MESSAGE --- [...ontrol_DirectorySelect].[..._ICARTTDirectory_Click] User selected directory: C:\Users\atschaff\ICARTT Data
+2016-04-14 16:06:13.291   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 16:06:13.291   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: Directory Select
+2016-04-14 16:06:13.291   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   File Name Filters
+2016-04-14 16:06:14.399 MESSAGE --- [       ICARTT_FileManager].[    GetICARTTFilesFromDir] Searched for ICARTT files
+2016-04-14 16:06:14.399 MESSAGE --- [       ICARTT_FileManager].[    GetICARTTFilesFromDir]     Directory: C:\Users\atschaff\ICARTT Data
+2016-04-14 16:06:14.399 MESSAGE --- [       ICARTT_FileManager].[    GetICARTTFilesFromDir]     Number of ICARTT Files Found: 3274
+2016-04-14 16:06:23.300   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 16:06:23.300   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: File Name Filters
+2016-04-14 16:06:23.300   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   File Select
+2016-04-14 16:06:35.027   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 16:06:35.027   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: File Select
+2016-04-14 16:06:35.027   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   File Name Filters
+2016-04-14 16:06:41.605   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 16:06:41.605   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: File Name Filters
+2016-04-14 16:06:41.605   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   File Select
+2016-04-14 16:06:49.132   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 16:06:49.132   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: File Select
+2016-04-14 16:06:49.132   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   File Name Filters
+2016-04-14 16:06:53.685   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 16:06:53.685   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: File Name Filters
+2016-04-14 16:06:53.685   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   File Select
+2016-04-14 16:07:03.877   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 16:07:03.877   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: File Select
+2016-04-14 16:07:03.877   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   Time Variables
+2016-04-14 16:07:06.288 WARNING --- [...riableSelectionControl].[      PreselectComboboxes] No potential time variables were identified.
+2016-04-14 16:07:06.288 WARNING --- [...riableSelectionControl].[      PreselectComboboxes]     Data ID: frappe-ch4-isotopes
+2016-04-14 16:07:06.288 WARNING --- [...riableSelectionControl].[      PreselectComboboxes]     Number of files: 1
+2016-04-14 16:07:07.973   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 16:07:07.973   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: Time Variables
+2016-04-14 16:07:07.973   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   Map Variables
+2016-04-14 16:07:42.469 MESSAGE --- [                  Program].[                     Main] Main thread terminating.
+2016-04-14 16:07:42.470 MESSAGE --- [                   Logger].[                    Close] Close requested. Remaining 0 messages will be written to file.
+2016-04-14 16:11:10.090 MESSAGE --- [                   Logger].[                    Setup] Ready to accept and digest messages.
+2016-04-14 16:11:10.327   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 16:11:10.327   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: DEFAULT NAME
+2016-04-14 16:11:10.327   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   Directory Select
+2016-04-14 16:11:19.105 MESSAGE --- [...ontrol_DirectorySelect].[..._ICARTTDirectory_Click] User selected directory: C:\Users\atschaff\ICARTT Data\CALIFORNIA_2013\P3B_AIRCRAFT
+2016-04-14 16:11:20.030   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 16:11:20.030   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: Directory Select
+2016-04-14 16:11:20.030   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   File Name Filters
+2016-04-14 16:11:20.066 MESSAGE --- [       ICARTT_FileManager].[    GetICARTTFilesFromDir] Searched for ICARTT files
+2016-04-14 16:11:20.066 MESSAGE --- [       ICARTT_FileManager].[    GetICARTTFilesFromDir]     Directory: C:\Users\atschaff\ICARTT Data\CALIFORNIA_2013\P3B_AIRCRAFT
+2016-04-14 16:11:20.066 MESSAGE --- [       ICARTT_FileManager].[    GetICARTTFilesFromDir]     Number of ICARTT Files Found: 349
+2016-04-14 16:11:24.591   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 16:11:24.591   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: File Name Filters
+2016-04-14 16:11:24.591   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   File Select
+2016-04-14 16:11:24.682  EXCEPT --- [              ICARTT_File].[                     Load] System.FormatException: Input string was not in a correct format.
+2016-04-14 16:11:24.682  EXCEPT --- [              ICARTT_File].[                     Load]        at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+2016-04-14 16:11:24.682  EXCEPT --- [              ICARTT_File].[                     Load]        at System.Double.Parse(String s)
+2016-04-14 16:11:24.682  EXCEPT --- [              ICARTT_File].[                     Load]        at ICARTT_Merge_Configuration.ICARTT_File_Library.ICARTT_File.Load() in C:\Users\atschaff\Documents\Visual Studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\ICARTT_File_Library\ICARTT_File.cs:line 256
+2016-04-14 16:11:24.700   ERROR --- [              ICARTT_File].[                     Load] LOAD ERROR: C:\Users\atschaff\ICARTT Data\CALIFORNIA_2013\P3B_AIRCRAFT\FRIED.ALAN\discoveraq-CH2O_P3B_20130128_R0_1Min.ict
+2016-04-14 16:11:24.790  EXCEPT --- [              ICARTT_File].[                     Load] System.FormatException: Input string was not in a correct format.
+2016-04-14 16:11:24.790  EXCEPT --- [              ICARTT_File].[                     Load]        at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+2016-04-14 16:11:24.790  EXCEPT --- [              ICARTT_File].[                     Load]        at System.Double.Parse(String s)
+2016-04-14 16:11:24.790  EXCEPT --- [              ICARTT_File].[                     Load]        at ICARTT_Merge_Configuration.ICARTT_File_Library.ICARTT_File.Load() in C:\Users\atschaff\Documents\Visual Studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\ICARTT_File_Library\ICARTT_File.cs:line 256
+2016-04-14 16:11:24.807   ERROR --- [              ICARTT_File].[                     Load] LOAD ERROR: C:\Users\atschaff\ICARTT Data\CALIFORNIA_2013\P3B_AIRCRAFT\FRIED.ALAN\discoveraq-CH2O_P3B_20130128_R0_1Min.ict
+2016-04-14 16:11:28.174   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 16:11:28.174   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: File Select
+2016-04-14 16:11:28.174   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   Time Variables
+2016-04-14 16:12:05.616   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 16:12:05.616   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: Time Variables
+2016-04-14 16:12:05.616   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   Map Variables
+2016-04-14 16:13:53.395 MESSAGE --- [                  Program].[                     Main] Main thread terminating.
+2016-04-14 16:13:53.396 MESSAGE --- [                   Logger].[                    Close] Close requested. Remaining 0 messages will be written to file.
+2016-04-14 16:30:32.264 MESSAGE --- [                   Logger].[                    Setup] Ready to accept and digest messages.
+2016-04-14 16:30:32.516   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 16:30:32.516   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: DEFAULT NAME
+2016-04-14 16:30:32.516   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   Directory Select
+2016-04-14 16:30:40.820 MESSAGE --- [...ontrol_DirectorySelect].[..._ICARTTDirectory_Click] User selected directory: C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT
+2016-04-14 16:30:41.639   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 16:30:41.639   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: Directory Select
+2016-04-14 16:30:41.639   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   File Name Filters
+2016-04-14 16:30:41.664 MESSAGE --- [       ICARTT_FileManager].[    GetICARTTFilesFromDir] Searched for ICARTT files
+2016-04-14 16:30:41.664 MESSAGE --- [       ICARTT_FileManager].[    GetICARTTFilesFromDir]     Directory: C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT
+2016-04-14 16:30:41.664 MESSAGE --- [       ICARTT_FileManager].[    GetICARTTFilesFromDir]     Number of ICARTT Files Found: 188
+2016-04-14 16:30:48.168   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 16:30:48.168   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: File Name Filters
+2016-04-14 16:30:48.168   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   File Select
+2016-04-14 16:30:48.776   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 16:30:48.776   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: File Select
+2016-04-14 16:30:48.776   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   Time Variables
+2016-04-14 16:30:50.607   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 16:30:50.607   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: Time Variables
+2016-04-14 16:30:50.607   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   Map Variables
+2016-04-14 16:31:01.919 MESSAGE --- [                  Program].[                     Main] Main thread terminating.
+2016-04-14 16:31:01.920 MESSAGE --- [                   Logger].[                    Close] Close requested. Remaining 0 messages will be written to file.
+2016-04-14 16:31:14.935 MESSAGE --- [                   Logger].[                    Setup] Ready to accept and digest messages.
+2016-04-14 16:31:15.154   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 16:31:15.154   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: DEFAULT NAME
+2016-04-14 16:31:15.154   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   Directory Select
+2016-04-14 16:31:25.044 MESSAGE --- [...ontrol_DirectorySelect].[..._ICARTTDirectory_Click] User selected directory: C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT
+2016-04-14 16:31:25.930   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 16:31:25.930   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: Directory Select
+2016-04-14 16:31:25.930   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   File Name Filters
+2016-04-14 16:31:25.947 MESSAGE --- [       ICARTT_FileManager].[    GetICARTTFilesFromDir] Searched for ICARTT files
+2016-04-14 16:31:25.947 MESSAGE --- [       ICARTT_FileManager].[    GetICARTTFilesFromDir]     Directory: C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT
+2016-04-14 16:31:25.947 MESSAGE --- [       ICARTT_FileManager].[    GetICARTTFilesFromDir]     Number of ICARTT Files Found: 188
+2016-04-14 16:31:26.425   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 16:31:26.425   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: File Name Filters
+2016-04-14 16:31:26.425   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   File Select
+2016-04-14 16:31:26.977   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 16:31:26.977   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: File Select
+2016-04-14 16:31:26.977   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   Time Variables
+2016-04-14 16:31:29.001   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 16:31:29.001   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: Time Variables
+2016-04-14 16:31:29.001   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   Map Variables
+2016-04-14 16:33:01.524   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 16:33:01.524   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: Map Variables
+2016-04-14 16:33:01.524   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   Time Variables
+2016-04-14 16:33:02.597   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 16:33:02.597   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: Time Variables
+2016-04-14 16:33:02.597   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   Map Variables
+2016-04-14 16:33:05.173   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 16:33:05.173   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: Map Variables
+2016-04-14 16:33:05.173   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   Time Variables
+2016-04-14 16:33:06.427   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 16:33:06.427   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: Time Variables
+2016-04-14 16:33:06.427   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   Map Variables
+2016-04-14 16:33:12.342   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 16:33:12.342   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: Map Variables
+2016-04-14 16:33:12.342   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   Time Variables
+2016-04-14 16:33:13.484   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 16:33:13.484   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: Time Variables
+2016-04-14 16:33:13.484   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   Map Variables
+2016-04-14 16:33:23.306 MESSAGE --- [                  Program].[                     Main] Main thread terminating.
+2016-04-14 16:33:23.306 MESSAGE --- [                   Logger].[                    Close] Close requested. Remaining 0 messages will be written to file.
+2016-04-14 16:43:57.796 MESSAGE --- [                   Logger].[                    Setup] Ready to accept and digest messages.
+2016-04-14 16:43:58.041   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 16:43:58.041   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: DEFAULT NAME
+2016-04-14 16:43:58.041   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   Directory Select
+2016-04-14 16:44:00.658   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 16:44:00.658   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: Directory Select
+2016-04-14 16:44:00.658   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   Time Variables
+2016-04-14 16:44:00.750  EXCEPT --- [       ICARTT_FileManager].[    GetICARTTFilesFromDir] System.ArgumentException: The path is not of a legal form.
+2016-04-14 16:44:00.750  EXCEPT --- [       ICARTT_FileManager].[    GetICARTTFilesFromDir]        at System.IO.Path.NormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+2016-04-14 16:44:00.750  EXCEPT --- [       ICARTT_FileManager].[    GetICARTTFilesFromDir]        at System.IO.Path.GetFullPathInternal(String path)
+2016-04-14 16:44:00.750  EXCEPT --- [       ICARTT_FileManager].[    GetICARTTFilesFromDir]        at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+2016-04-14 16:44:00.750  EXCEPT --- [       ICARTT_FileManager].[    GetICARTTFilesFromDir]        at System.IO.Directory.GetFiles(String path, String searchPattern, SearchOption searchOption)
+2016-04-14 16:44:00.750  EXCEPT --- [       ICARTT_FileManager].[    GetICARTTFilesFromDir]        at ICARTT_Merge_Configuration.Utilities.ICARTT_FileManager.GetICARTTFilesFromDir(String dir) in C:\Users\atschaff\Documents\Visual Studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\Utilities\ICARTT_FileManager.cs:line 104
+2016-04-14 16:44:00.756 MESSAGE --- [       ICARTT_FileManager].[    GetICARTTFilesFromDir] Searched for ICARTT files
+2016-04-14 16:44:00.756 MESSAGE --- [       ICARTT_FileManager].[    GetICARTTFilesFromDir]     Directory: 
+2016-04-14 16:44:00.756 MESSAGE --- [       ICARTT_FileManager].[    GetICARTTFilesFromDir]     Number of ICARTT Files Found: 0
+2016-04-14 16:44:01.258   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 16:44:01.258   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: Time Variables
+2016-04-14 16:44:01.258   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   Map Variables
+2016-04-14 16:44:03.450   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 16:44:03.450   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: Map Variables
+2016-04-14 16:44:03.450   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   Time Variables
+2016-04-14 16:44:21.441   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 16:44:21.441   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: Time Variables
+2016-04-14 16:44:21.441   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   Map Variables
+2016-04-14 16:44:44.711   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 16:44:44.711   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: Map Variables
+2016-04-14 16:44:44.711   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   Directory Select
+2016-04-14 16:44:52.380 MESSAGE --- [...ontrol_DirectorySelect].[..._ICARTTDirectory_Click] User selected directory: C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT
+2016-04-14 16:44:53.384   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 16:44:53.384   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: Directory Select
+2016-04-14 16:44:53.384   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   File Name Filters
+2016-04-14 16:44:53.406 MESSAGE --- [       ICARTT_FileManager].[    GetICARTTFilesFromDir] Searched for ICARTT files
+2016-04-14 16:44:53.406 MESSAGE --- [       ICARTT_FileManager].[    GetICARTTFilesFromDir]     Directory: C:\Users\atschaff\ICARTT Data\TEXAS_2013\P3B_AIRCRAFT
+2016-04-14 16:44:53.406 MESSAGE --- [       ICARTT_FileManager].[    GetICARTTFilesFromDir]     Number of ICARTT Files Found: 188
+2016-04-14 16:44:55.591   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 16:44:55.591   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: File Name Filters
+2016-04-14 16:44:55.591   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   File Select
+2016-04-14 16:44:57.167   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 16:44:57.167   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: File Select
+2016-04-14 16:44:57.167   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   Time Variables
+2016-04-14 16:44:58.529   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 16:44:58.529   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: Time Variables
+2016-04-14 16:44:58.529   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   Map Variables
+2016-04-14 16:45:55.916   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 16:45:55.916   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: Map Variables
+2016-04-14 16:45:55.916   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   Time Variables
+2016-04-14 16:45:57.026   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl] Changing Process View
+2016-04-14 16:45:57.026   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     From: Time Variables
+2016-04-14 16:45:57.026   DEBUG --- [...T_ConfigurationBuilder].[...eCurrentProcessControl]     To:   Map Variables
+2016-04-14 16:46:45.581 MESSAGE --- [                  Program].[                     Main] Main thread terminating.
+2016-04-14 16:46:45.582 MESSAGE --- [                   Logger].[                    Close] Close requested. Remaining 0 messages will be written to file.

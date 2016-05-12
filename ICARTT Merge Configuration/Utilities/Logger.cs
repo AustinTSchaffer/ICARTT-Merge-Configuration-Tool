@@ -8,6 +8,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ICARTT_Merge_Configuration.Utilities
 {
@@ -23,8 +24,8 @@ namespace ICARTT_Merge_Configuration.Utilities
         /// Used to trim incoming names to size.
         /// </summary>
         public static readonly int
-            MAX_CLASS_NAME_LENGTH = 20,
-            MAX_METHOD_NAME_LENGTH = 20;
+            MAX_CLASS_NAME_LENGTH = 25,
+            MAX_METHOD_NAME_LENGTH = 25;
 
         /// <summary>
         /// Format of the message that will be written to the log file. The fields will be populated in order of occurrance: Datetime, message code, class, message indent,  message.
@@ -190,7 +191,10 @@ namespace ICARTT_Merge_Configuration.Utilities
             {
                 if (messageQueue.Count() != 0)
                 {
-                    Trace.WriteLine(messageQueue.Dequeue());
+                    string message = messageQueue.Dequeue();
+
+                    Trace.WriteLine(message);
+
                     WatchHighMessageTraffic();
                 }
                 else if (messageLoggingThreadClosing)
@@ -295,6 +299,9 @@ namespace ICARTT_Merge_Configuration.Utilities
                 messageQueue.Enqueue(formattedMessage);
                 messagesDuringCurrentSecond += 1;
                 mutex.ReleaseMutex();
+
+                if (null != auxiliaryDisplay)
+                    auxiliaryDisplay.Text += formattedMessage + Environment.NewLine;
             }
         }
 
@@ -315,5 +322,17 @@ namespace ICARTT_Merge_Configuration.Utilities
         /// <param name="currentMethod">Current executing method</param>
         /// <param name="exception">A thrown exception</param>
         public static void Log(Type currentClass, MethodBase currentMethod, Exception exception) { Log(MessageCode.Except, currentClass, currentMethod, exception.ToString().Split(new string[] { Environment.NewLine }, StringSplitOptions.None)); }
+
+
+        private static TextBox auxiliaryDisplay;
+
+        /// <summary>
+        /// Sets an auxiliary display that the logger can write to.
+        /// </summary>
+        /// <param name="textBox">Windows Forms text box object.</param>
+        public static void SetAuxiliaryDisplay(TextBox textBox)
+        {
+            auxiliaryDisplay = textBox;
+        }
     }
 }

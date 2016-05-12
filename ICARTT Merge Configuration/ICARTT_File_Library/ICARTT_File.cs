@@ -9,7 +9,7 @@ namespace ICARTT_Merge_Configuration.ICARTT_File_Library
     /// <summary>
     /// This class serves as a location to store information related to a single ICARTT file. This class holds all metadata found in the name of the file, the header of the file, and the file system's data regarding the file.
     /// </summary>
-    class ICARTT_File
+    public class ICARTT_File
     {
 
         /// <summary>
@@ -123,13 +123,21 @@ namespace ICARTT_Merge_Configuration.ICARTT_File_Library
         /// <summary>
         /// Returns a list of the dependent variables found in the referenced ICARTT file. Defaults to an empty list if file is not loaded.
         /// </summary>
-        public List<ICARTT_Variable> DependentVariables { get { return new List<ICARTT_Variable>(this.dependentVariables); } }
+        public List<ICARTT_Variable> Variables { get { return new List<ICARTT_Variable>(this.variables); } }
 
 
         /// <summary>
         /// Returns the independent variable of the referenced ICARTT file. Defaults to null of file is not loaded.
         /// </summary>
-        public ICARTT_Variable IndependentVariable { get { return independentVariable; } }
+        public ICARTT_Variable IndependentVariable
+        {
+            get
+            {
+                foreach (ICARTT_Variable ictVar in this.variables) if (ictVar.columnNumber == 0) return ictVar;
+
+                return null;
+            }
+        }
 
 
         /// <summary>
@@ -161,18 +169,31 @@ namespace ICARTT_Merge_Configuration.ICARTT_File_Library
 
 
         /// <summary>
-        /// Indepedent variable of referenced ICARTT file.
+        /// Dependendent variables of referenced ICARTT file.
         /// </summary>
-        private ICARTT_Variable independentVariable;
+        private List<ICARTT_Variable> variables;
+
+        #endregion
+
+
+        #region Timebase Variables
+
+        /// <summary>
+        /// Variable that corresponds to the time a measurement began.
+        /// </summary>
+        public ICARTT_Variable TimeVariable_Start;
 
 
         /// <summary>
-        /// Dependendent variables of referenced ICARTT file.
+        /// Variable that corresponds to the midpoint time of a measurement.
         /// </summary>
-        private List<ICARTT_Variable> dependentVariables;
+        public ICARTT_Variable TimeVariable_Midpoint;
 
 
-        
+        /// <summary>
+        /// Variable that corresponds to the time a measurement ended.
+        /// </summary>
+        public ICARTT_Variable TimeVariable_Stop;
 
         #endregion
 
@@ -204,7 +225,7 @@ namespace ICARTT_Merge_Configuration.ICARTT_File_Library
 
             fileNameInformation = new ICARTT_FileName(inputFileName, inputFilePath);
             fileProperties = new ICARTT_FileProperties();
-            dependentVariables = new List<ICARTT_Variable>();
+            variables = new List<ICARTT_Variable>();
         }
 
 
@@ -233,7 +254,11 @@ namespace ICARTT_Merge_Configuration.ICARTT_File_Library
                 fileProperties.FileVolumeInformation = file.ReadLine();
                 fileProperties.DateInformation = file.ReadLine();
                 fileProperties.DataInterval = double.Parse(file.ReadLine());
-                independentVariable = new ICARTT_Variable(file.ReadLine(), 0, 1, -1);
+
+                variables.Add(new ICARTT_Variable(
+                        GetProperty(FileNameProperty.DataID),
+                        file.ReadLine(), 0));
+
                 fileProperties.NumDependentVariables = int.Parse(file.ReadLine());
 
                 string[] scalingFactors = file.ReadLine().Split(',');
@@ -245,10 +270,12 @@ namespace ICARTT_Merge_Configuration.ICARTT_File_Library
                 // Read in all dependent variables.
                 for (int varCol = 1; varCol <= fileProperties.NumDependentVariables; ++varCol)
                 {
-                    dependentVariables.Add(
+                    variables.Add(
                         new ICARTT_Variable(
+                            GetProperty(FileNameProperty.DataID),
                             file.ReadLine(),
                             varCol,
+                            ICARTT_Variable.VariableType.INPUT,
                             double.Parse(scalingFactors[varCol - 1]),
                             double.Parse(missingDataIndicators[varCol - 1])
                             ));
@@ -269,6 +296,7 @@ namespace ICARTT_Merge_Configuration.ICARTT_File_Library
             {
                 Logger.Log(typeof(ICARTT_File), MethodBase.GetCurrentMethod(), e);
                 Logger.Log(Logger.MessageCode.Error, typeof(ICARTT_File), MethodBase.GetCurrentMethod(), "LOAD ERROR: " + FilePath + FileName);
+                this.IncludeInMerge = false;
             }
         }
 
@@ -320,8 +348,16 @@ namespace ICARTT_Merge_Configuration.ICARTT_File_Library
         {
             if (null == ictFile) return false;
 
-            // TODO
+            if (ictFile.variables.Count != this.variables.Count) return false;
 
+            for (int i = 0; i < this.variables.Count; ++i)
+            {
+                ICARTT_Variable va = this.variables[i];
+                ICARTT_Variable vb = ictFile.variables[i];
+
+                if (!va.Equals(vb)) return false;
+            }
+            
             return true;
         }
 
@@ -356,8 +392,7 @@ namespace ICARTT_Merge_Configuration.ICARTT_File_Library
         /// <returns>Specified file.</returns>
         public bool IsEarlierLaunchThan(ICARTT_File icarttFile)
         {
-            if (null == icarttFile)
-                return false;
+            if (null == icarttFile) return false;
 
             // Check all fields other than Launch for equality
             foreach (FileNameProperty fnp in Enum.GetValues(typeof(FileNameProperty)))

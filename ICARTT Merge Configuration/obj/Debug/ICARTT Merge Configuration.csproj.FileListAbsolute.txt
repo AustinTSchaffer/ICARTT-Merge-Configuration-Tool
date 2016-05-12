@@ -8,7 +8,6 @@ C:\Users\atschaff\Documents\Visual Studio 2015\Projects\ICARTT Merge Configurati
 C:\Users\atschaff\Documents\Visual Studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\obj\Debug\ICARTT_Merge_Configuration.GUI.ProcessControl_DirectorySelect.resources
 C:\Users\atschaff\Documents\Visual Studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\obj\Debug\ICARTT_Merge_Configuration.GUI.ProcessControl_FileNameFilters.resources
 C:\Users\atschaff\Documents\Visual Studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\obj\Debug\ICARTT_Merge_Configuration.GUI.ProcessControl_FileSelect.resources
-C:\Users\atschaff\Documents\Visual Studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\obj\Debug\ICARTT_Merge_Configuration.GUI.ProcessControl_VariableViewer.resources
 C:\Users\atschaff\Documents\Visual Studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\obj\Debug\ICARTT_Merge_Configuration.Properties.Resources.resources
 C:\Users\atschaff\Documents\Visual Studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\obj\Debug\ICARTT Merge Configuration.csproj.GenerateResource.Cache
 C:\Users\atschaff\Documents\Visual Studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\obj\Debug\ICARTT Merge Configuration Tool.exe.manifest
@@ -17,4 +16,5 @@ C:\Users\atschaff\Documents\Visual Studio 2015\Projects\ICARTT Merge Configurati
 C:\Users\atschaff\Documents\Visual Studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\obj\Debug\ICARTT Merge Configuration Tool.pdb
 C:\Users\atschaff\Documents\Visual Studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\obj\Debug\ICARTT_Merge_Configuration.GUI.ProcessControl_TimeVariableSelection.resources
 C:\Users\atschaff\Documents\Visual Studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\obj\Debug\ICARTT Merge Configuration.csprojResolveAssemblyReference.cache
-C:\Users\atschaff\Documents\Visual Studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\obj\Debug\ICARTT_Merge_Configuration.GUI.ProcessControl_TimeVariableSelectionControls.TimeVariableSelectionControl.resources
+C:\Users\atschaff\Documents\Visual Studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\obj\Debug\ICARTT_Merge_Configuration.GUI.ProcessControl_TimeVariableSelectionControls.ProcessControl_TimeVariableSelectionControl.resources
+C:\Users\atschaff\Documents\Visual Studio 2015\Projects\ICARTT Merge Configuration\ICARTT Merge Configuration\obj\Debug\ICARTT_Merge_Configuration.GUI.ProcessControl_VariableMapper.resources
