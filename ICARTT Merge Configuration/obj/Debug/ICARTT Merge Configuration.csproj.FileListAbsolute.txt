@@ -1,5 +1,13 @@
-C:\Users\austi\VisualStudioProjects\ICARTT-Merge-Configuration-Tool\ICARTT Merge Configuration\obj\Debug\ICARTT Merge Configuration.csprojResolveAssemblyReference.cache
 C:\Users\austi\VisualStudioProjects\ICARTT-Merge-Configuration-Tool\ICARTT Merge Configuration\obj\Debug\ICARTT_Merge_Configuration.GUI.ProcessControl_TimeVariableSelection.resources
 C:\Users\austi\VisualStudioProjects\ICARTT-Merge-Configuration-Tool\ICARTT Merge Configuration\obj\Debug\ICARTT_Merge_Configuration.GUI.ProcessControl_TimeVariableSelectionControls.ProcessControl_TimeVariableSelectionControl.resources
 C:\Users\austi\VisualStudioProjects\ICARTT-Merge-Configuration-Tool\ICARTT Merge Configuration\obj\Debug\ICARTT_Merge_Configuration.GUI.ProcessControl_VariableMapper.resources
 C:\Users\austi\VisualStudioProjects\ICARTT-Merge-Configuration-Tool\ICARTT Merge Configuration\obj\Debug\ICARTT Merge Configuration.csproj.GenerateResource.Cache
+C:\Users\austi\VisualStudioProjects\ICARTT-Merge-Configuration-Tool\ICARTT Merge Configuration\bin\Debug\ICARTT Merge Configuration Tool.exe.config
+C:\Users\austi\VisualStudioProjects\ICARTT-Merge-Configuration-Tool\ICARTT Merge Configuration\bin\Debug\ICARTT Merge Configuration Tool.exe.manifest
+C:\Users\austi\VisualStudioProjects\ICARTT-Merge-Configuration-Tool\ICARTT Merge Configuration\bin\Debug\ICARTT Merge Configuration Tool.application
+C:\Users\austi\VisualStudioProjects\ICARTT-Merge-Configuration-Tool\ICARTT Merge Configuration\bin\Debug\ICARTT Merge Configuration Tool.exe
+C:\Users\austi\VisualStudioProjects\ICARTT-Merge-Configuration-Tool\ICARTT Merge Configuration\bin\Debug\ICARTT Merge Configuration Tool.pdb
+C:\Users\austi\VisualStudioProjects\ICARTT-Merge-Configuration-Tool\ICARTT Merge Configuration\obj\Debug\ICARTT Merge Configuration Tool.exe.manifest
+C:\Users\austi\VisualStudioProjects\ICARTT-Merge-Configuration-Tool\ICARTT Merge Configuration\obj\Debug\ICARTT Merge Configuration Tool.application
+C:\Users\austi\VisualStudioProjects\ICARTT-Merge-Configuration-Tool\ICARTT Merge Configuration\obj\Debug\ICARTT Merge Configuration Tool.exe
+C:\Users\austi\VisualStudioProjects\ICARTT-Merge-Configuration-Tool\ICARTT Merge Configuration\obj\Debug\ICARTT Merge Configuration Tool.pdb

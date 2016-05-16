@@ -143,7 +143,6 @@ namespace ICARTT_Merge_Configuration.GUI
             this.Controls.Add(this.BackAndNextPanel);
             this.Controls.Add(this.ListBox_Navigation);
             this.Controls.Add(this.ConsoleOutTextBox);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ICARTT_ConfigurationBuilder";
             this.Text = "ICARTT Merge Configuration Builder";
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ICARTT_ConfigurationBuilder_KeyPress);
