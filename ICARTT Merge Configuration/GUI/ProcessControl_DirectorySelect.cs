@@ -15,7 +15,7 @@ namespace ICARTT_Merge_Configuration.GUI
     public partial class ProcessControl_DirectorySelect : ProcessControl
     {
         private bool existingMerge;
-
+        string lastPulledDirectory = null;
 
         public ProcessControl_DirectorySelect() : base("Directory Select")
         {
@@ -24,7 +24,11 @@ namespace ICARTT_Merge_Configuration.GUI
 
         public override void Deactivate()
         {
-            ICARTT_FileManager.GetICARTTFilesFromDir(TextField_RootDirectory.Text);
+            if (null == lastPulledDirectory || !lastPulledDirectory.Equals(TextField_RootDirectory.Text))
+            {
+                lastPulledDirectory = String.Copy(TextField_RootDirectory.Text);
+                ICARTT_FileManager.GetICARTTFilesFromDir(lastPulledDirectory);
+            }
             base.Deactivate();
         }
 

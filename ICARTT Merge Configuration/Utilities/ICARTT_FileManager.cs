@@ -10,7 +10,7 @@ using System.Reflection;
 
 namespace ICARTT_Merge_Configuration.Utilities
 {
-    static class ICARTT_FileManager
+    public static class ICARTT_FileManager
     {
 
         /// <summary>
@@ -38,20 +38,18 @@ namespace ICARTT_Merge_Configuration.Utilities
         }
 
         /// <summary>
-        /// Readonly. Returns a copy of the list of all the ICARTT files that can be considered in the scope of this merge.
+        /// Returns a reference to the list of all ICARTT files that can be considered in the scope of this merge.
         /// </summary>
         public static List<ICARTT_File> IcarttFilesInScope
         {
             get
             {
-                List<ICARTT_File> filesInScope = new List<ICARTT_File>();
-                if (null != allIcarttFiles) filesInScope.AddRange(allIcarttFiles);
                 return allIcarttFiles;
             }
         }
 
         /// <summary>
-        /// Readonly. Returns a copy of the list of ICARTT files that have been chosen to be merged.
+        /// Returns a list of the ICARTT files that have been chosen to be merged.
         /// </summary>
         public static List<ICARTT_File> IcarttFilesToMerge
         {
@@ -72,18 +70,7 @@ namespace ICARTT_Merge_Configuration.Utilities
         /// <summary>
         /// Invokes the Load() method of all the ICARTT_File objects in the list of ICARTT_Files to merge. This should load all of the ICARTT file header metadata into memory.
         /// </summary>
-        public static void LoadAll()
-        {
-            foreach (ICARTT_File ictFile in allIcarttFiles)
-            {
-                if (ictFile.IncludeInMerge)
-                {
-                    Logger.Log(Logger.MessageCode.Debug, typeof(ICARTT_FileManager), MethodBase.GetCurrentMethod(), "Loading: " + ictFile.FilePath + ictFile.FileName);
-
-                    ictFile.Load();
-                }
-            }
-        }
+        public static void LoadAll() { foreach (ICARTT_File ictFile in allIcarttFiles) if (ictFile.IncludeInMerge) ictFile.Load(); }
 
 
         /// <summary>

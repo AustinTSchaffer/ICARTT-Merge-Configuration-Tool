@@ -23,12 +23,13 @@ namespace ICARTT_Merge_Configuration.GUI
                 new ProcessControl_FileNameFilters(),
                 new ProcessControl_FileSelect(),
                 new ProcessControl_TimeVariableSelection(),
-                new ProcessControl_VariableViewer()
+                new ProcessControl_VariableMapper()
             };
 
             InitializeComponent();
             PopulateNavigationListBox();
             this.ChangeCurrentProcessControl(ProcessControls.ElementAt(0));
+            Logger.SetAuxiliaryDisplay(this.ConsoleOutTextBox);
         }
 
 
@@ -113,5 +114,15 @@ namespace ICARTT_Merge_Configuration.GUI
             else this.ChangeCurrentProcessControl(ProcessControls.ElementAt(0));
         }
 
+        private void ConsoleOutTextBox_TextChanged(object sender, EventArgs e)
+        {
+            ConsoleOutTextBox.SelectionStart = ConsoleOutTextBox.TextLength;
+            ConsoleOutTextBox.ScrollToCaret();
+        }
+
+        private void ICARTT_ConfigurationBuilder_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
     }
 }

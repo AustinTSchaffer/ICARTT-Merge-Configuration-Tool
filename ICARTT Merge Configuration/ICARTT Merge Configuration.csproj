@@ -112,17 +112,17 @@
     <Compile Include="GUI\ProcessControl_TimeVariableSelection.Designer.cs">
       <DependentUpon>ProcessControl_TimeVariableSelection.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\ProcessControl_TimeVariableSelectionControls\TimeVariableSelectionControl.cs">
+    <Compile Include="GUI\TimeVariableSelectionControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\ProcessControl_TimeVariableSelectionControls\TimeVariableSelectionControl.Designer.cs">
+    <Compile Include="GUI\TimeVariableSelectionControl.Designer.cs">
       <DependentUpon>TimeVariableSelectionControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\ProcessControl_VariableViewer.cs">
+    <Compile Include="GUI\ProcessControl_VariableMapper.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\ProcessControl_VariableViewer.Designer.cs">
-      <DependentUpon>ProcessControl_VariableViewer.cs</DependentUpon>
+    <Compile Include="GUI\ProcessControl_VariableMapper.Designer.cs">
+      <DependentUpon>ProcessControl_VariableMapper.cs</DependentUpon>
     </Compile>
     <Compile Include="Utilities\ICARTT_FileManager.cs" />
     <Compile Include="ICARTT_File_Library\ICARTT_File.cs" />
@@ -155,11 +155,11 @@
     <EmbeddedResource Include="GUI\ProcessControl_TimeVariableSelection.resx">
       <DependentUpon>ProcessControl_TimeVariableSelection.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ProcessControl_TimeVariableSelectionControls\TimeVariableSelectionControl.resx">
+    <EmbeddedResource Include="GUI\TimeVariableSelectionControl.resx">
       <DependentUpon>TimeVariableSelectionControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ProcessControl_VariableViewer.resx">
-      <DependentUpon>ProcessControl_VariableViewer.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\ProcessControl_VariableMapper.resx">
+      <DependentUpon>ProcessControl_VariableMapper.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

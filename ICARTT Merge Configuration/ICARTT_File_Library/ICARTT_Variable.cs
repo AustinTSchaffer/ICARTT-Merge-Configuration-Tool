@@ -8,8 +8,9 @@ using System.Threading.Tasks;
 
 namespace ICARTT_Merge_Configuration.ICARTT_File_Library
 {
-    class ICARTT_Variable
+    public class ICARTT_Variable
     {
+
         /// <summary>
         /// Column number where variable appears in the file. 0 refers to the independent variable. 1 refers to the first dependent variable.
         /// </summary>
@@ -18,31 +19,54 @@ namespace ICARTT_Merge_Configuration.ICARTT_File_Library
         /// <summary>
         /// Short variable name.
         /// </summary>
-        public string name;
+        public string Name;
 
         /// <summary>
         /// Units of variable.
         /// </summary>
-        public string unit;
+        public string Unit;
 
         /// <summary>
         /// Third optional field when naming an ICARTT variable
         /// </summary>
-        public string desc;
+        public string Desc;
+
+        /// <summary>
+        /// Data ID that contains this variable.
+        /// </summary>
+        public string DataID;
 
         /// <summary>
         /// Scaling factor of ICARTT variable.
         /// </summary>
-        public double scaleFactor;
+        public double ScaleFactor;
 
         /// <summary>
         /// Missing data indicator.
         /// </summary>
-        public double missingDataIndicator;
+        public double MissingDataIndicator;
 
 
         /// <summary>
-        /// Holds all properties that have not already been specified.
+        /// Possible variable merge types. Input denotes variables from a file, which are not merged directly.
+        /// </summary>
+        public enum VariableType
+        {
+            INPUT,
+            TIME,
+            SCALAR,
+            Vector_Magnitude,
+            Vector_Direction
+        }
+
+        /// <summary>
+        /// Variable's merge type.
+        /// </summary>
+        public VariableType Type;
+
+
+        /// <summary>
+        /// Holds all properties that have not already been specified. Used for output variables.
         /// </summary>
         public Dictionary<string, string> properties;
 
@@ -65,15 +89,16 @@ namespace ICARTT_Merge_Configuration.ICARTT_File_Library
         /// <summary>
         /// Constructor for loading an ICARTT variable to file.
         /// </summary>
+        /// <param name="dataID">Data ID that contains this ICARTT variable.</param>
         /// <param name="fullNameFromFile">Name of variable from line in file</param>
         /// <param name="cN">Column number</param>
         /// <param name="sF">Scale Factor</param>
         /// <param name="mDI">Missing data indicator.</param>
-        public ICARTT_Variable(string fullNameFromFile, int cN, double sF, double mDI)
+        public ICARTT_Variable(string dataID, string fullNameFromFile, int cN, VariableType type = VariableType.INPUT, double sF = DEFAULT_SF, double mDI = DEFAULT_MDI)
         {
-            columnNumber = cN;
-            scaleFactor = sF;
-            missingDataIndicator = mDI;
+            this.columnNumber = cN;
+            this.ScaleFactor = sF;
+            this.MissingDataIndicator = mDI;
 
             properties = new Dictionary<string, string>();
 
@@ -81,21 +106,24 @@ namespace ICARTT_Merge_Configuration.ICARTT_File_Library
             {
                 Logger.Log(Logger.MessageCode.Warning, typeof(ICARTT_Variable), MethodBase.GetCurrentMethod(), "Empty variable name. Initializing default.");
 
-                name = DEFAULT_NAME;
-                unit = DEFAULT_UNIT;
-                desc = DEFAULT_DESC;
+                Name = DEFAULT_NAME;
+                Unit = DEFAULT_UNIT;
+                Desc = DEFAULT_DESC;
             }
             else
             {
                 string[] splitName = fullNameFromFile.Split(VARIABLE_FIELD_SEPARATOR);
-                name = (splitName.Length > 0) ? splitName[0].Trim() : DEFAULT_NAME;
-                unit = (splitName.Length > 1) ? splitName[1].Trim() : DEFAULT_UNIT;
-                desc = (splitName.Length > 2) ? splitName[2].Trim() : DEFAULT_DESC;
+                Name = (splitName.Length > 0) ? splitName[0].Trim() : DEFAULT_NAME;
+                Unit = (splitName.Length > 1) ? splitName[1].Trim() : DEFAULT_UNIT;
+                Desc = (splitName.Length > 2) ? splitName[2].Trim() : DEFAULT_DESC;
             }
 
-            name = (name.Length < 1) ? DEFAULT_NAME : name;
-            unit = (unit.Length < 1) ? DEFAULT_UNIT : unit;
-            desc = (desc.Length < 1) ? DEFAULT_DESC : desc;
+            this.Name = (Name.Length < 1) ? DEFAULT_NAME : Name;
+            this.Unit = (Unit.Length < 1) ? DEFAULT_UNIT : Unit;
+            this.Desc = (Desc.Length < 1) ? DEFAULT_DESC : Desc;
+
+            this.Type = type;
+            this.DataID = (null != dataID) ? dataID : "NO DATA ID";
         }
 
 
@@ -108,7 +136,7 @@ namespace ICARTT_Merge_Configuration.ICARTT_File_Library
         /// <param name="cN">Column number</param>
         /// <param name="sF">Scale Factor</param>
         /// <param name="mDI">Missing data indicator.</param>
-        public ICARTT_Variable(string name, string unit, string desc, int cN, double sF = DEFAULT_SF, double mDI = DEFAULT_MDI) : this(String.Format("{1}{0}{2}{0}{3}", VARIABLE_FIELD_SEPARATOR, name, unit, desc), cN, sF, mDI) { }
+        public ICARTT_Variable(string dataID, string name, string unit, string desc, int cN, VariableType type = VariableType.INPUT, double sF = DEFAULT_SF, double mDI = DEFAULT_MDI) : this(dataID, String.Format("{1}{0}{2}{0}{3}", VARIABLE_FIELD_SEPARATOR, name, unit, desc), cN, type, sF, mDI) { }
 
 
         /// <summary>
@@ -120,9 +148,9 @@ namespace ICARTT_Merge_Configuration.ICARTT_File_Library
         {
             if (null == obj || GetType() != obj.GetType()) return false;
 
-            ICARTT_Variable iV = ((ICARTT_Variable)obj);
+            ICARTT_Variable iV = ((ICARTT_Variable) obj);
 
-            return name.Equals(iV.name) && unit.Equals(iV.unit) && desc.Equals(iV.desc) && iV.scaleFactor == scaleFactor && iV.missingDataIndicator == missingDataIndicator;
+            return DataID.Equals(iV.DataID) && Name.Equals(iV.Name) && Unit.Equals(iV.Unit) && iV.ScaleFactor == ScaleFactor && iV.MissingDataIndicator == MissingDataIndicator;
         }
         
 
@@ -130,6 +158,6 @@ namespace ICARTT_Merge_Configuration.ICARTT_File_Library
         /// Returns the hash of the concatenated name, units, description, scale factor, and MDI.
         /// </summary>
         /// <returns></returns>
-        public override int GetHashCode() { return (name + unit + desc + scaleFactor.ToString() + missingDataIndicator.ToString()).GetHashCode(); }
+        public override int GetHashCode() { return (Name + Unit + Desc + ScaleFactor.ToString() + MissingDataIndicator.ToString()).GetHashCode(); }
     }
 }

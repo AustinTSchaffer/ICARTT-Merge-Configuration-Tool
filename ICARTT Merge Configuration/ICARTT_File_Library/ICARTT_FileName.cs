@@ -105,7 +105,7 @@ namespace ICARTT_Merge_Configuration.ICARTT_File_Library
             DEFAULT_REVISION    = "R0",
             DEFAULT_LAUNCH      = "L0",
             DEFAULT_VOLUME      = "V0",
-            DEFAULT_COMMENTS    = "NO-COMMENTS",
+            DEFAULT_COMMENTS    = "",
             DEFAULT_FILE_NAME   = 
             (
                 DEFAULT_DATA_ID + "_" +

@@ -26,8 +26,6 @@ namespace ICARTT_Merge_Configuration.GUI
         #region Windows Form Designer generated code
 
 
-
-
         /// <summary>
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
@@ -49,14 +47,18 @@ namespace ICARTT_Merge_Configuration.GUI
             // 
             this.ConsoleOutTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ConsoleOutTextBox.Location = new System.Drawing.Point(12, 547);
+            this.ConsoleOutTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.ConsoleOutTextBox.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConsoleOutTextBox.Location = new System.Drawing.Point(12, 707);
             this.ConsoleOutTextBox.Multiline = true;
             this.ConsoleOutTextBox.Name = "ConsoleOutTextBox";
             this.ConsoleOutTextBox.ReadOnly = true;
             this.ConsoleOutTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.ConsoleOutTextBox.Size = new System.Drawing.Size(557, 167);
+            this.ConsoleOutTextBox.Size = new System.Drawing.Size(735, 199);
             this.ConsoleOutTextBox.TabIndex = 4;
             this.ConsoleOutTextBox.TabStop = false;
+            this.ConsoleOutTextBox.WordWrap = false;
+            this.ConsoleOutTextBox.TextChanged += new System.EventHandler(this.ConsoleOutTextBox_TextChanged);
             // 
             // BackAndNextPanel
             // 
@@ -64,9 +66,9 @@ namespace ICARTT_Merge_Configuration.GUI
             | System.Windows.Forms.AnchorStyles.Right)));
             this.BackAndNextPanel.Controls.Add(this.NextButton);
             this.BackAndNextPanel.Controls.Add(this.BackButton);
-            this.BackAndNextPanel.Location = new System.Drawing.Point(183, 512);
+            this.BackAndNextPanel.Location = new System.Drawing.Point(183, 672);
             this.BackAndNextPanel.Name = "BackAndNextPanel";
-            this.BackAndNextPanel.Size = new System.Drawing.Size(386, 29);
+            this.BackAndNextPanel.Size = new System.Drawing.Size(564, 29);
             this.BackAndNextPanel.TabIndex = 2;
             // 
             // NextButton
@@ -74,7 +76,7 @@ namespace ICARTT_Merge_Configuration.GUI
             this.NextButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.NextButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.NextButton.Location = new System.Drawing.Point(311, 0);
+            this.NextButton.Location = new System.Drawing.Point(489, 0);
             this.NextButton.Name = "NextButton";
             this.NextButton.Size = new System.Drawing.Size(75, 29);
             this.NextButton.TabIndex = 2;
@@ -107,7 +109,7 @@ namespace ICARTT_Merge_Configuration.GUI
             this.ListBox_Navigation.ItemHeight = 20;
             this.ListBox_Navigation.Location = new System.Drawing.Point(12, 37);
             this.ListBox_Navigation.Name = "ListBox_Navigation";
-            this.ListBox_Navigation.Size = new System.Drawing.Size(161, 504);
+            this.ListBox_Navigation.Size = new System.Drawing.Size(161, 664);
             this.ListBox_Navigation.TabIndex = 0;
             this.ListBox_Navigation.SelectedIndexChanged += new System.EventHandler(this.NavigationListBox_SelectedIndexChanged);
             // 
@@ -128,14 +130,14 @@ namespace ICARTT_Merge_Configuration.GUI
             | System.Windows.Forms.AnchorStyles.Right)));
             this.CurrentProcessControl.Location = new System.Drawing.Point(182, 9);
             this.CurrentProcessControl.Name = "CurrentProcessControl";
-            this.CurrentProcessControl.Size = new System.Drawing.Size(387, 497);
+            this.CurrentProcessControl.Size = new System.Drawing.Size(565, 657);
             this.CurrentProcessControl.TabIndex = 3;
             // 
             // ICARTT_ConfigurationBuilder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(581, 726);
+            this.ClientSize = new System.Drawing.Size(759, 918);
             this.Controls.Add(this.NavigationListBoxLabel);
             this.Controls.Add(this.CurrentProcessControl);
             this.Controls.Add(this.BackAndNextPanel);
@@ -144,6 +146,7 @@ namespace ICARTT_Merge_Configuration.GUI
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ICARTT_ConfigurationBuilder";
             this.Text = "ICARTT Merge Configuration Builder";
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ICARTT_ConfigurationBuilder_KeyPress);
             this.BackAndNextPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
