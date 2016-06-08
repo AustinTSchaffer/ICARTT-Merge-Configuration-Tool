@@ -134,5 +134,10 @@ namespace ICARTT_Merge_Configuration.GUI
                 }
             }
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
